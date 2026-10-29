@@ -1,0 +1,7 @@
+{
+  "Routing": {
+    "Invoice": "Accounting",
+    "Act": "Accounting",
+    "Contract": "Legal"
+  }
+}

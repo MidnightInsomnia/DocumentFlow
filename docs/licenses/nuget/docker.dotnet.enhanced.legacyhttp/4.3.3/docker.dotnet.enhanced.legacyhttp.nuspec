@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Docker.DotNet.Enhanced.LegacyHttp</id>
+    <version>4.3.3</version>
+    <authors>Docker.DotNet.LegacyHttp</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>icon.png</icon>
+    <iconUrl>https://github.com/testcontainers/Docker.DotNet/raw/main/icon.png</iconUrl>
+    <description>A Docker.DotNet transport implementation for HTTP(S) Docker Engine connections.</description>
+    <copyright>Copyright (c) .NET Foundation and Contributors; Andre Hofmeister</copyright>
+    <tags>Docker Container C# .NET</tags>
+    <repository type="git" url="https://github.com/testcontainers/Docker.DotNet/" commit="1e4015a84fa48cbcfe9002ecc4e2cf14177edc2d" />
+    <dependencies>
+      <group targetFramework="net10.0">
+        <dependency id="Docker.DotNet.Enhanced.Handler.Abstractions" version="4.3.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="Docker.DotNet.Enhanced.Handler.Abstractions" version="4.3.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net9.0">
+        <dependency id="Docker.DotNet.Enhanced.Handler.Abstractions" version="4.3.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Docker.DotNet.Enhanced.Handler.Abstractions" version="4.3.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Docker.DotNet.Enhanced.Handler.Abstractions" version="4.3.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

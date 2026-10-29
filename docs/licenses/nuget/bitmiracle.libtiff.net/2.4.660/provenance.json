@@ -1,0 +1,17 @@
+{
+  "package": "BitMiracle.LibTiff.NET",
+  "version": "2.4.660",
+  "package_url": "https://api.nuget.org/v3-flatcontainer/bitmiracle.libtiff.net/2.4.660/bitmiracle.libtiff.net.2.4.660.nupkg",
+  "package_sha256": "2779c539262f5c68b37eb19d62220e17fccabcc409fca6948be9529a60fff57a",
+  "license_in_package": false,
+  "nuspec_license_url": "https://bitmiracle.github.io/libtiff.net/help/articles/license.html",
+  "upstream_license_url": "https://raw.githubusercontent.com/BitMiracle/libtiff.net/5ad1a8053becd52fa6ad91ca120aec1ad2763024/license.txt",
+  "upstream_commit": "5ad1a8053becd52fa6ad91ca120aec1ad2763024",
+  "classification": "BSD-3-Clause (Bit Miracle and ComponentAce); includes IJG/libtiff attribution notices",
+  "notes": "The actual NuGet archive contains only a legacy licenseUrl, not an embedded LICENSE or SPDX expression. LICENSE.txt is an unchanged upstream file at the pinned commit; license-official.html is the licenseUrl response. Do not describe LICENSE.txt as extracted from the package.",
+  "files_sha256": {
+    "BitMiracle.LibTiff.NET.nuspec": "eddb478406f238d50fa5d24d57d93d9b4200cf5fd9cb215c30fc219243b9de1e",
+    "license-official.html": "90fb9313f269c1b4428f209a6d463cbd73af630cb3d87a0e84ac14a36adc4a73",
+    "LICENSE.txt": "1700d430afca68db45c5e51e5467aa0d4eb9533e964e18a3a56dec5c230f3ba0"
+  }
+}

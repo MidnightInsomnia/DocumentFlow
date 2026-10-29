@@ -1,0 +1,22 @@
+bin/
+obj/
+.vs/
+.idea/
+*.user
+*.suo
+.env
+storage/
+.run/
+**/node_modules/
+**/dist/
+evaluation/results/
+tmp/
+**/__pycache__/
+*.pyc
+
+# Local runtime and personal work
+DocumentFlow-runtime/
+local-secrets.json
+diplom/
+validation/
+*.bak

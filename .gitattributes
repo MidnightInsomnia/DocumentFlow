@@ -1,0 +1,4 @@
+# License/NOTICE archives are byte-preserved and SHA-256-bound in the inventory.
+docs/licenses/** -text
+docs/*.json -text
+docs/verification/*.json -text
