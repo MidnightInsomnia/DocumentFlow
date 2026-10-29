@@ -1,0 +1,7 @@
+Field,Expected,Correct,Missing,Wrong,Unexpected,AccuracyPercent
+Amount,28,11,17,0,3,35.48
+Date,35,15,20,0,1,41.67
+INN,11,7,4,0,0,63.64
+KPP,6,5,1,0,2,62.5
+Number,35,14,20,1,1,38.89
+RelatedContractNumber,6,0,6,0,3,0

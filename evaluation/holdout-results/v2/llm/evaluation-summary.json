@@ -1,0 +1,2129 @@
+{
+  "GeneratedAtUtc": "2026-09-22T16:06:56.1543285Z",
+  "CorpusSize": 42,
+  "Executed": 42,
+  "Skipped": 0,
+  "Overall": {
+    "DocumentCount": 42,
+    "ClassificationAccuracyPercent": 100,
+    "FieldAccuracyPercent": 39.69,
+    "ExactMatchPercent": 26.19,
+    "NeedsReviewRate": 33.33,
+    "FailureRate": 47.62,
+    "Timing": {
+      "AverageMs": 1311.67,
+      "MedianMs": 1365,
+      "P95Ms": 1988
+    }
+  },
+  "CompletedCount": 8,
+  "NeedsReviewCount": 14,
+  "FailedCount": 20,
+  "AutomaticCompletionRate": 19.05,
+  "SourceKinds": {
+    "TextPdf": {
+      "DocumentCount": 18,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 28.07,
+      "ExactMatchPercent": 27.78,
+      "NeedsReviewRate": 27.78,
+      "FailureRate": 61.11,
+      "Timing": {
+        "AverageMs": 1130.72,
+        "MedianMs": 1253.5,
+        "P95Ms": 1755
+      }
+    },
+    "ScannedPdf": {
+      "DocumentCount": 12,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 34.15,
+      "ExactMatchPercent": 16.67,
+      "NeedsReviewRate": 16.67,
+      "FailureRate": 58.33,
+      "Timing": {
+        "AverageMs": 1698.25,
+        "MedianMs": 1640.5,
+        "P95Ms": 2201
+      }
+    },
+    "Image": {
+      "DocumentCount": 12,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 66.67,
+      "ExactMatchPercent": 33.33,
+      "NeedsReviewRate": 58.33,
+      "FailureRate": 16.67,
+      "Timing": {
+        "AverageMs": 1196.5,
+        "MedianMs": 1210,
+        "P95Ms": 1915
+      }
+    }
+  },
+  "Difficulties": {
+    "Easy": {
+      "DocumentCount": 14,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 54.35,
+      "ExactMatchPercent": 42.86,
+      "NeedsReviewRate": 28.57,
+      "FailureRate": 35.71,
+      "Timing": {
+        "AverageMs": 1286.14,
+        "MedianMs": 1329,
+        "P95Ms": 2197
+      }
+    },
+    "Medium": {
+      "DocumentCount": 14,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 26.19,
+      "ExactMatchPercent": 21.43,
+      "NeedsReviewRate": 28.57,
+      "FailureRate": 64.29,
+      "Timing": {
+        "AverageMs": 1284.71,
+        "MedianMs": 1366.5,
+        "P95Ms": 1988
+      }
+    },
+    "Hard": {
+      "DocumentCount": 14,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 37.21,
+      "ExactMatchPercent": 14.29,
+      "NeedsReviewRate": 42.86,
+      "FailureRate": 42.86,
+      "Timing": {
+        "AverageMs": 1364.14,
+        "MedianMs": 1365,
+        "P95Ms": 2201
+      }
+    }
+  },
+  "Fields": [
+    {
+      "Field": "Amount",
+      "Expected": 28,
+      "Correct": 11,
+      "Missing": 17,
+      "Wrong": 0,
+      "Unexpected": 3,
+      "AccuracyPercent": 35.48
+    },
+    {
+      "Field": "Date",
+      "Expected": 35,
+      "Correct": 15,
+      "Missing": 20,
+      "Wrong": 0,
+      "Unexpected": 1,
+      "AccuracyPercent": 41.67
+    },
+    {
+      "Field": "INN",
+      "Expected": 11,
+      "Correct": 7,
+      "Missing": 4,
+      "Wrong": 0,
+      "Unexpected": 0,
+      "AccuracyPercent": 63.64
+    },
+    {
+      "Field": "KPP",
+      "Expected": 6,
+      "Correct": 5,
+      "Missing": 1,
+      "Wrong": 0,
+      "Unexpected": 2,
+      "AccuracyPercent": 62.5
+    },
+    {
+      "Field": "Number",
+      "Expected": 35,
+      "Correct": 14,
+      "Missing": 20,
+      "Wrong": 1,
+      "Unexpected": 1,
+      "AccuracyPercent": 38.89
+    },
+    {
+      "Field": "RelatedContractNumber",
+      "Expected": 6,
+      "Correct": 0,
+      "Missing": 6,
+      "Wrong": 0,
+      "Unexpected": 3,
+      "AccuracyPercent": 0
+    }
+  ],
+  "ConfusionMatrix": {
+    "Unknown": {
+      "Unknown": 6,
+      "Invoice": 0,
+      "Contract": 0,
+      "Act": 0
+    },
+    "Invoice": {
+      "Unknown": 0,
+      "Invoice": 12,
+      "Contract": 0,
+      "Act": 0
+    },
+    "Contract": {
+      "Unknown": 0,
+      "Invoice": 0,
+      "Contract": 12,
+      "Act": 0
+    },
+    "Act": {
+      "Unknown": 0,
+      "Invoice": 0,
+      "Contract": 0,
+      "Act": 12
+    }
+  },
+  "Documents": [
+    {
+      "Id": "invoice-holdout-textpdf-001",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-holdout-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "HX-701",
+        "Date": "2026-10-03",
+        "INN": "7800000001",
+        "Amount": "211375.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "211375.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-03",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000001",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "HX-701",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1431,
+      "Error": "Ollama returned unsupported field '<missing>' for Invoice.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-textpdf-002",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "invoice-holdout-b",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "2026-H/02",
+        "Date": "2026-10-04",
+        "INN": "7800000002",
+        "Amount": "212750.00",
+        "KPP": "780200002"
+      },
+      "ActualFields": {
+        "Number": "2026-H/02",
+        "Date": "2026-10-04",
+        "INN": "7800000002",
+        "Amount": "212750.00",
+        "KPP": "780200002"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "212750.00",
+          "Actual": "212750.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-04",
+          "Actual": "2026-10-04",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000002",
+          "Actual": "7800000002",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "780200002",
+          "Actual": "780200002",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "2026-H/02",
+          "Actual": "2026-H/02",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 1755,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-textpdf-003",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-holdout-c",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "СФХ-03",
+        "Date": "2026-10-05",
+        "INN": "7800000003",
+        "Amount": "214125.00"
+      },
+      "ActualFields": {
+        "Number": "СФХ-03",
+        "Date": "2026-10-05",
+        "INN": "7800000003",
+        "Amount": "214125.00",
+        "KPP": "000000000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "214125.00",
+          "Actual": "214125.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-05",
+          "Actual": "2026-10-05",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000003",
+          "Actual": "7800000003",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": null,
+          "Actual": "000000000",
+          "Result": "Unexpected"
+        },
+        {
+          "Field": "Number",
+          "Expected": "СФХ-03",
+          "Actual": "СФХ-03",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1701,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-textpdf-004",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-holdout-d",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "7404",
+        "Date": "2026-10-06",
+        "INN": "7800000004",
+        "KPP": "780200004"
+      },
+      "ActualFields": {
+        "Number": "7404",
+        "Date": "2026-10-06",
+        "INN": "7800000004",
+        "KPP": "780200004"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-10-06",
+          "Actual": "2026-10-06",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000004",
+          "Actual": "7800000004",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "780200004",
+          "Actual": "780200004",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "7404",
+          "Actual": "7404",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1397,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-textpdf-005",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "invoice-holdout-e",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "PAY-005",
+        "Date": "2026-10-07",
+        "INN": "7800000005",
+        "Amount": "216875.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "216875.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-07",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000005",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "PAY-005",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1572,
+      "Error": "Ollama returned an empty value for field 'KPP'.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-scannedpdf-006",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-holdout-f",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "H-06/26",
+        "Date": "2026-10-08",
+        "INN": "7800000006",
+        "Amount": "218250.00",
+        "KPP": "780200006"
+      },
+      "ActualFields": {
+        "Number": "H-06/26",
+        "Date": "2026-10-08",
+        "INN": "7800000006",
+        "Amount": "218250.00",
+        "KPP": "780200006"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "218250.00",
+          "Actual": "218250.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-08",
+          "Actual": "2026-10-08",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000006",
+          "Actual": "7800000006",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "780200006",
+          "Actual": "780200006",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "H-06/26",
+          "Actual": "H-06/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 2197,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-scannedpdf-007",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "invoice-holdout-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "7717",
+        "Date": "2026-10-09",
+        "INN": "7800000007",
+        "Amount": "219625.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "219625.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-09",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000007",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "7717",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1988,
+      "Error": "Ollama returned an empty value for field 'KPP'.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-scannedpdf-008",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-holdout-b",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "BILL-08",
+        "Date": "2026-10-10",
+        "INN": "7800000008",
+        "Amount": "221000.00",
+        "KPP": "780200008"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "221000.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-10",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000008",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "780200008",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "BILL-08",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1973,
+      "Error": "Ollama returned unsupported field '<missing>' for Invoice.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-scannedpdf-009",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-holdout-c",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "ХС-009",
+        "Date": "2026-10-11",
+        "Amount": "222375.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "222375.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-11",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "ХС-009",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 2201,
+      "Error": "Ollama returned unsupported field 'RelatedContractNumber' for Invoice.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-image-010",
+      "SourceKind": "Image",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-holdout-d",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "7810",
+        "Date": "2026-10-12",
+        "INN": "7800000010",
+        "Amount": "223750.00",
+        "KPP": "780200010"
+      },
+      "ActualFields": {
+        "Number": "7810",
+        "Date": "2026-10-12",
+        "INN": "7800000010",
+        "Amount": "223750.00",
+        "KPP": "780200010"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "223750.00",
+          "Actual": "223750.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-12",
+          "Actual": "2026-10-12",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000010",
+          "Actual": "7800000010",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "780200010",
+          "Actual": "780200010",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "7810",
+          "Actual": "7810",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 1900,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-image-011",
+      "SourceKind": "Image",
+      "Difficulty": "Medium",
+      "TemplateId": "invoice-holdout-e",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "HOLD-11",
+        "Date": "2026-10-13",
+        "INN": "7800000011",
+        "Amount": "225125.00"
+      },
+      "ActualFields": {
+        "Number": "HOLD-11",
+        "Date": "2026-10-13",
+        "INN": "7800000011",
+        "Amount": "225125.00",
+        "KPP": "0"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "225125.00",
+          "Actual": "225125.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-13",
+          "Actual": "2026-10-13",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000011",
+          "Actual": "7800000011",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": null,
+          "Actual": "0",
+          "Result": "Unexpected"
+        },
+        {
+          "Field": "Number",
+          "Expected": "HOLD-11",
+          "Actual": "HOLD-11",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1809,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-holdout-image-012",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-holdout-f",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "812/Н",
+        "Date": "2026-10-14",
+        "INN": "7800000012",
+        "Amount": "226500.00",
+        "KPP": "780200012"
+      },
+      "ActualFields": {
+        "Number": "812/H",
+        "Date": "2026-10-14",
+        "INN": "7800000012",
+        "Amount": "226500.00",
+        "KPP": "780200012"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "226500.00",
+          "Actual": "226500.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-10-14",
+          "Actual": "2026-10-14",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7800000012",
+          "Actual": "7800000012",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "780200012",
+          "Actual": "780200012",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "812/Н",
+          "Actual": "812/H",
+          "Result": "WrongValue"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1915,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-textpdf-001",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-holdout-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "HC-901",
+        "Date": "2026-11-02",
+        "Amount": "322110.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "322110.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-11-02",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "HC-901",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1122,
+      "Error": "Ollama field response is invalid JSON.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-textpdf-002",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "contract-holdout-b",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "СГ-22/2",
+        "Date": "2026-11-03",
+        "Amount": "324220.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "324220.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-11-03",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "СГ-22/2",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1124,
+      "Error": "Ollama field response is invalid JSON.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-textpdf-003",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-holdout-c",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "HOLD-C3",
+        "Date": "2026-11-04",
+        "Amount": "326330.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "326330.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-11-04",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "HOLD-C3",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1093,
+      "Error": "Ollama field response is invalid JSON.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-textpdf-004",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-holdout-d",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "944",
+        "Date": "2026-11-05",
+        "Amount": "328440.00"
+      },
+      "ActualFields": {
+        "Number": "944",
+        "Date": "2026-11-05",
+        "Amount": "328440.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "328440.00",
+          "Actual": "328440.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-11-05",
+          "Actual": "2026-11-05",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "944",
+          "Actual": "944",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 1082,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-textpdf-005",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "contract-holdout-e",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "C-905",
+        "Date": "2026-11-06",
+        "Amount": "330550.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "330550.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-11-06",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "C-905",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1106,
+      "Error": "Ollama field response is invalid JSON.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-scannedpdf-006",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-holdout-f",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "96/К",
+        "Date": "2026-11-07",
+        "Amount": "332660.00"
+      },
+      "ActualFields": {
+        "Number": "96/К",
+        "Date": "2026-11-07",
+        "Amount": "332660.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "332660.00",
+          "Actual": "332660.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-11-07",
+          "Actual": "2026-11-07",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "96/К",
+          "Actual": "96/К",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 1506,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-scannedpdf-007",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "contract-holdout-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "HCT-07",
+        "Date": "2026-11-08"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-11-08",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "HCT-07",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1404,
+      "Error": "Ollama returned an empty value for field 'Amount'.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-scannedpdf-008",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-holdout-b",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Date": "2026-11-09"
+      },
+      "ActualFields": {
+        "Number": "unknown",
+        "Date": "2026-11-09",
+        "Amount": "unknown"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": null,
+          "Actual": "unknown",
+          "Result": "Unexpected"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-11-09",
+          "Actual": "2026-11-09",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": null,
+          "Actual": "unknown",
+          "Result": "Unexpected"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1313,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-scannedpdf-009",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-holdout-c",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "КОН-09",
+        "Date": "2026-11-10"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-11-10",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "КОН-09",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1393,
+      "Error": "Ollama returned an empty value for field 'Amount'.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-image-010",
+      "SourceKind": "Image",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-holdout-d",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "9100",
+        "Date": "2026-11-11"
+      },
+      "ActualFields": {
+        "Number": "9100",
+        "Date": "2026-11-11",
+        "Amount": "0.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": null,
+          "Actual": "0.00",
+          "Result": "Unexpected"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-11-11",
+          "Actual": "2026-11-11",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "9100",
+          "Actual": "9100",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1212,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-image-011",
+      "SourceKind": "Image",
+      "Difficulty": "Medium",
+      "TemplateId": "contract-holdout-e",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "H-CTR-11",
+        "Date": "2026-11-12"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-11-12",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "H-CTR-11",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1208,
+      "Error": "Ollama returned an empty value for field 'Amount'.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-holdout-image-012",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-holdout-f",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "912/26",
+        "Date": "2026-11-13"
+      },
+      "ActualFields": {
+        "Number": "912/26",
+        "Date": "2026-11-13",
+        "Amount": "null"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": null,
+          "Actual": "null",
+          "Result": "Unexpected"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-11-13",
+          "Actual": "2026-11-13",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "912/26",
+          "Actual": "912/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1172,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-textpdf-001",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-holdout-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "HA-301",
+        "Date": "2026-12-02",
+        "Amount": "91975.00",
+        "RelatedContractNumber": "HC-701"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "91975.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-02",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "HA-301",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "HC-701",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1246,
+      "Error": "Ollama returned unsupported field '<missing>' for Act.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-textpdf-002",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "act-holdout-b",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "АКХ-32",
+        "Date": "2026-12-03",
+        "Amount": "92950.00",
+        "RelatedContractNumber": "HC-702"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "92950.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-03",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "АКХ-32",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "HC-702",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1329,
+      "Error": "Ollama field response is invalid JSON.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-textpdf-003",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "act-holdout-c",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "H-ACT-03",
+        "Date": "2026-12-04",
+        "Amount": "93925.00",
+        "RelatedContractNumber": "HC-703"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "93925.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-04",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "H-ACT-03",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "HC-703",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1337,
+      "Error": "Ollama field response is invalid JSON.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-textpdf-004",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-holdout-d",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "344",
+        "Date": "2026-12-05",
+        "Amount": "94900.00",
+        "RelatedContractNumber": "HC-704"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "94900.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-05",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "344",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "HC-704",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1261,
+      "Error": "Ollama returned unsupported field '<missing>' for Act.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-textpdf-005",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "act-holdout-e",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "A-305/26",
+        "Date": "2026-12-06",
+        "Amount": "95875.00",
+        "RelatedContractNumber": "HC-705"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "95875.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-06",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "A-305/26",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "HC-705",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1281,
+      "Error": "Ollama returned unsupported field '<missing>' for Act.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-scannedpdf-006",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-holdout-f",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "366",
+        "Date": "2026-12-07",
+        "Amount": "96850.00",
+        "RelatedContractNumber": "HC-706"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "96850.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-07",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "366",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "HC-706",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1626,
+      "Error": "Ollama returned unsupported field '<missing>' for Act.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-scannedpdf-007",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "act-holdout-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "HOLD-A7",
+        "Amount": "97825.00"
+      },
+      "ActualFields": {
+        "Number": "HOLD-A7",
+        "Amount": "97825.00",
+        "Date": "1970-01-01"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "97825.00",
+          "Actual": "97825.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": null,
+          "Actual": "1970-01-01",
+          "Result": "Unexpected"
+        },
+        {
+          "Field": "Number",
+          "Expected": "HOLD-A7",
+          "Actual": "HOLD-A7",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1429,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-scannedpdf-008",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "act-holdout-b",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "388",
+        "Date": "2026-12-09",
+        "Amount": "98800.00"
+      },
+      "ActualFields": {
+        "Number": "388",
+        "Date": "2026-12-09",
+        "Amount": "98800.00",
+        "RelatedContractNumber": "388"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "98800.00",
+          "Actual": "98800.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-09",
+          "Actual": "2026-12-09",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "388",
+          "Actual": "388",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": null,
+          "Actual": "388",
+          "Result": "Unexpected"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1655,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-scannedpdf-009",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "act-holdout-c",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "АК-309",
+        "Date": "2026-12-10",
+        "Amount": "99775.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "99775.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-10",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "АК-309",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1694,
+      "Error": "Ollama field response is invalid JSON.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-image-010",
+      "SourceKind": "Image",
+      "Difficulty": "Easy",
+      "TemplateId": "act-holdout-d",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "3100",
+        "Date": "2026-12-11",
+        "Amount": "100750.00"
+      },
+      "ActualFields": {
+        "Number": "3100",
+        "Date": "2026-12-11",
+        "Amount": "100750.00",
+        "RelatedContractNumber": "3100"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "100750.00",
+          "Actual": "100750.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-11",
+          "Actual": "2026-12-11",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "3100",
+          "Actual": "3100",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": null,
+          "Actual": "3100",
+          "Result": "Unexpected"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1524,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-image-011",
+      "SourceKind": "Image",
+      "Difficulty": "Medium",
+      "TemplateId": "act-holdout-e",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Failed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "HA-11",
+        "Date": "2026-12-12",
+        "Amount": "101725.00"
+      },
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "101725.00",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-12-12",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "HA-11",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1494,
+      "Error": "Ollama field response is invalid JSON.",
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-holdout-image-012",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "act-holdout-f",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "312/Р",
+        "Date": "2026-12-13"
+      },
+      "ActualFields": {
+        "Number": "312/Р",
+        "Date": "2026-12-13",
+        "RelatedContractNumber": "Р"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-12-13",
+          "Actual": "2026-12-13",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "312/Р",
+          "Actual": "312/Р",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": null,
+          "Actual": "Р",
+          "Result": "Unexpected"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 1155,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-holdout-textpdf-001",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "unknown-holdout-letter",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 178,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-holdout-textpdf-002",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "unknown-holdout-memo",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 168,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-holdout-textpdf-003",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "unknown-holdout-protocol",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 170,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-holdout-image-004",
+      "SourceKind": "Image",
+      "Difficulty": "Easy",
+      "TemplateId": "unknown-holdout-notice",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 324,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-holdout-image-005",
+      "SourceKind": "Image",
+      "Difficulty": "Medium",
+      "TemplateId": "unknown-holdout-request",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 319,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-holdout-image-006",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "unknown-holdout-message",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 326,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    }
+  ]
+}

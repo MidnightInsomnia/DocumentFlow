@@ -1,0 +1,73 @@
+Id,SourceKind,Difficulty,TemplateId,ExpectedType,ActualType,ClassificationCorrect,ExpectedStatus,ActualStatus,ExpectedDepartment,ActualDepartment,FieldsCorrect,FieldsMissing,FieldsWrong,FieldsUnexpected,ExactMatch,ProcessingTimeMs,Result
+invoice-final-textpdf-001,TextPdf,Easy,invoice-final-ledger,Invoice,Invoice,True,Completed,NeedsReview,Accounting,Unassigned,4,0,0,1,False,1869,Executed
+invoice-final-textpdf-002,TextPdf,Medium,invoice-final-remittance,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,1896,Executed
+invoice-final-textpdf-003,TextPdf,Hard,invoice-final-supply,Invoice,Invoice,True,Completed,NeedsReview,Accounting,Unassigned,4,0,0,1,False,1865,Executed
+invoice-final-textpdf-004,TextPdf,Easy,invoice-final-summary,Invoice,Invoice,True,Completed,Failed,Accounting,Unassigned,0,5,0,0,False,1666,Ollama returned unsupported field '<missing>' for Invoice.
+invoice-final-textpdf-005,TextPdf,Medium,invoice-final-table,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,1548,Executed
+invoice-final-textpdf-006,TextPdf,Hard,invoice-final-commercial,Invoice,Invoice,True,NeedsReview,NeedsReview,Unassigned,Unassigned,4,0,0,0,True,1563,Executed
+invoice-final-textpdf-007,TextPdf,Easy,invoice-final-settlement,Invoice,Invoice,True,Completed,NeedsReview,Accounting,Unassigned,4,0,0,1,False,1832,Executed
+invoice-final-scannedpdf-008,ScannedPdf,Medium,invoice-final-payment,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,2377,Executed
+invoice-final-scannedpdf-009,ScannedPdf,Hard,invoice-final-ledger,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,3,0,1,0,False,2067,Executed
+invoice-final-scannedpdf-010,ScannedPdf,Easy,invoice-final-remittance,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,2864,Executed
+invoice-final-scannedpdf-011,ScannedPdf,Medium,invoice-final-supply,Invoice,Invoice,True,Completed,NeedsReview,Accounting,Unassigned,4,0,0,1,False,2286,Executed
+invoice-final-scannedpdf-012,ScannedPdf,Hard,invoice-final-summary,Invoice,Invoice,True,Completed,Failed,Accounting,Unassigned,0,5,0,0,False,2202,Ollama returned unsupported field '<missing>' for Invoice.
+invoice-final-scannedpdf-013,ScannedPdf,Easy,invoice-final-table,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,2499,Executed
+invoice-final-scannedpdf-014,ScannedPdf,Medium,invoice-final-commercial,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,4,0,1,0,False,2417,Executed
+invoice-final-image-015,Image,Hard,invoice-final-settlement,Invoice,Invoice,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1964,Ollama returned an empty value for field 'KPP'.
+invoice-final-image-016,Image,Easy,invoice-final-payment,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,4,0,1,0,False,2123,Executed
+invoice-final-image-017,Image,Medium,invoice-final-ledger,Invoice,Invoice,True,NeedsReview,NeedsReview,Unassigned,Unassigned,3,0,0,2,False,1944,Executed
+invoice-final-image-018,Image,Hard,invoice-final-remittance,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,2145,Executed
+invoice-final-image-019,Image,Easy,invoice-final-supply,Invoice,Invoice,True,Completed,NeedsReview,Accounting,Unassigned,3,0,1,1,False,2026,Executed
+invoice-final-image-020,Image,Medium,invoice-final-summary,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,2137,Executed
+contract-final-textpdf-001,TextPdf,Medium,contract-final-framework,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1237,Executed
+contract-final-textpdf-002,TextPdf,Hard,contract-final-services,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1232,Executed
+contract-final-textpdf-003,TextPdf,Easy,contract-final-delivery,Contract,Contract,True,Completed,Completed,Legal,Legal,2,0,0,1,False,1195,Executed
+contract-final-textpdf-004,TextPdf,Medium,contract-final-stages,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1187,Executed
+contract-final-textpdf-005,TextPdf,Hard,contract-final-partnership,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1243,Executed
+contract-final-textpdf-006,TextPdf,Easy,contract-final-annexed,Contract,Contract,True,Completed,Completed,Legal,Legal,2,0,0,1,False,1182,Executed
+contract-final-textpdf-007,TextPdf,Medium,contract-final-procurement,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1188,Executed
+contract-final-scannedpdf-008,ScannedPdf,Hard,contract-final-terms,Contract,Contract,True,NeedsReview,NeedsReview,Unassigned,Unassigned,2,0,0,1,False,1715,Executed
+contract-final-scannedpdf-009,ScannedPdf,Easy,contract-final-framework,Contract,Contract,True,Completed,Completed,Legal,Legal,2,0,0,1,False,2147,Executed
+contract-final-scannedpdf-010,ScannedPdf,Medium,contract-final-services,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1759,Executed
+contract-final-scannedpdf-011,ScannedPdf,Hard,contract-final-delivery,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1769,Executed
+contract-final-scannedpdf-012,ScannedPdf,Easy,contract-final-stages,Contract,Contract,True,Completed,Completed,Legal,Legal,2,0,0,1,False,2122,Executed
+contract-final-scannedpdf-013,ScannedPdf,Medium,contract-final-partnership,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1788,Executed
+contract-final-image-014,Image,Hard,contract-final-annexed,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1461,Executed
+contract-final-image-015,Image,Easy,contract-final-procurement,Contract,Contract,True,Completed,Completed,Legal,Legal,1,0,1,1,False,1487,Executed
+contract-final-image-016,Image,Medium,contract-final-terms,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1489,Executed
+contract-final-image-017,Image,Hard,contract-final-framework,Contract,Contract,True,Completed,Completed,Legal,Legal,2,0,1,0,False,1518,Executed
+contract-final-image-018,Image,Easy,contract-final-services,Contract,Contract,True,NeedsReview,NeedsReview,Unassigned,Unassigned,1,0,0,2,False,1472,Executed
+contract-final-image-019,Image,Medium,contract-final-delivery,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1514,Executed
+contract-final-image-020,Image,Hard,contract-final-stages,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1484,Executed
+act-final-textpdf-001,TextPdf,Hard,act-final-acceptance,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1462,Ollama field response is invalid JSON.
+act-final-textpdf-002,TextPdf,Easy,act-final-completion,Act,Act,True,Completed,Completed,Accounting,Accounting,3,0,0,1,False,1457,Executed
+act-final-textpdf-003,TextPdf,Medium,act-final-delivery,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1452,Ollama field response is invalid JSON.
+act-final-textpdf-004,TextPdf,Hard,act-final-service,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,3,0,0,False,1416,Ollama field response is invalid JSON.
+act-final-textpdf-005,TextPdf,Easy,act-final-stage,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1463,Ollama field response is invalid JSON.
+act-final-textpdf-006,TextPdf,Medium,act-final-commission,Act,Act,True,Completed,Completed,Accounting,Accounting,3,0,0,1,False,1423,Executed
+act-final-scannedpdf-007,ScannedPdf,Hard,act-final-results,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1956,Ollama field response is invalid JSON.
+act-final-scannedpdf-008,ScannedPdf,Easy,act-final-transfer,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,3,0,0,False,2005,Ollama field response is invalid JSON.
+act-final-scannedpdf-009,ScannedPdf,Medium,act-final-acceptance,Act,Act,True,NeedsReview,Completed,Unassigned,Accounting,2,0,1,1,False,1956,Executed
+act-final-scannedpdf-010,ScannedPdf,Hard,act-final-completion,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,3,0,0,False,1894,Ollama field response is invalid JSON.
+act-final-scannedpdf-011,ScannedPdf,Easy,act-final-delivery,Act,Act,True,Completed,Completed,Accounting,Accounting,3,0,1,0,False,2432,Executed
+act-final-scannedpdf-012,ScannedPdf,Medium,act-final-service,Act,Act,True,Completed,Completed,Accounting,Accounting,3,0,0,1,False,1898,Executed
+act-final-scannedpdf-013,ScannedPdf,Hard,act-final-stage,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,2269,Executed
+act-final-image-014,Image,Easy,act-final-commission,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,3,0,0,False,1655,Ollama field response is invalid JSON.
+act-final-image-015,Image,Medium,act-final-results,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1776,Ollama field response is invalid JSON.
+act-final-image-016,Image,Hard,act-final-transfer,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,3,0,0,False,1685,Ollama field response is invalid JSON.
+act-final-image-017,Image,Easy,act-final-acceptance,Act,Act,True,Completed,Completed,Accounting,Accounting,3,0,1,0,False,1768,Executed
+act-final-image-018,Image,Medium,act-final-completion,Act,Act,True,Completed,Completed,Accounting,Accounting,3,0,0,1,False,1699,Executed
+act-final-image-019,Image,Hard,act-final-delivery,Act,Act,True,NeedsReview,NeedsReview,Unassigned,Unassigned,2,0,1,1,False,1753,Executed
+act-final-image-020,Image,Easy,act-final-service,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,3,0,0,False,1696,Ollama field response is invalid JSON.
+unknown-final-textpdf-001,TextPdf,Easy,unknown-final-memo,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,210,Executed
+unknown-final-textpdf-002,TextPdf,Medium,unknown-final-notice,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,197,Executed
+unknown-final-textpdf-003,TextPdf,Hard,unknown-final-request,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,181,Executed
+unknown-final-textpdf-004,TextPdf,Easy,unknown-final-protocol,Unknown,Act,False,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,2,False,846,Executed
+unknown-final-scannedpdf-005,ScannedPdf,Medium,unknown-final-info,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,594,Executed
+unknown-final-scannedpdf-006,ScannedPdf,Hard,unknown-final-approval,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,2777,Executed
+unknown-final-scannedpdf-007,ScannedPdf,Easy,unknown-final-order,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,582,Executed
+unknown-final-scannedpdf-008,ScannedPdf,Medium,unknown-final-letter,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,576,Executed
+unknown-final-image-009,Image,Hard,unknown-final-memo,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,382,Executed
+unknown-final-image-010,Image,Easy,unknown-final-notice,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,406,Executed
+unknown-final-image-011,Image,Medium,unknown-final-request,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,386,Executed
+unknown-final-image-012,Image,Hard,unknown-final-protocol,Unknown,Act,False,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,2,False,1042,Executed

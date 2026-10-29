@@ -18,5 +18,4 @@ tmp/
 DocumentFlow-runtime/
 local-secrets.json
 diplom/
-validation/
 *.bak

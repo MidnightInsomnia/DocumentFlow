@@ -1,0 +1,12 @@
+{
+  "scope": "All added application-source lines from the complete staged git diff, without tool-output truncation. Third-party archives and deletions excluded. Heuristic scan, not a security guarantee.",
+  "findings": [
+    {
+      "category": "dynamicCode",
+      "path": "frontend/documentflow-web/src/components/DocumentReviewForm.tsx",
+      "line": "    const russianDate = /^(\\d{1,2})[./](\\d{1,2})[./](\\d{4})$/.exec(value)"
+    }
+  ],
+  "authoredWhitespaceExitCode": 0,
+  "scannedDiffUtf8Bytes": 619544
+}

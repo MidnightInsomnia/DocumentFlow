@@ -1,0 +1,3414 @@
+{
+  "GeneratedAtUtc": "2026-09-22T16:37:37.9119208Z",
+  "CorpusSize": 68,
+  "Executed": 68,
+  "Skipped": 0,
+  "Overall": {
+    "DocumentCount": 68,
+    "ClassificationAccuracyPercent": 100,
+    "FieldAccuracyPercent": 95.07,
+    "ExactMatchPercent": 85.29,
+    "NeedsReviewRate": 25,
+    "FailureRate": 0,
+    "Timing": {
+      "AverageMs": 285.31,
+      "MedianMs": 187,
+      "P95Ms": 594
+    }
+  },
+  "CompletedCount": 51,
+  "NeedsReviewCount": 17,
+  "FailedCount": 0,
+  "AutomaticCompletionRate": 75,
+  "SourceKinds": {
+    "TextPdf": {
+      "DocumentCount": 44,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 100,
+      "ExactMatchPercent": 100,
+      "NeedsReviewRate": 25,
+      "FailureRate": 0,
+      "Timing": {
+        "AverageMs": 180.93,
+        "MedianMs": 183.5,
+        "P95Ms": 191
+      }
+    },
+    "ScannedPdf": {
+      "DocumentCount": 12,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 87.88,
+      "ExactMatchPercent": 66.67,
+      "NeedsReviewRate": 25,
+      "FailureRate": 0,
+      "Timing": {
+        "AverageMs": 588.83,
+        "MedianMs": 584,
+        "P95Ms": 623
+      }
+    },
+    "Image": {
+      "DocumentCount": 12,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 83.33,
+      "ExactMatchPercent": 50,
+      "NeedsReviewRate": 25,
+      "FailureRate": 0,
+      "Timing": {
+        "AverageMs": 364.5,
+        "MedianMs": 359,
+        "P95Ms": 387
+      }
+    }
+  },
+  "Difficulties": {
+    "Easy": {
+      "DocumentCount": 25,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 100,
+      "ExactMatchPercent": 100,
+      "NeedsReviewRate": 20,
+      "FailureRate": 0,
+      "Timing": {
+        "AverageMs": 182.2,
+        "MedianMs": 184,
+        "P95Ms": 191
+      }
+    },
+    "Medium": {
+      "DocumentCount": 15,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 100,
+      "ExactMatchPercent": 100,
+      "NeedsReviewRate": 26.67,
+      "FailureRate": 0,
+      "Timing": {
+        "AverageMs": 178.07,
+        "MedianMs": 181,
+        "P95Ms": 192
+      }
+    },
+    "Hard": {
+      "DocumentCount": 28,
+      "ClassificationAccuracyPercent": 100,
+      "FieldAccuracyPercent": 87.65,
+      "ExactMatchPercent": 64.29,
+      "NeedsReviewRate": 28.57,
+      "FailureRate": 0,
+      "Timing": {
+        "AverageMs": 434.82,
+        "MedianMs": 381.5,
+        "P95Ms": 622
+      }
+    }
+  },
+  "Fields": [
+    {
+      "Field": "Amount",
+      "Expected": 48,
+      "Correct": 48,
+      "Missing": 0,
+      "Wrong": 0,
+      "Unexpected": 0,
+      "AccuracyPercent": 100
+    },
+    {
+      "Field": "Date",
+      "Expected": 58,
+      "Correct": 58,
+      "Missing": 0,
+      "Wrong": 0,
+      "Unexpected": 0,
+      "AccuracyPercent": 100
+    },
+    {
+      "Field": "INN",
+      "Expected": 19,
+      "Correct": 16,
+      "Missing": 3,
+      "Wrong": 0,
+      "Unexpected": 0,
+      "AccuracyPercent": 84.21
+    },
+    {
+      "Field": "KPP",
+      "Expected": 10,
+      "Correct": 10,
+      "Missing": 0,
+      "Wrong": 0,
+      "Unexpected": 0,
+      "AccuracyPercent": 100
+    },
+    {
+      "Field": "Number",
+      "Expected": 58,
+      "Correct": 51,
+      "Missing": 1,
+      "Wrong": 6,
+      "Unexpected": 0,
+      "AccuracyPercent": 87.93
+    },
+    {
+      "Field": "RelatedContractNumber",
+      "Expected": 10,
+      "Correct": 10,
+      "Missing": 0,
+      "Wrong": 0,
+      "Unexpected": 0,
+      "AccuracyPercent": 100
+    }
+  ],
+  "ConfusionMatrix": {
+    "Unknown": {
+      "Unknown": 8,
+      "Invoice": 0,
+      "Contract": 0,
+      "Act": 0
+    },
+    "Invoice": {
+      "Unknown": 0,
+      "Invoice": 20,
+      "Contract": 0,
+      "Act": 0
+    },
+    "Contract": {
+      "Unknown": 0,
+      "Invoice": 0,
+      "Contract": 20,
+      "Act": 0
+    },
+    "Act": {
+      "Unknown": 0,
+      "Invoice": 0,
+      "Contract": 0,
+      "Act": 20
+    }
+  },
+  "Documents": [
+    {
+      "Id": "invoice-textpdf-001",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-standard-b",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "INV-2026-01",
+        "Date": "2026-09-02",
+        "INN": "7700000001",
+        "KPP": "770100001",
+        "Amount": "101000"
+      },
+      "ActualFields": {
+        "Number": "INV-2026-01",
+        "Date": "2026-09-02",
+        "INN": "7700000001",
+        "KPP": "770100001",
+        "Amount": "101000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "101000",
+          "Actual": "101000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-02",
+          "Actual": "2026-09-02",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000001",
+          "Actual": "7700000001",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100001",
+          "Actual": "770100001",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "INV-2026-01",
+          "Actual": "INV-2026-01",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 191,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-002",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-compact-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "СЧ-002/26",
+        "Date": "2026-09-03",
+        "INN": "7700000002",
+        "KPP": "770100002",
+        "Amount": "102000.00"
+      },
+      "ActualFields": {
+        "Number": "СЧ-002/26",
+        "Date": "2026-09-03",
+        "INN": "7700000002",
+        "KPP": "770100002",
+        "Amount": "102000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "102000.00",
+          "Actual": "102000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-03",
+          "Actual": "2026-09-03",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000002",
+          "Actual": "7700000002",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100002",
+          "Actual": "770100002",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "СЧ-002/26",
+          "Actual": "СЧ-002/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 190,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-003",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "invoice-reordered-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "5003",
+        "Date": "2026-09-04",
+        "INN": "7700000003",
+        "KPP": "770100003",
+        "Amount": "103000.50"
+      },
+      "ActualFields": {
+        "Number": "5003",
+        "Date": "2026-09-04",
+        "INN": "7700000003",
+        "KPP": "770100003",
+        "Amount": "103000.50"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "103000.50",
+          "Actual": "103000.50",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-04",
+          "Actual": "2026-09-04",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000003",
+          "Actual": "7700000003",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100003",
+          "Actual": "770100003",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "5003",
+          "Actual": "5003",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 188,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-004",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-short-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "124",
+        "Date": "2026-09-05",
+        "INN": "7700000004",
+        "KPP": "770100004",
+        "Amount": "104000"
+      },
+      "ActualFields": {
+        "Number": "124",
+        "Date": "2026-09-05",
+        "INN": "7700000004",
+        "KPP": "770100004",
+        "Amount": "104000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "104000",
+          "Actual": "104000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-05",
+          "Actual": "2026-09-05",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000004",
+          "Actual": "7700000004",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100004",
+          "Actual": "770100004",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "124",
+          "Actual": "124",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 191,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-005",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-standard-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "INV-2026-05",
+        "Date": "2026-09-06",
+        "INN": "7700000005",
+        "KPP": "770100005",
+        "Amount": "105000"
+      },
+      "ActualFields": {
+        "Number": "INV-2026-05",
+        "Date": "2026-09-06",
+        "INN": "7700000005",
+        "KPP": "770100005",
+        "Amount": "105000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "105000",
+          "Actual": "105000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-06",
+          "Actual": "2026-09-06",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000005",
+          "Actual": "7700000005",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100005",
+          "Actual": "770100005",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "INV-2026-05",
+          "Actual": "INV-2026-05",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 191,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-006",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "invoice-standard-b",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "СЧ-006/26",
+        "Date": "2026-09-07",
+        "INN": "7700000006",
+        "KPP": "770100006",
+        "Amount": "106000.00"
+      },
+      "ActualFields": {
+        "Number": "СЧ-006/26",
+        "Date": "2026-09-07",
+        "INN": "7700000006",
+        "KPP": "770100006",
+        "Amount": "106000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "106000.00",
+          "Actual": "106000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-07",
+          "Actual": "2026-09-07",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000006",
+          "Actual": "7700000006",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100006",
+          "Actual": "770100006",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "СЧ-006/26",
+          "Actual": "СЧ-006/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 192,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-007",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-compact-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "5007",
+        "Date": "2026-09-08",
+        "INN": "7700000007",
+        "KPP": "770100007",
+        "Amount": "107000.50"
+      },
+      "ActualFields": {
+        "Number": "5007",
+        "Date": "2026-09-08",
+        "INN": "7700000007",
+        "KPP": "770100007",
+        "Amount": "107000.50"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "107000.50",
+          "Actual": "107000.50",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-08",
+          "Actual": "2026-09-08",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000007",
+          "Actual": "7700000007",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100007",
+          "Actual": "770100007",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "5007",
+          "Actual": "5007",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 185,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-008",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-reordered-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "128",
+        "Date": "2026-09-09",
+        "INN": "7700000008",
+        "KPP": "770100008",
+        "Amount": "108000"
+      },
+      "ActualFields": {
+        "Number": "128",
+        "Date": "2026-09-09",
+        "INN": "7700000008",
+        "KPP": "770100008",
+        "Amount": "108000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "108000",
+          "Actual": "108000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-09",
+          "Actual": "2026-09-09",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000008",
+          "Actual": "7700000008",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100008",
+          "Actual": "770100008",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "128",
+          "Actual": "128",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 185,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-009",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-short-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "INV-2026-09",
+        "Date": "2026-09-10",
+        "INN": "7700000009",
+        "KPP": "770100009",
+        "Amount": "109000"
+      },
+      "ActualFields": {
+        "Number": "INV-2026-09",
+        "Date": "2026-09-10",
+        "INN": "7700000009",
+        "KPP": "770100009",
+        "Amount": "109000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "109000",
+          "Actual": "109000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-10",
+          "Actual": "2026-09-10",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000009",
+          "Actual": "7700000009",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100009",
+          "Actual": "770100009",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "INV-2026-09",
+          "Actual": "INV-2026-09",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 187,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-010",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-standard-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "СЧ-010/26",
+        "Date": "2026-09-11",
+        "INN": "7700000010",
+        "KPP": "770100010",
+        "Amount": "110000.00"
+      },
+      "ActualFields": {
+        "Number": "СЧ-010/26",
+        "Date": "2026-09-11",
+        "INN": "7700000010",
+        "KPP": "770100010",
+        "Amount": "110000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "110000.00",
+          "Actual": "110000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-11",
+          "Actual": "2026-09-11",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000010",
+          "Actual": "7700000010",
+          "Result": "Correct"
+        },
+        {
+          "Field": "KPP",
+          "Expected": "770100010",
+          "Actual": "770100010",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "СЧ-010/26",
+          "Actual": "СЧ-010/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 185,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-011",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "invoice-standard-b",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "5011",
+        "Date": "2026-09-12",
+        "INN": "7700000011"
+      },
+      "ActualFields": {
+        "Number": "5011",
+        "Date": "2026-09-12",
+        "INN": "7700000011"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-09-12",
+          "Actual": "2026-09-12",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000011",
+          "Actual": "7700000011",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "5011",
+          "Actual": "5011",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 184,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-textpdf-012",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "invoice-compact-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "132",
+        "Date": "2026-09-13",
+        "INN": "500000000012",
+        "Amount": "112000"
+      },
+      "ActualFields": {
+        "Number": "132",
+        "Date": "2026-09-13",
+        "INN": "500000000012",
+        "Amount": "112000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "112000",
+          "Actual": "112000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-13",
+          "Actual": "2026-09-13",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "500000000012",
+          "Actual": "500000000012",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "132",
+          "Actual": "132",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 181,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-scannedpdf-013",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-reordered-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "INV-2026-13",
+        "Date": "2026-09-14",
+        "INN": "7700000013",
+        "Amount": "113000"
+      },
+      "ActualFields": {
+        "Number": "1",
+        "Date": "2026-09-14",
+        "INN": "7700000013",
+        "Amount": "113000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "113000",
+          "Actual": "113000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-14",
+          "Actual": "2026-09-14",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000013",
+          "Actual": "7700000013",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "INV-2026-13",
+          "Actual": "1",
+          "Result": "WrongValue"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 619,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-scannedpdf-014",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-short-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "СЧ-014/26",
+        "Date": "2026-09-15",
+        "INN": "500000000014",
+        "Amount": "114000.00"
+      },
+      "ActualFields": {
+        "Number": "СЧ-014/26",
+        "Date": "2026-09-15",
+        "INN": "500000000014",
+        "Amount": "114000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "114000.00",
+          "Actual": "114000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-15",
+          "Actual": "2026-09-15",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "500000000014",
+          "Actual": "500000000014",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "СЧ-014/26",
+          "Actual": "СЧ-014/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 622,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-scannedpdf-015",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-standard-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "5015",
+        "Date": "2026-09-16",
+        "Amount": "115000.50"
+      },
+      "ActualFields": {
+        "Number": "5015",
+        "Date": "2026-09-16",
+        "Amount": "115000.50"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "115000.50",
+          "Actual": "115000.50",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-16",
+          "Actual": "2026-09-16",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "5015",
+          "Actual": "5015",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 581,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-scannedpdf-016",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-standard-b",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "136",
+        "Date": "2026-09-17",
+        "INN": "500000000016",
+        "Amount": "116000"
+      },
+      "ActualFields": {
+        "Number": "136",
+        "Date": "2026-09-17",
+        "Amount": "116000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "116000",
+          "Actual": "116000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-17",
+          "Actual": "2026-09-17",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "500000000016",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "136",
+          "Actual": "136",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 623,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-image-017",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-compact-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "INV-2026-17",
+        "Date": "2026-09-18",
+        "INN": "7700000017",
+        "Amount": "117000"
+      },
+      "ActualFields": {
+        "Number": "1",
+        "Date": "2026-09-18",
+        "INN": "7700000017",
+        "Amount": "117000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "117000",
+          "Actual": "117000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-18",
+          "Actual": "2026-09-18",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000017",
+          "Actual": "7700000017",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "INV-2026-17",
+          "Actual": "1",
+          "Result": "WrongValue"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 387,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-image-018",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-reordered-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "СЧ-018/26",
+        "Date": "2026-09-19",
+        "INN": "500000000018",
+        "Amount": "118000.00"
+      },
+      "ActualFields": {
+        "Number": "СЧ-018/26",
+        "Date": "2026-09-19",
+        "Amount": "118000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "118000.00",
+          "Actual": "118000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-19",
+          "Actual": "2026-09-19",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "500000000018",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "СЧ-018/26",
+          "Actual": "СЧ-018/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 384,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-image-019",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-short-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "5019",
+        "Date": "2026-09-20",
+        "INN": "7700000019",
+        "Amount": "119000.50"
+      },
+      "ActualFields": {
+        "Number": "5019",
+        "Date": "2026-09-20",
+        "INN": "7700000019",
+        "Amount": "119000.50"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "119000.50",
+          "Actual": "119000.50",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-20",
+          "Actual": "2026-09-20",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "7700000019",
+          "Actual": "7700000019",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "5019",
+          "Actual": "5019",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 361,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "invoice-image-020",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "invoice-standard-a",
+      "ExpectedType": "Invoice",
+      "ActualType": "Invoice",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "140",
+        "Date": "2026-09-21",
+        "INN": "500000000020",
+        "Amount": "120000"
+      },
+      "ActualFields": {
+        "Number": "140",
+        "Date": "2026-09-21",
+        "Amount": "120000"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "120000",
+          "Actual": "120000",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-09-21",
+          "Actual": "2026-09-21",
+          "Result": "Correct"
+        },
+        {
+          "Field": "INN",
+          "Expected": "500000000020",
+          "Actual": null,
+          "Result": "Missing"
+        },
+        {
+          "Field": "Number",
+          "Expected": "140",
+          "Actual": "140",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 379,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-001",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-standard-b",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "121/26",
+        "Date": "2026-08-02",
+        "Amount": "201000.00"
+      },
+      "ActualFields": {
+        "Number": "121/26",
+        "Date": "2026-08-02",
+        "Amount": "201000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "201000.00",
+          "Actual": "201000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-02",
+          "Actual": "2026-08-02",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "121/26",
+          "Actual": "121/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 184,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-002",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-short-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "CTR-2026-02",
+        "Date": "2026-08-03",
+        "Amount": "202000.00"
+      },
+      "ActualFields": {
+        "Number": "CTR-2026-02",
+        "Date": "2026-08-03",
+        "Amount": "202000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "202000.00",
+          "Actual": "202000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-03",
+          "Actual": "2026-08-03",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "CTR-2026-02",
+          "Actual": "CTR-2026-02",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 183,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-003",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "contract-legal-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "13",
+        "Date": "2026-08-04",
+        "Amount": "203000.00"
+      },
+      "ActualFields": {
+        "Number": "13",
+        "Date": "2026-08-04",
+        "Amount": "203000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "203000.00",
+          "Actual": "203000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-04",
+          "Actual": "2026-08-04",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "13",
+          "Actual": "13",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 181,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-004",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-compact-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "Д-334",
+        "Date": "2026-08-05",
+        "Amount": "204000.00"
+      },
+      "ActualFields": {
+        "Number": "Д-334",
+        "Date": "2026-08-05",
+        "Amount": "204000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "204000.00",
+          "Actual": "204000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-05",
+          "Actual": "2026-08-05",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "Д-334",
+          "Actual": "Д-334",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 185,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-005",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-standard-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "125/26",
+        "Date": "2026-08-06",
+        "Amount": "205000.00"
+      },
+      "ActualFields": {
+        "Number": "125/26",
+        "Date": "2026-08-06",
+        "Amount": "205000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "205000.00",
+          "Actual": "205000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-06",
+          "Actual": "2026-08-06",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "125/26",
+          "Actual": "125/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 189,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-006",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "contract-standard-b",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "CTR-2026-06",
+        "Date": "2026-08-07",
+        "Amount": "206000.00"
+      },
+      "ActualFields": {
+        "Number": "CTR-2026-06",
+        "Date": "2026-08-07",
+        "Amount": "206000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "206000.00",
+          "Actual": "206000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-07",
+          "Actual": "2026-08-07",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "CTR-2026-06",
+          "Actual": "CTR-2026-06",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 181,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-007",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-short-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "17",
+        "Date": "2026-08-08",
+        "Amount": "207000.00"
+      },
+      "ActualFields": {
+        "Number": "17",
+        "Date": "2026-08-08",
+        "Amount": "207000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "207000.00",
+          "Actual": "207000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-08",
+          "Actual": "2026-08-08",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "17",
+          "Actual": "17",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 186,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-008",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-legal-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "Д-338",
+        "Date": "2026-08-09",
+        "Amount": "208000.00"
+      },
+      "ActualFields": {
+        "Number": "Д-338",
+        "Date": "2026-08-09",
+        "Amount": "208000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "208000.00",
+          "Actual": "208000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-09",
+          "Actual": "2026-08-09",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "Д-338",
+          "Actual": "Д-338",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 181,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-009",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "contract-compact-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "129/26",
+        "Date": "2026-08-10",
+        "Amount": "209000.00"
+      },
+      "ActualFields": {
+        "Number": "129/26",
+        "Date": "2026-08-10",
+        "Amount": "209000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "209000.00",
+          "Actual": "209000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-10",
+          "Actual": "2026-08-10",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "129/26",
+          "Actual": "129/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 181,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-010",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "contract-standard-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "CTR-2026-10",
+        "Date": "2026-08-11",
+        "Amount": "210000.00"
+      },
+      "ActualFields": {
+        "Number": "CTR-2026-10",
+        "Date": "2026-08-11",
+        "Amount": "210000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "210000.00",
+          "Actual": "210000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-08-11",
+          "Actual": "2026-08-11",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "CTR-2026-10",
+          "Actual": "CTR-2026-10",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 184,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-011",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-standard-b",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 178,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-textpdf-012",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "contract-short-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "Д-342",
+        "Date": "2026-08-13"
+      },
+      "ActualFields": {
+        "Number": "Д-342",
+        "Date": "2026-08-13"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-08-13",
+          "Actual": "2026-08-13",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "Д-342",
+          "Actual": "Д-342",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 179,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-scannedpdf-013",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-legal-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "133/26",
+        "Date": "2026-08-14"
+      },
+      "ActualFields": {
+        "Number": "133/26",
+        "Date": "2026-08-14"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-08-14",
+          "Actual": "2026-08-14",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "133/26",
+          "Actual": "133/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 572,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-scannedpdf-014",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-compact-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "CTR-2026-14",
+        "Date": "2026-08-15"
+      },
+      "ActualFields": {
+        "Number": "eCTR-2026-14",
+        "Date": "2026-08-15"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-08-15",
+          "Actual": "2026-08-15",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "CTR-2026-14",
+          "Actual": "eCTR-2026-14",
+          "Result": "WrongValue"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 594,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-scannedpdf-015",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-standard-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "25",
+        "Date": "2026-08-16"
+      },
+      "ActualFields": {
+        "Number": "25",
+        "Date": "2026-08-16"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-08-16",
+          "Actual": "2026-08-16",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "25",
+          "Actual": "25",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 588,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-scannedpdf-016",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-standard-b",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "Д-346",
+        "Date": "2026-08-17"
+      },
+      "ActualFields": {
+        "Number": "Д-346",
+        "Date": "2026-08-17"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-08-17",
+          "Actual": "2026-08-17",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "Д-346",
+          "Actual": "Д-346",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 585,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-image-017",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-short-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "137/26",
+        "Date": "2026-08-18"
+      },
+      "ActualFields": {
+        "Number": "137/26",
+        "Date": "2026-08-18"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-08-18",
+          "Actual": "2026-08-18",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "137/26",
+          "Actual": "137/26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 356,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-image-018",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-legal-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "CTR-2026-18",
+        "Date": "2026-08-19"
+      },
+      "ActualFields": {
+        "Number": "eCTR-2026-18",
+        "Date": "2026-08-19"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-08-19",
+          "Actual": "2026-08-19",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "CTR-2026-18",
+          "Actual": "eCTR-2026-18",
+          "Result": "WrongValue"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 378,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-image-019",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-compact-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "29",
+        "Date": "2026-08-20"
+      },
+      "ActualFields": {
+        "Number": "29",
+        "Date": "2026-08-20"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-08-20",
+          "Actual": "2026-08-20",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "29",
+          "Actual": "29",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 353,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "contract-image-020",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "contract-standard-a",
+      "ExpectedType": "Contract",
+      "ActualType": "Contract",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Legal",
+      "ActualDepartment": "Legal",
+      "ExpectedFields": {
+        "Number": "Д-350",
+        "Date": "2026-08-21"
+      },
+      "ActualFields": {
+        "Number": "Д-350",
+        "Date": "2026-08-21"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-08-21",
+          "Actual": "2026-08-21",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "Д-350",
+          "Actual": "Д-350",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 357,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-001",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-services-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "АКТ-001",
+        "Date": "2026-07-02",
+        "RelatedContractNumber": "Д-401",
+        "Amount": "31000.00"
+      },
+      "ActualFields": {
+        "Number": "АКТ-001",
+        "Date": "2026-07-02",
+        "Amount": "31000.00",
+        "RelatedContractNumber": "Д-401"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "31000.00",
+          "Actual": "31000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-02",
+          "Actual": "2026-07-02",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "АКТ-001",
+          "Actual": "АКТ-001",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-401",
+          "Actual": "Д-401",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 187,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-002",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-related-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "A-02/26",
+        "Date": "2026-07-03",
+        "RelatedContractNumber": "Д-402",
+        "Amount": "32000.00"
+      },
+      "ActualFields": {
+        "Number": "A-02/26",
+        "Date": "2026-07-03",
+        "Amount": "32000.00",
+        "RelatedContractNumber": "Д-402"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "32000.00",
+          "Actual": "32000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-03",
+          "Actual": "2026-07-03",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "A-02/26",
+          "Actual": "A-02/26",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-402",
+          "Actual": "Д-402",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 189,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-003",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "act-compact-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "503",
+        "Date": "2026-07-04",
+        "RelatedContractNumber": "Д-403",
+        "Amount": "33000.00"
+      },
+      "ActualFields": {
+        "Number": "503",
+        "Date": "2026-07-04",
+        "Amount": "33000.00",
+        "RelatedContractNumber": "Д-403"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "33000.00",
+          "Actual": "33000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-04",
+          "Actual": "2026-07-04",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "503",
+          "Actual": "503",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-403",
+          "Actual": "Д-403",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 184,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-004",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-reordered-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "14",
+        "Date": "2026-07-05",
+        "RelatedContractNumber": "Д-404",
+        "Amount": "34000.00"
+      },
+      "ActualFields": {
+        "Number": "14",
+        "Date": "2026-07-05",
+        "Amount": "34000.00",
+        "RelatedContractNumber": "Д-404"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "34000.00",
+          "Actual": "34000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-05",
+          "Actual": "2026-07-05",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "14",
+          "Actual": "14",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-404",
+          "Actual": "Д-404",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 191,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-005",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-works-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "АКТ-005",
+        "Date": "2026-07-06",
+        "RelatedContractNumber": "Д-405",
+        "Amount": "35000.00"
+      },
+      "ActualFields": {
+        "Number": "АКТ-005",
+        "Date": "2026-07-06",
+        "Amount": "35000.00",
+        "RelatedContractNumber": "Д-405"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "35000.00",
+          "Actual": "35000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-06",
+          "Actual": "2026-07-06",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "АКТ-005",
+          "Actual": "АКТ-005",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-405",
+          "Actual": "Д-405",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 182,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-006",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "act-services-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "A-06/26",
+        "Date": "2026-07-07",
+        "RelatedContractNumber": "Д-406",
+        "Amount": "36000.00"
+      },
+      "ActualFields": {
+        "Number": "A-06/26",
+        "Date": "2026-07-07",
+        "Amount": "36000.00",
+        "RelatedContractNumber": "Д-406"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "36000.00",
+          "Actual": "36000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-07",
+          "Actual": "2026-07-07",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "A-06/26",
+          "Actual": "A-06/26",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-406",
+          "Actual": "Д-406",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 185,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-007",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-related-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "507",
+        "Date": "2026-07-08",
+        "RelatedContractNumber": "Д-407",
+        "Amount": "37000.00"
+      },
+      "ActualFields": {
+        "Number": "507",
+        "Date": "2026-07-08",
+        "Amount": "37000.00",
+        "RelatedContractNumber": "Д-407"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "37000.00",
+          "Actual": "37000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-08",
+          "Actual": "2026-07-08",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "507",
+          "Actual": "507",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-407",
+          "Actual": "Д-407",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 181,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-008",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-compact-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "18",
+        "Date": "2026-07-09",
+        "RelatedContractNumber": "Д-408",
+        "Amount": "38000.00"
+      },
+      "ActualFields": {
+        "Number": "18",
+        "Date": "2026-07-09",
+        "Amount": "38000.00",
+        "RelatedContractNumber": "Д-408"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "38000.00",
+          "Actual": "38000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-09",
+          "Actual": "2026-07-09",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "18",
+          "Actual": "18",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-408",
+          "Actual": "Д-408",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 180,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-009",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "act-reordered-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "АКТ-009",
+        "Date": "2026-07-10",
+        "RelatedContractNumber": "Д-409",
+        "Amount": "39000.00"
+      },
+      "ActualFields": {
+        "Number": "АКТ-009",
+        "Date": "2026-07-10",
+        "Amount": "39000.00",
+        "RelatedContractNumber": "Д-409"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "39000.00",
+          "Actual": "39000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-10",
+          "Actual": "2026-07-10",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "АКТ-009",
+          "Actual": "АКТ-009",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-409",
+          "Actual": "Д-409",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 182,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-010",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "act-works-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "A-10/26",
+        "Date": "2026-07-11",
+        "RelatedContractNumber": "Д-410",
+        "Amount": "40000.00"
+      },
+      "ActualFields": {
+        "Number": "A-10/26",
+        "Date": "2026-07-11",
+        "Amount": "40000.00",
+        "RelatedContractNumber": "Д-410"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "40000.00",
+          "Actual": "40000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-11",
+          "Actual": "2026-07-11",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "A-10/26",
+          "Actual": "A-10/26",
+          "Result": "Correct"
+        },
+        {
+          "Field": "RelatedContractNumber",
+          "Expected": "Д-410",
+          "Actual": "Д-410",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 184,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-011",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "act-services-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "511",
+        "Date": "2026-07-12"
+      },
+      "ActualFields": {
+        "Number": "511",
+        "Date": "2026-07-12"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Date",
+          "Expected": "2026-07-12",
+          "Actual": "2026-07-12",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "511",
+          "Actual": "511",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 179,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-textpdf-012",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "act-related-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "22",
+        "Date": "2026-07-13",
+        "Amount": "42000.00"
+      },
+      "ActualFields": {
+        "Number": "22",
+        "Date": "2026-07-13",
+        "Amount": "42000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "42000.00",
+          "Actual": "42000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-13",
+          "Actual": "2026-07-13",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "22",
+          "Actual": "22",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 179,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-scannedpdf-013",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "act-compact-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "АКТ-013",
+        "Date": "2026-07-14",
+        "Amount": "43000.00"
+      },
+      "ActualFields": {
+        "Number": "АКТ-013",
+        "Date": "2026-07-14",
+        "Amount": "43000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "43000.00",
+          "Actual": "43000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-14",
+          "Actual": "2026-07-14",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "АКТ-013",
+          "Actual": "АКТ-013",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 572,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-scannedpdf-014",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "act-reordered-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "A-14/26",
+        "Date": "2026-07-15",
+        "Amount": "44000.00"
+      },
+      "ActualFields": {
+        "Number": "А-14/26",
+        "Date": "2026-07-15",
+        "Amount": "44000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "44000.00",
+          "Actual": "44000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-15",
+          "Actual": "2026-07-15",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "A-14/26",
+          "Actual": "А-14/26",
+          "Result": "WrongValue"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 583,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-scannedpdf-015",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "act-works-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Amount": "45000.00"
+      },
+      "ActualFields": {
+        "Amount": "45000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "45000.00",
+          "Actual": "45000.00",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 561,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-scannedpdf-016",
+      "SourceKind": "ScannedPdf",
+      "Difficulty": "Hard",
+      "TemplateId": "act-services-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "26",
+        "Date": "2026-07-17",
+        "Amount": "46000.00"
+      },
+      "ActualFields": {
+        "Number": "26",
+        "Date": "2026-07-17",
+        "Amount": "46000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "46000.00",
+          "Actual": "46000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-17",
+          "Actual": "2026-07-17",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "26",
+          "Actual": "26",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 566,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-image-017",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "act-related-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "АКТ-017",
+        "Date": "2026-07-18",
+        "Amount": "47000.00"
+      },
+      "ActualFields": {
+        "Number": "АКТ-017",
+        "Date": "2026-07-18",
+        "Amount": "47000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "47000.00",
+          "Actual": "47000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-18",
+          "Actual": "2026-07-18",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "АКТ-017",
+          "Actual": "АКТ-017",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 353,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-image-018",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "act-compact-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "A-18/26",
+        "Date": "2026-07-19",
+        "Amount": "48000.00"
+      },
+      "ActualFields": {
+        "Number": "А-18/26",
+        "Date": "2026-07-19",
+        "Amount": "48000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "48000.00",
+          "Actual": "48000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-19",
+          "Actual": "2026-07-19",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "A-18/26",
+          "Actual": "А-18/26",
+          "Result": "WrongValue"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 350,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-image-019",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "act-reordered-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "Completed",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Accounting",
+      "ExpectedFields": {
+        "Number": "519",
+        "Date": "2026-07-20",
+        "Amount": "49000.00"
+      },
+      "ActualFields": {
+        "Number": "519",
+        "Date": "2026-07-20",
+        "Amount": "49000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "49000.00",
+          "Actual": "49000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-20",
+          "Actual": "2026-07-20",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "519",
+          "Actual": "519",
+          "Result": "Correct"
+        }
+      ],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 354,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "act-image-020",
+      "SourceKind": "Image",
+      "Difficulty": "Hard",
+      "TemplateId": "act-works-a",
+      "ExpectedType": "Act",
+      "ActualType": "Act",
+      "ExpectedStatus": "Completed",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Accounting",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {
+        "Number": "30",
+        "Date": "2026-07-21",
+        "Amount": "50000.00"
+      },
+      "ActualFields": {
+        "Date": "2026-07-21",
+        "Amount": "50000.00"
+      },
+      "ClassificationCorrect": true,
+      "FieldResults": [
+        {
+          "Field": "Amount",
+          "Expected": "50000.00",
+          "Actual": "50000.00",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Date",
+          "Expected": "2026-07-21",
+          "Actual": "2026-07-21",
+          "Result": "Correct"
+        },
+        {
+          "Field": "Number",
+          "Expected": "30",
+          "Actual": null,
+          "Result": "Missing"
+        }
+      ],
+      "ExactMatch": false,
+      "ProcessingTimeMs": 362,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-text-001",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "unknown-memo-a",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 165,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-text-002",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "unknown-letter-a",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 165,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-text-003",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "unknown-notification-a",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 163,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-text-004",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "unknown-information-a",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 162,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-text-005",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "unknown-memo-a",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 164,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-text-006",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "unknown-letter-a",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 164,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-text-007",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Medium",
+      "TemplateId": "unknown-notification-a",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 166,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    },
+    {
+      "Id": "unknown-text-008",
+      "SourceKind": "TextPdf",
+      "Difficulty": "Easy",
+      "TemplateId": "unknown-information-a",
+      "ExpectedType": "Unknown",
+      "ActualType": "Unknown",
+      "ExpectedStatus": "NeedsReview",
+      "ActualStatus": "NeedsReview",
+      "ExpectedDepartment": "Unassigned",
+      "ActualDepartment": "Unassigned",
+      "ExpectedFields": {},
+      "ActualFields": {},
+      "ClassificationCorrect": true,
+      "FieldResults": [],
+      "ExactMatch": true,
+      "ProcessingTimeMs": 167,
+      "Error": null,
+      "Skipped": false,
+      "SkipReason": null
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "documents": [
+    {
+      "id": "invoice-text-001", "file": "files/invoice-text-001.pdf", "sourceKind": "TextPdf", "difficulty": "Easy", "templateId": "invoice-standard-a", "contentType": "application/pdf",
+      "expectedType": "Invoice", "expectedStatus": "Completed", "expectedDepartment": "Accounting",
+      "expectedFields": { "Number": "125", "Date": "2026-09-17", "INN": "7712345678", "KPP": "770101001", "Amount": "125000.50" }
+    },
+    {
+      "id": "invoice-text-002", "file": "files/invoice-text-002.pdf", "sourceKind": "TextPdf", "difficulty": "Easy", "templateId": "invoice-standard-b", "contentType": "application/pdf",
+      "expectedType": "Invoice", "expectedStatus": "Completed", "expectedDepartment": "Accounting",
+      "expectedFields": { "Number": "126", "Date": "2026-09-18", "INN": "7712345678", "Amount": "50000" }
+    },
+    {
+      "id": "contract-text-001", "file": "files/contract-text-001.pdf", "sourceKind": "TextPdf", "difficulty": "Easy", "templateId": "contract-standard-a", "contentType": "application/pdf",
+      "expectedType": "Contract", "expectedStatus": "Completed", "expectedDepartment": "Legal",
+      "expectedFields": { "Number": "Д-338", "Date": "2026-09-11", "Amount": "150000.00" }
+    },
+    {
+      "id": "contract-text-002", "file": "files/contract-text-002.pdf", "sourceKind": "TextPdf", "difficulty": "Medium", "templateId": "contract-short-a", "contentType": "application/pdf",
+      "expectedType": "Contract", "expectedStatus": "Completed", "expectedDepartment": "Legal",
+      "expectedFields": { "Number": "125/26", "Date": "2026-09-12" }
+    },
+    {
+      "id": "act-text-001", "file": "files/act-text-001.pdf", "sourceKind": "TextPdf", "difficulty": "Easy", "templateId": "act-standard-a", "contentType": "application/pdf",
+      "expectedType": "Act", "expectedStatus": "Completed", "expectedDepartment": "Accounting",
+      "expectedFields": { "Number": "17", "Date": "2026-09-15", "Amount": "18900.00", "RelatedContractNumber": "Д-338" }
+    },
+    {
+      "id": "act-text-002", "file": "files/act-text-002.pdf", "sourceKind": "TextPdf", "difficulty": "Medium", "templateId": "act-services-a", "contentType": "application/pdf",
+      "expectedType": "Act", "expectedStatus": "Completed", "expectedDepartment": "Accounting",
+      "expectedFields": { "Number": "18", "Date": "2026-09-16", "Amount": "20000" }
+    },
+    {
+      "id": "unknown-text-001", "file": "files/unknown-text-001.pdf", "sourceKind": "TextPdf", "difficulty": "Easy", "templateId": "unknown-memo-a", "contentType": "application/pdf",
+      "expectedType": "Unknown", "expectedStatus": "NeedsReview", "expectedDepartment": "Unassigned", "expectedFields": {}
+    }
+  ]
+}

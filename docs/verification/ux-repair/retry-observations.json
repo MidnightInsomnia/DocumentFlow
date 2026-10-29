@@ -1,0 +1,57 @@
+{
+  "database": "documentflow_ux_retry_80d902dd",
+  "checks": {
+    "retry_sample_uploaded": true,
+    "actual_refused_model_becomes_retry_scheduled": true,
+    "manual_retry_cooldown_enforced": true,
+    "failure_survives_api_restart": true,
+    "admin_manual_retry_is_accepted": true,
+    "real_model_recovery_produces_suggestion": true,
+    "retry_creates_single_inactive_draft": true,
+    "create_user_button_not_full_width": true,
+    "automatic_proposal_visible_in_document": true,
+    "actual_browser_approval_readback": true,
+    "document_no_mobile_page_overflow": true,
+    "retry_disposable_database_removed": true,
+    "retry_disposable_storage_removed": true,
+    "retry_owned_ports_closed": true
+  },
+  "observations": {
+    "retry_sample_uploaded": 202,
+    "actual_refused_model_becomes_retry_scheduled": {
+      "documentId": "9c31d320-804e-4cf4-a3bc-1065f05ca21f",
+      "status": "RetryScheduled",
+      "message": "Модель недоступна или вернула непригодный ответ. Попытка будет повторена автоматически.",
+      "canRetry": false,
+      "lastAttemptAtUtc": "2026-10-24T15:53:32.760486Z",
+      "nextRetryAtUtc": "2026-10-24T15:58:32.760486Z",
+      "kindId": null,
+      "kindName": null,
+      "errorCode": "ai_unavailable_or_invalid_response"
+    },
+    "manual_retry_cooldown_enforced": 429,
+    "failure_survives_api_restart": {
+      "documentId": "9c31d320-804e-4cf4-a3bc-1065f05ca21f",
+      "status": "RetryScheduled",
+      "message": "Модель недоступна или вернула непригодный ответ. Попытка будет повторена автоматически.",
+      "canRetry": true,
+      "lastAttemptAtUtc": "2026-10-24T15:53:32.760486Z",
+      "nextRetryAtUtc": "2026-10-24T15:58:32.760486Z",
+      "kindId": null,
+      "kindName": null,
+      "errorCode": "ai_unavailable_or_invalid_response"
+    },
+    "admin_manual_retry_is_accepted": 202,
+    "real_model_recovery_produces_suggestion": {
+      "documentId": "9c31d320-804e-4cf4-a3bc-1065f05ca21f",
+      "status": "Suggested",
+      "message": "Предложен новый вид. Требуется подтверждение администратора.",
+      "canRetry": false,
+      "lastAttemptAtUtc": null,
+      "nextRetryAtUtc": null,
+      "kindId": "836dffca-9eb4-4ad2-8391-e5372660d303",
+      "kindName": "Управление",
+      "errorCode": null
+    }
+  }
+}

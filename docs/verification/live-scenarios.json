@@ -1,0 +1,203 @@
+[
+  {
+    "scenario": "migration and admin login",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "seeded stable kinds/departments",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "create department persisted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "edit department persisted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "create document kind persisted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "real Worker extracts DOCX and routes to review",
+    "passed": true,
+    "detail": "NeedsReview"
+  },
+  {
+    "scenario": "unknown document remains unconfirmed",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "draft without selected schema roundtrip",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "server draft roundtrip preserves incomplete/raw values",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "document assignments persisted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "text/department/counterparty filters",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "counterparty aggregation",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "stale review rejects CAS",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "review normalizes Russian amount and completes",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "CSV BOM and confirmed data",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "reopen restores editable state and changes version",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "previous confirmed values retained in history",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "stale draft rejected after reopening",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "referenced department safely deactivated",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "assignment survives deactivation",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "unchanged inactive assignment may be retained",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "unused department truly deleted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "operator cannot mutate admin catalogs",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "drafts isolated by user",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "real embedding model index",
+    "passed": true,
+    "detail": {
+      "indexed": 2
+    }
+  },
+  {
+    "scenario": "semantic query without literal match ranks repair document",
+    "passed": true,
+    "detail": [
+      [
+        "repair-54db9d.docx",
+        0.5129285585969005
+      ],
+      [
+        "vacation-54db9d.docx",
+        0.35528939751423333
+      ]
+    ]
+  },
+  {
+    "scenario": "AI really creates draft kind",
+    "passed": true,
+    "detail": "Заявление о предоставлении ежегодного оплачиваемого отпуска"
+  },
+  {
+    "scenario": "pending AI kind retained while changing department",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "editing AI kind does not approve it",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "TIFF HTTP real two-page count",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "TIFF HTTP pixels and orientation page 1",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "TIFF HTTP pixels and orientation page 2",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "TIFF HTTP page range validation",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "browser skip preserves filtered queue",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "browser unsaved navigation canceled with blur-normalized amount",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "AI placeholders cannot be applied",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "AI dates normalized for HTML date field",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "browser confirm and next really saves then navigates",
+    "passed": true,
+    "detail": null
+  }
+]

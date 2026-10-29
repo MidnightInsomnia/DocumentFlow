@@ -1,0 +1,343 @@
+{
+  "type": "Static SSR of real components, not a live deployed app",
+  "apiRunning": false,
+  "databaseStarted": false,
+  "mockApiResponses": false,
+  "scope": "Initial/loading/empty-form states only, no authenticated/data-rich interactions claimed",
+  "captures": [
+    {
+      "screen": "registry",
+      "device": "desktop",
+      "path": ".impeccable/review/registry-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "scroll": 1440,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "registry",
+      "device": "mobile",
+      "path": ".impeccable/review/registry-mobile.png",
+      "geometry": {
+        "width": 390,
+        "scroll": 390,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "search",
+      "device": "desktop",
+      "path": ".impeccable/review/search-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "scroll": 1440,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "search",
+      "device": "mobile",
+      "path": ".impeccable/review/search-mobile.png",
+      "geometry": {
+        "width": 390,
+        "scroll": 390,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "upload",
+      "device": "desktop",
+      "path": ".impeccable/review/upload-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "scroll": 1440,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "upload",
+      "device": "mobile",
+      "path": ".impeccable/review/upload-mobile.png",
+      "geometry": {
+        "width": 390,
+        "scroll": 390,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "catalogs",
+      "device": "desktop",
+      "path": ".impeccable/review/catalogs-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "scroll": 1440,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "catalogs",
+      "device": "mobile",
+      "path": ".impeccable/review/catalogs-mobile.png",
+      "geometry": {
+        "width": 390,
+        "scroll": 390,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "overview",
+      "device": "desktop",
+      "path": ".impeccable/review/overview-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "scroll": 1440,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "overview",
+      "device": "mobile",
+      "path": ".impeccable/review/overview-mobile.png",
+      "geometry": {
+        "width": 390,
+        "scroll": 390,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "users",
+      "device": "desktop",
+      "path": ".impeccable/review/users-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "scroll": 1440,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "users",
+      "device": "mobile",
+      "path": ".impeccable/review/users-mobile.png",
+      "geometry": {
+        "width": 390,
+        "scroll": 390,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "password",
+      "device": "desktop",
+      "path": ".impeccable/review/password-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "scroll": 1440,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "password",
+      "device": "mobile",
+      "path": ".impeccable/review/password-mobile.png",
+      "geometry": {
+        "width": 390,
+        "scroll": 390,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "document-loading",
+      "device": "desktop",
+      "path": ".impeccable/review/document-loading-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "scroll": 1440,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "document-loading",
+      "device": "mobile",
+      "path": ".impeccable/review/document-loading-mobile.png",
+      "geometry": {
+        "width": 390,
+        "scroll": 390,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "JetBrains Mono",
+          "JetBrains Mono"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "login",
+      "device": "desktop",
+      "path": ".impeccable/review/login-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "scroll": 1440,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter"
+        ]
+      },
+      "networkRequests": 0
+    },
+    {
+      "screen": "login",
+      "device": "mobile",
+      "path": ".impeccable/review/login-mobile.png",
+      "geometry": {
+        "width": 390,
+        "scroll": 390,
+        "font": "Inter, \"Segoe UI\", sans-serif",
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter"
+        ]
+      },
+      "networkRequests": 0
+    }
+  ]
+}

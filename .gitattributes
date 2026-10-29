@@ -2,3 +2,12 @@
 docs/licenses/** -text
 docs/*.json -text
 docs/verification/*.json -text
+
+# Synthetic evaluation binaries and frozen manifests must survive Windows checkout unchanged.
+evaluation/**/*.pdf -text
+evaluation/**/*.png -text
+evaluation/**/manifest.json text eol=lf
+evaluation/**/FILES-SHA256.txt text eol=lf
+evaluation/corpus-v3-final-holdout/manifest.json -text -eol
+evaluation/corpus-v3-final-holdout/FILES-SHA256.txt -text -eol
+evaluation/corpus-v3-final-holdout/CORPUS-SPEC.md text eol=lf

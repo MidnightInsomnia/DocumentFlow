@@ -1,0 +1,153 @@
+{
+  "parentVerificationPassed": true,
+  "independentReviewRewritten": false,
+  "independentReviewPassed": false,
+  "independentSecondReviewPerformed": false,
+  "originalReview": {
+    "path": "docs/verification/final-code-review.json",
+    "sha256": "bc871a0711b35989830399bce5577c2d35773fd4ca4d0d2400869b3d0538ce29",
+    "reviewedHead": "4ef9e71843d6c0ba7f9448597d5461e0a1f1e3ac",
+    "indexSha256": "cb8c5cd0afb520775d80c5c1f461da96abbc0ed026b22d356b9d62247662330d",
+    "stagedTree": "5d116ea5a0d869d7f2416896e45cf5b0ea9c8ebb",
+    "sourceFingerprintCount": 301,
+    "identityVerifiedBeforeFixes": true
+  },
+  "allConfirmedFindingsResolved": true,
+  "findings": [
+    {
+      "id": "DF-L01",
+      "parentConfirmed": true,
+      "status": "resolved-and-live-verified",
+      "liveScenarios": [
+        "conflicting emergency copy survives two reloads",
+        "editing new version retains old copy and its original TTL",
+        "real storage quota failure does not delete the original emergency record",
+        "conflicting copy remains readable after reload with full sessionStorage"
+      ]
+    },
+    {
+      "id": "DF-L02",
+      "parentConfirmed": true,
+      "status": "resolved-and-live-verified",
+      "liveScenarios": [
+        "stale draft CAS returns 409 without replacing saved input",
+        "save response concurrency token equals subsequent GET",
+        "actual two browser tabs preserve saved winner and losing local input",
+        "same tab can save repeatedly with returned token"
+      ]
+    },
+    {
+      "id": "DF-L03",
+      "parentConfirmed": true,
+      "status": "resolved-and-live-verified",
+      "liveScenarios": [
+        "three-document registry skips reach each document once",
+        "search queue reaches document beyond first 20 results"
+      ]
+    },
+    {
+      "id": "DF-L04",
+      "parentConfirmed": true,
+      "status": "resolved-and-live-verified",
+      "liveScenarios": [
+        "background does not assign deactivated defaults",
+        "actual new completed invoice has technical Accounting route",
+        "background excludes inactive kind and Accounting on completed invoice",
+        "deactivation preserves deliberately assigned historical kind and department",
+        "completed invoice really exists without workspace before startup",
+        "startup backfill excludes inactive kind and department",
+        "restart preserves historical inactive assignments"
+      ]
+    },
+    {
+      "id": "DF-L05",
+      "parentConfirmed": true,
+      "status": "resolved-and-live-verified",
+      "liveScenarios": [
+        "real 15-second refresh preserves unsaved kind and department",
+        "explicit save persists protected local choice"
+      ]
+    },
+    {
+      "id": "DF-L06",
+      "parentConfirmed": true,
+      "status": "resolved-and-live-verified",
+      "liveScenarios": [
+        "null draft input roundtrips as empty string",
+        "official UI restores remaining fields after nullable save"
+      ]
+    }
+  ],
+  "liveEvidence": {
+    "path": "docs/verification/post-review-live.json",
+    "passedChecks": 25,
+    "sha256": "3451b9c760395530291248c08113115f9f3bb0e7f00c17c19df2c418a5ed080d",
+    "original46Scenarios": "Historical coverage before the post-review code-only fixes; not rerun or summed as unique tests."
+  },
+  "postReviewSourceChanges": [
+    {
+      "path": "frontend/documentflow-web/src/api/reviewWorkApi.ts",
+      "beforeSha256": "a3e6419323520bd1d02c51234a562adc5a99fc1de23d18c2258619a409b11ef8",
+      "afterSha256": "e3dcc10853d11e79fa026f545be8c1ef0e740da69b6c3ffeafe18b4a4b7e2bba"
+    },
+    {
+      "path": "frontend/documentflow-web/src/components/DocumentAssignment.tsx",
+      "beforeSha256": "10103bbee9c73e7afb14592871c32c90e211a7e8952732095c1ad386dba4e8ed",
+      "afterSha256": "28796e8536c17db49e18d67fe2dd45f2f56b57a2e0eda69b28736e3194d5b5dc"
+    },
+    {
+      "path": "frontend/documentflow-web/src/components/DocumentReviewForm.tsx",
+      "beforeSha256": "7df7a0feff250e4166f8dc6b2c99c42d66bf42a6dfad5cc480cc115f44b53dea",
+      "afterSha256": "6ebee10572b1c9fab6730fdac3537cd4c432cdf067efffb700f42815093306b6"
+    },
+    {
+      "path": "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx",
+      "beforeSha256": "02b61fb8e39d44c2bc5628a41c2f10989eba13c58cc14139b57cf06057cdd6e2",
+      "afterSha256": "35c69d3bbbeda3db585db596e3e4d215e9e9d20787eb6563d9fd76ebccb9d6e3"
+    },
+    {
+      "path": "src/DocumentFlow.Infrastructure/ReviewWork/ReviewWorkService.cs",
+      "beforeSha256": "85240e215267aaf0d6e1906756ab8fb8dcf4ded6c79b9bf393f6d1dc56c69101",
+      "afterSha256": "850f39ebcb529e321b323bb3f17d5eba2db7727ce3781343b1736de30a2a627d"
+    },
+    {
+      "path": "src/DocumentFlow.Infrastructure/Workspace/DocumentWorkspaceService.cs",
+      "beforeSha256": "22fc8023f04e5fa0cace09cb8709ff551084b3331b981ac299a359a2c0ea1498",
+      "afterSha256": "dfa0fd8fab3d2b8736304895ffe90be11b11ddf20ecef70838a85c45f276c30a"
+    },
+    {
+      "path": "src/DocumentFlow.Infrastructure/Workspace/WorkspaceIndexingService.cs",
+      "beforeSha256": "752da31f3b54c10c1b4728cd535e8b4265aa12dc72ecdc725d1dd6e479f2ea42",
+      "afterSha256": "725c746c38fb51cba6d95232491c499fe1e4e90af769e3f8a618f288fb0327cb"
+    },
+    {
+      "path": "src/DocumentFlow.Infrastructure/Workspace/WorkspaceInitializer.cs",
+      "beforeSha256": "d9bec00852d9453ec1632e9c8a5ea9c422c98d7c6a2848cf9061dcce021adc56",
+      "afterSha256": "0202b9f3178acdb2869eab75b00fc6d28f1df816970e65c8ffe7d37ea6d5acb5"
+    }
+  ],
+  "postReviewBookkeepingChanges": [
+    {
+      "path": ".gitattributes",
+      "reason": "Preserve checksum-bound JSON evidence byte-for-byte on Git checkout."
+    }
+  ],
+  "allOtherSourceFingerprintsUnchanged": true,
+  "gates": {
+    "solutionBuild": "0 errors; 0 warnings",
+    "frontendBuild": "passed after final quota guard",
+    "fullNpmAuditFoundVulnerabilities": 0,
+    "currentDependencyInputHashesUnchanged": true,
+    "currentLicenseEvidenceFilesSha256Verified": 392,
+    "ownedStackProcessesStopped": true
+  },
+  "nonblockingSuggestionsDeferred": [
+    "DF-S01: UI viewer for review revisions",
+    "DF-S02: navigation guard on general catalog editor"
+  ],
+  "limitations": [
+    "The original independent verdict remains FAIL; fixes were verified by the parent without a second independent review.",
+    "Full OCR/Tesseract, production migration/load, all native PDF/GPU/toolchain license contents remain unverified; see current docs.",
+    "Scratch runtime/probe scripts and raw PNG sources are local-only; committed JSON reports and screenshots do not include secrets."
+  ]
+}

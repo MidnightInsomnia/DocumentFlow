@@ -1,0 +1,32 @@
+[
+  {
+    "file": "managed-limit-pages31.tiff",
+    "error": "TextExtractionException",
+    "message": "TIFF содержит более 30 страниц."
+  },
+  {
+    "file": "managed-limit-side6001.tiff",
+    "error": "TextExtractionException",
+    "message": "TIFF превышает лимит 6000 пикселей по стороне."
+  },
+  {
+    "file": "managed-limit-page12m.tiff",
+    "error": "TextExtractionException",
+    "message": "TIFF превышает лимит 12 млн пикселей на страницу или 48 млн на документ."
+  },
+  {
+    "file": "managed-limit-total48m.tiff",
+    "error": "TextExtractionException",
+    "message": "TIFF превышает лимит 12 млн пикселей на страницу или 48 млн на документ."
+  },
+  {
+    "file": "managed-limit-source100m.tiff",
+    "error": "TextExtractionException",
+    "message": "TIFF пуст или превышает лимит 100 МиБ."
+  },
+  {
+    "file": "managed-bigtiff.tiff",
+    "error": "TextExtractionException",
+    "message": "BigTIFF не поддерживается. Сохраните документ в обычном TIFF (TIFF 6.0) или PDF."
+  }
+]

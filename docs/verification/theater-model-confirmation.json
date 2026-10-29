@@ -1,0 +1,145 @@
+{
+  "bge-m3": {
+    "hasLicense": true,
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "bert",
+      "families": [
+        "bert"
+      ],
+      "parameter_size": "566.70M",
+      "quantization_level": "F16"
+    }
+  },
+  "qwen2.5:0.5b-instruct": {
+    "hasLicense": true,
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "494.03M",
+      "quantization_level": "Q4_K_M"
+    }
+  },
+  "1440": {
+    "position": "fixed",
+    "display": "grid",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1000
+    },
+    "children": [
+      {
+        "class": "theater-toolbar",
+        "rect": {
+          "x": 20,
+          "y": 14,
+          "width": 1399.984375,
+          "height": 55
+        }
+      },
+      {
+        "class": "review-source",
+        "rect": {
+          "x": 20,
+          "y": 81,
+          "width": 892.53125,
+          "height": 901
+        }
+      },
+      {
+        "class": "review-form-column",
+        "rect": {
+          "x": 930.53125,
+          "y": 81,
+          "width": 489.453125,
+          "height": 901
+        }
+      }
+    ]
+  },
+  "900": {
+    "position": "fixed",
+    "display": "grid",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 1000
+    },
+    "children": [
+      {
+        "class": "theater-toolbar",
+        "rect": {
+          "x": 20,
+          "y": 14,
+          "width": 860,
+          "height": 55
+        }
+      },
+      {
+        "class": "review-source",
+        "rect": {
+          "x": 20,
+          "y": 81,
+          "width": 455.125,
+          "height": 901
+        }
+      },
+      {
+        "class": "review-form-column",
+        "rect": {
+          "x": 493.125,
+          "y": 81,
+          "width": 386.875,
+          "height": 901
+        }
+      }
+    ]
+  },
+  "390": {
+    "position": "fixed",
+    "display": "flex",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    },
+    "children": [
+      {
+        "class": "theater-toolbar",
+        "rect": {
+          "x": 10,
+          "y": 10,
+          "width": 370,
+          "height": 116
+        }
+      },
+      {
+        "class": "review-source",
+        "rect": {
+          "x": 10,
+          "y": 138,
+          "width": 354,
+          "height": 425
+        }
+      },
+      {
+        "class": "review-form-column",
+        "rect": {
+          "x": 10,
+          "y": 575,
+          "width": 370,
+          "height": 686
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "issue": "DF-L02",
+    "scenario": "stale draft CAS returns 409 without replacing saved input",
+    "passed": true
+  },
+  {
+    "issue": "DF-L02",
+    "scenario": "save response concurrency token equals subsequent GET",
+    "passed": true
+  },
+  {
+    "issue": "DF-L02",
+    "scenario": "actual two browser tabs preserve saved winner and losing local input",
+    "passed": true
+  },
+  {
+    "issue": "DF-L02",
+    "scenario": "same tab can save repeatedly with returned token",
+    "passed": true
+  },
+  {
+    "issue": "DF-L06",
+    "scenario": "null draft input roundtrips as empty string",
+    "passed": true
+  },
+  {
+    "issue": "DF-L06",
+    "scenario": "official UI restores remaining fields after nullable save",
+    "passed": true
+  },
+  {
+    "issue": "DF-L01",
+    "scenario": "conflicting emergency copy survives two reloads",
+    "passed": true
+  },
+  {
+    "issue": "DF-L01",
+    "scenario": "editing new version retains old copy and its original TTL",
+    "passed": true
+  },
+  {
+    "issue": "DF-L03",
+    "scenario": "three-document registry skips reach each document once",
+    "passed": true
+  },
+  {
+    "issue": "DF-L03",
+    "scenario": "search queue reaches document beyond first 20 results",
+    "passed": true
+  },
+  {
+    "issue": "DF-L05",
+    "scenario": "real 15-second refresh preserves unsaved kind and department",
+    "passed": true
+  },
+  {
+    "issue": "DF-L05",
+    "scenario": "explicit save persists protected local choice",
+    "passed": true
+  },
+  {
+    "issue": "DF-L04",
+    "scenario": "background does not assign deactivated defaults",
+    "passed": true
+  },
+  {
+    "issue": "DF-L04",
+    "scenario": "actual new completed invoice has technical Accounting route",
+    "passed": true
+  },
+  {
+    "issue": "DF-L04",
+    "scenario": "background excludes inactive kind and Accounting on completed invoice",
+    "passed": true
+  },
+  {
+    "issue": "DF-L04",
+    "scenario": "deactivation preserves deliberately assigned historical kind and department",
+    "passed": true
+  },
+  {
+    "issue": "DF-L04",
+    "scenario": "completed invoice really exists without workspace before startup",
+    "passed": true
+  },
+  {
+    "issue": "DF-L04",
+    "scenario": "startup backfill excludes inactive kind and department",
+    "passed": true
+  },
+  {
+    "issue": "DF-L04",
+    "scenario": "restart preserves historical inactive assignments",
+    "passed": true
+  },
+  {
+    "issue": "smoke",
+    "scenario": "real semantic model still works after review fixes",
+    "passed": true
+  },
+  {
+    "issue": "smoke",
+    "scenario": "real AI still creates inactive document-kind draft",
+    "passed": true
+  },
+  {
+    "issue": "smoke",
+    "scenario": "new automatic kind is inactive until approved",
+    "passed": true
+  },
+  {
+    "issue": "smoke",
+    "scenario": "admin approval still activates kind without confirming document",
+    "passed": true
+  },
+  {
+    "issue": "DF-L01",
+    "scenario": "real storage quota failure does not delete the original emergency record",
+    "passed": true
+  },
+  {
+    "issue": "DF-L01",
+    "scenario": "conflicting copy remains readable after reload with full sessionStorage",
+    "passed": true
+  }
+]

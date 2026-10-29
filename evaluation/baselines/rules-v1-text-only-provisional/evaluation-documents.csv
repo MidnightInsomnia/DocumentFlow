@@ -1,0 +1,69 @@
+Id,SourceKind,Difficulty,TemplateId,ExpectedType,ActualType,ClassificationCorrect,ExpectedStatus,ActualStatus,ExpectedDepartment,ActualDepartment,FieldsCorrect,FieldsMissing,FieldsWrong,FieldsUnexpected,ExactMatch,ProcessingTimeMs,Result
+invoice-textpdf-001,TextPdf,Easy,invoice-standard-b,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,314,Executed
+invoice-textpdf-002,TextPdf,Easy,invoice-compact-a,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,2,Executed
+invoice-textpdf-003,TextPdf,Medium,invoice-reordered-a,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,1,Executed
+invoice-textpdf-004,TextPdf,Hard,invoice-short-a,Invoice,Unknown,False,Completed,NeedsReview,Accounting,Unassigned,0,5,0,0,False,3,Executed
+invoice-textpdf-005,TextPdf,Easy,invoice-standard-a,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,3,Executed
+invoice-textpdf-006,TextPdf,Medium,invoice-standard-b,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,1,Executed
+invoice-textpdf-007,TextPdf,Easy,invoice-compact-a,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,1,Executed
+invoice-textpdf-008,TextPdf,Easy,invoice-reordered-a,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,2,Executed
+invoice-textpdf-009,TextPdf,Hard,invoice-short-a,Invoice,Unknown,False,Completed,NeedsReview,Accounting,Unassigned,0,5,0,0,False,1,Executed
+invoice-textpdf-010,TextPdf,Easy,invoice-standard-a,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,1,Executed
+invoice-textpdf-011,TextPdf,Easy,invoice-standard-b,Invoice,Invoice,True,NeedsReview,NeedsReview,Unassigned,Unassigned,3,0,0,0,True,2,Executed
+invoice-textpdf-012,TextPdf,Medium,invoice-compact-a,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,1,Executed
+invoice-scannedpdf-013,ScannedPdf,Hard,invoice-reordered-a,Invoice,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+invoice-scannedpdf-014,ScannedPdf,Hard,invoice-short-a,Invoice,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+invoice-scannedpdf-015,ScannedPdf,Hard,invoice-standard-a,Invoice,Unknown,False,NeedsReview,PendingProcessing,Unassigned,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+invoice-scannedpdf-016,ScannedPdf,Hard,invoice-standard-b,Invoice,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+invoice-image-017,Image,Hard,invoice-compact-a,Invoice,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+invoice-image-018,Image,Hard,invoice-reordered-a,Invoice,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+invoice-image-019,Image,Hard,invoice-short-a,Invoice,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+invoice-image-020,Image,Hard,invoice-standard-a,Invoice,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+contract-textpdf-001,TextPdf,Easy,contract-standard-b,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,5,Executed
+contract-textpdf-002,TextPdf,Easy,contract-short-a,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,2,Executed
+contract-textpdf-003,TextPdf,Medium,contract-legal-a,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1,Executed
+contract-textpdf-004,TextPdf,Easy,contract-compact-a,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1,Executed
+contract-textpdf-005,TextPdf,Easy,contract-standard-a,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1,Executed
+contract-textpdf-006,TextPdf,Medium,contract-standard-b,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1,Executed
+contract-textpdf-007,TextPdf,Easy,contract-short-a,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1,Executed
+contract-textpdf-008,TextPdf,Easy,contract-legal-a,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,3,Executed
+contract-textpdf-009,TextPdf,Medium,contract-compact-a,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,2,Executed
+contract-textpdf-010,TextPdf,Easy,contract-standard-a,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1,Executed
+contract-textpdf-011,TextPdf,Hard,contract-standard-b,Contract,Contract,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,2,Executed
+contract-textpdf-012,TextPdf,Medium,contract-short-a,Contract,Contract,True,Completed,Completed,Legal,Legal,2,0,0,0,True,1,Executed
+contract-scannedpdf-013,ScannedPdf,Hard,contract-legal-a,Contract,Unknown,False,Completed,PendingProcessing,Legal,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+contract-scannedpdf-014,ScannedPdf,Hard,contract-compact-a,Contract,Unknown,False,Completed,PendingProcessing,Legal,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+contract-scannedpdf-015,ScannedPdf,Hard,contract-standard-a,Contract,Unknown,False,Completed,PendingProcessing,Legal,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+contract-scannedpdf-016,ScannedPdf,Hard,contract-standard-b,Contract,Unknown,False,Completed,PendingProcessing,Legal,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+contract-image-017,Image,Hard,contract-short-a,Contract,Unknown,False,Completed,PendingProcessing,Legal,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+contract-image-018,Image,Hard,contract-legal-a,Contract,Unknown,False,Completed,PendingProcessing,Legal,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+contract-image-019,Image,Hard,contract-compact-a,Contract,Unknown,False,Completed,PendingProcessing,Legal,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+contract-image-020,Image,Hard,contract-standard-a,Contract,Unknown,False,Completed,PendingProcessing,Legal,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+act-textpdf-001,TextPdf,Easy,act-services-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,9,Executed
+act-textpdf-002,TextPdf,Easy,act-related-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,2,Executed
+act-textpdf-003,TextPdf,Medium,act-compact-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,1,Executed
+act-textpdf-004,TextPdf,Easy,act-reordered-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,2,Executed
+act-textpdf-005,TextPdf,Easy,act-works-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,1,Executed
+act-textpdf-006,TextPdf,Medium,act-services-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,1,Executed
+act-textpdf-007,TextPdf,Easy,act-related-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,1,Executed
+act-textpdf-008,TextPdf,Easy,act-compact-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,1,Executed
+act-textpdf-009,TextPdf,Medium,act-reordered-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,2,Executed
+act-textpdf-010,TextPdf,Easy,act-works-a,Act,Act,True,Completed,Completed,Accounting,Accounting,4,0,0,0,True,2,Executed
+act-textpdf-011,TextPdf,Hard,act-services-a,Act,Act,True,NeedsReview,NeedsReview,Unassigned,Unassigned,2,0,0,0,True,1,Executed
+act-textpdf-012,TextPdf,Medium,act-related-a,Act,Act,True,Completed,Completed,Accounting,Accounting,3,0,0,0,True,1,Executed
+act-scannedpdf-013,ScannedPdf,Hard,act-compact-a,Act,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+act-scannedpdf-014,ScannedPdf,Hard,act-reordered-a,Act,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+act-scannedpdf-015,ScannedPdf,Hard,act-works-a,Act,Unknown,False,NeedsReview,PendingProcessing,Unassigned,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+act-scannedpdf-016,ScannedPdf,Hard,act-services-a,Act,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+act-image-017,Image,Hard,act-related-a,Act,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+act-image-018,Image,Hard,act-compact-a,Act,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+act-image-019,Image,Hard,act-reordered-a,Act,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+act-image-020,Image,Hard,act-works-a,Act,Unknown,False,Completed,PendingProcessing,Accounting,Unassigned,0,0,0,0,False,0,Skipped: Tesseract OCR is unavailable.
+unknown-text-001,TextPdf,Medium,unknown-memo-a,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,1,Executed
+unknown-text-002,TextPdf,Easy,unknown-letter-a,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,1,Executed
+unknown-text-003,TextPdf,Medium,unknown-notification-a,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,1,Executed
+unknown-text-004,TextPdf,Easy,unknown-information-a,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,2,Executed
+unknown-text-005,TextPdf,Medium,unknown-memo-a,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,2,Executed
+unknown-text-006,TextPdf,Easy,unknown-letter-a,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,1,Executed
+unknown-text-007,TextPdf,Medium,unknown-notification-a,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,1,Executed
+unknown-text-008,TextPdf,Easy,unknown-information-a,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,2,Executed

@@ -1,0 +1,665 @@
+{
+  "documents": [
+    {
+      "id": "invoice-holdout-textpdf-001",
+      "file": "files/invoice-holdout-textpdf-001.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Easy",
+      "templateId": "invoice-holdout-a",
+      "contentType": "application/pdf",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "HX-701",
+        "Date": "2026-10-03",
+        "INN": "7800000001",
+        "Amount": "211375.00"
+      }
+    },
+    {
+      "id": "invoice-holdout-textpdf-002",
+      "file": "files/invoice-holdout-textpdf-002.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Medium",
+      "templateId": "invoice-holdout-b",
+      "contentType": "application/pdf",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "2026-H/02",
+        "Date": "2026-10-04",
+        "INN": "7800000002",
+        "Amount": "212750.00",
+        "KPP": "780200002"
+      }
+    },
+    {
+      "id": "invoice-holdout-textpdf-003",
+      "file": "files/invoice-holdout-textpdf-003.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Hard",
+      "templateId": "invoice-holdout-c",
+      "contentType": "application/pdf",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "СФХ-03",
+        "Date": "2026-10-05",
+        "INN": "7800000003",
+        "Amount": "214125.00"
+      }
+    },
+    {
+      "id": "invoice-holdout-textpdf-004",
+      "file": "files/invoice-holdout-textpdf-004.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Easy",
+      "templateId": "invoice-holdout-d",
+      "contentType": "application/pdf",
+      "expectedType": "Invoice",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {
+        "Number": "7404",
+        "Date": "2026-10-06",
+        "INN": "7800000004",
+        "KPP": "780200004"
+      }
+    },
+    {
+      "id": "invoice-holdout-textpdf-005",
+      "file": "files/invoice-holdout-textpdf-005.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Medium",
+      "templateId": "invoice-holdout-e",
+      "contentType": "application/pdf",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "PAY-005",
+        "Date": "2026-10-07",
+        "INN": "7800000005",
+        "Amount": "216875.00"
+      }
+    },
+    {
+      "id": "invoice-holdout-scannedpdf-006",
+      "file": "files/invoice-holdout-scannedpdf-006.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Easy",
+      "templateId": "invoice-holdout-f",
+      "contentType": "application/pdf",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "H-06/26",
+        "Date": "2026-10-08",
+        "INN": "7800000006",
+        "Amount": "218250.00",
+        "KPP": "780200006"
+      }
+    },
+    {
+      "id": "invoice-holdout-scannedpdf-007",
+      "file": "files/invoice-holdout-scannedpdf-007.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Medium",
+      "templateId": "invoice-holdout-a",
+      "contentType": "application/pdf",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "7717",
+        "Date": "2026-10-09",
+        "INN": "7800000007",
+        "Amount": "219625.00"
+      }
+    },
+    {
+      "id": "invoice-holdout-scannedpdf-008",
+      "file": "files/invoice-holdout-scannedpdf-008.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Hard",
+      "templateId": "invoice-holdout-b",
+      "contentType": "application/pdf",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "BILL-08",
+        "Date": "2026-10-10",
+        "INN": "7800000008",
+        "Amount": "221000.00",
+        "KPP": "780200008"
+      }
+    },
+    {
+      "id": "invoice-holdout-scannedpdf-009",
+      "file": "files/invoice-holdout-scannedpdf-009.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Hard",
+      "templateId": "invoice-holdout-c",
+      "contentType": "application/pdf",
+      "expectedType": "Invoice",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {
+        "Number": "ХС-009",
+        "Date": "2026-10-11",
+        "Amount": "222375.00"
+      }
+    },
+    {
+      "id": "invoice-holdout-image-010",
+      "file": "files/invoice-holdout-image-010.png",
+      "sourceKind": "Image",
+      "difficulty": "Easy",
+      "templateId": "invoice-holdout-d",
+      "contentType": "image/png",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "7810",
+        "Date": "2026-10-12",
+        "INN": "7800000010",
+        "Amount": "223750.00",
+        "KPP": "780200010"
+      }
+    },
+    {
+      "id": "invoice-holdout-image-011",
+      "file": "files/invoice-holdout-image-011.png",
+      "sourceKind": "Image",
+      "difficulty": "Medium",
+      "templateId": "invoice-holdout-e",
+      "contentType": "image/png",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "HOLD-11",
+        "Date": "2026-10-13",
+        "INN": "7800000011",
+        "Amount": "225125.00"
+      }
+    },
+    {
+      "id": "invoice-holdout-image-012",
+      "file": "files/invoice-holdout-image-012.png",
+      "sourceKind": "Image",
+      "difficulty": "Hard",
+      "templateId": "invoice-holdout-f",
+      "contentType": "image/png",
+      "expectedType": "Invoice",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "812/Н",
+        "Date": "2026-10-14",
+        "INN": "7800000012",
+        "Amount": "226500.00",
+        "KPP": "780200012"
+      }
+    },
+    {
+      "id": "contract-holdout-textpdf-001",
+      "file": "files/contract-holdout-textpdf-001.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Easy",
+      "templateId": "contract-holdout-a",
+      "contentType": "application/pdf",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "HC-901",
+        "Date": "2026-11-02",
+        "Amount": "322110.00"
+      }
+    },
+    {
+      "id": "contract-holdout-textpdf-002",
+      "file": "files/contract-holdout-textpdf-002.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Medium",
+      "templateId": "contract-holdout-b",
+      "contentType": "application/pdf",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "СГ-22/2",
+        "Date": "2026-11-03",
+        "Amount": "324220.00"
+      }
+    },
+    {
+      "id": "contract-holdout-textpdf-003",
+      "file": "files/contract-holdout-textpdf-003.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Hard",
+      "templateId": "contract-holdout-c",
+      "contentType": "application/pdf",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "HOLD-C3",
+        "Date": "2026-11-04",
+        "Amount": "326330.00"
+      }
+    },
+    {
+      "id": "contract-holdout-textpdf-004",
+      "file": "files/contract-holdout-textpdf-004.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Easy",
+      "templateId": "contract-holdout-d",
+      "contentType": "application/pdf",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "944",
+        "Date": "2026-11-05",
+        "Amount": "328440.00"
+      }
+    },
+    {
+      "id": "contract-holdout-textpdf-005",
+      "file": "files/contract-holdout-textpdf-005.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Medium",
+      "templateId": "contract-holdout-e",
+      "contentType": "application/pdf",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "C-905",
+        "Date": "2026-11-06",
+        "Amount": "330550.00"
+      }
+    },
+    {
+      "id": "contract-holdout-scannedpdf-006",
+      "file": "files/contract-holdout-scannedpdf-006.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Easy",
+      "templateId": "contract-holdout-f",
+      "contentType": "application/pdf",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "96/К",
+        "Date": "2026-11-07",
+        "Amount": "332660.00"
+      }
+    },
+    {
+      "id": "contract-holdout-scannedpdf-007",
+      "file": "files/contract-holdout-scannedpdf-007.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Medium",
+      "templateId": "contract-holdout-a",
+      "contentType": "application/pdf",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "HCT-07",
+        "Date": "2026-11-08"
+      }
+    },
+    {
+      "id": "contract-holdout-scannedpdf-008",
+      "file": "files/contract-holdout-scannedpdf-008.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Hard",
+      "templateId": "contract-holdout-b",
+      "contentType": "application/pdf",
+      "expectedType": "Contract",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {
+        "Date": "2026-11-09"
+      }
+    },
+    {
+      "id": "contract-holdout-scannedpdf-009",
+      "file": "files/contract-holdout-scannedpdf-009.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Hard",
+      "templateId": "contract-holdout-c",
+      "contentType": "application/pdf",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "КОН-09",
+        "Date": "2026-11-10"
+      }
+    },
+    {
+      "id": "contract-holdout-image-010",
+      "file": "files/contract-holdout-image-010.png",
+      "sourceKind": "Image",
+      "difficulty": "Easy",
+      "templateId": "contract-holdout-d",
+      "contentType": "image/png",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "9100",
+        "Date": "2026-11-11"
+      }
+    },
+    {
+      "id": "contract-holdout-image-011",
+      "file": "files/contract-holdout-image-011.png",
+      "sourceKind": "Image",
+      "difficulty": "Medium",
+      "templateId": "contract-holdout-e",
+      "contentType": "image/png",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "H-CTR-11",
+        "Date": "2026-11-12"
+      }
+    },
+    {
+      "id": "contract-holdout-image-012",
+      "file": "files/contract-holdout-image-012.png",
+      "sourceKind": "Image",
+      "difficulty": "Hard",
+      "templateId": "contract-holdout-f",
+      "contentType": "image/png",
+      "expectedType": "Contract",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Legal",
+      "expectedFields": {
+        "Number": "912/26",
+        "Date": "2026-11-13"
+      }
+    },
+    {
+      "id": "act-holdout-textpdf-001",
+      "file": "files/act-holdout-textpdf-001.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Easy",
+      "templateId": "act-holdout-a",
+      "contentType": "application/pdf",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "HA-301",
+        "Date": "2026-12-02",
+        "Amount": "91975.00",
+        "RelatedContractNumber": "HC-701"
+      }
+    },
+    {
+      "id": "act-holdout-textpdf-002",
+      "file": "files/act-holdout-textpdf-002.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Medium",
+      "templateId": "act-holdout-b",
+      "contentType": "application/pdf",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "АКХ-32",
+        "Date": "2026-12-03",
+        "Amount": "92950.00",
+        "RelatedContractNumber": "HC-702"
+      }
+    },
+    {
+      "id": "act-holdout-textpdf-003",
+      "file": "files/act-holdout-textpdf-003.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Hard",
+      "templateId": "act-holdout-c",
+      "contentType": "application/pdf",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "H-ACT-03",
+        "Date": "2026-12-04",
+        "Amount": "93925.00",
+        "RelatedContractNumber": "HC-703"
+      }
+    },
+    {
+      "id": "act-holdout-textpdf-004",
+      "file": "files/act-holdout-textpdf-004.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Easy",
+      "templateId": "act-holdout-d",
+      "contentType": "application/pdf",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "344",
+        "Date": "2026-12-05",
+        "Amount": "94900.00",
+        "RelatedContractNumber": "HC-704"
+      }
+    },
+    {
+      "id": "act-holdout-textpdf-005",
+      "file": "files/act-holdout-textpdf-005.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Medium",
+      "templateId": "act-holdout-e",
+      "contentType": "application/pdf",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "A-305/26",
+        "Date": "2026-12-06",
+        "Amount": "95875.00",
+        "RelatedContractNumber": "HC-705"
+      }
+    },
+    {
+      "id": "act-holdout-scannedpdf-006",
+      "file": "files/act-holdout-scannedpdf-006.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Easy",
+      "templateId": "act-holdout-f",
+      "contentType": "application/pdf",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "366",
+        "Date": "2026-12-07",
+        "Amount": "96850.00",
+        "RelatedContractNumber": "HC-706"
+      }
+    },
+    {
+      "id": "act-holdout-scannedpdf-007",
+      "file": "files/act-holdout-scannedpdf-007.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Medium",
+      "templateId": "act-holdout-a",
+      "contentType": "application/pdf",
+      "expectedType": "Act",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {
+        "Number": "HOLD-A7",
+        "Amount": "97825.00"
+      }
+    },
+    {
+      "id": "act-holdout-scannedpdf-008",
+      "file": "files/act-holdout-scannedpdf-008.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Hard",
+      "templateId": "act-holdout-b",
+      "contentType": "application/pdf",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "388",
+        "Date": "2026-12-09",
+        "Amount": "98800.00"
+      }
+    },
+    {
+      "id": "act-holdout-scannedpdf-009",
+      "file": "files/act-holdout-scannedpdf-009.pdf",
+      "sourceKind": "ScannedPdf",
+      "difficulty": "Hard",
+      "templateId": "act-holdout-c",
+      "contentType": "application/pdf",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "АК-309",
+        "Date": "2026-12-10",
+        "Amount": "99775.00"
+      }
+    },
+    {
+      "id": "act-holdout-image-010",
+      "file": "files/act-holdout-image-010.png",
+      "sourceKind": "Image",
+      "difficulty": "Easy",
+      "templateId": "act-holdout-d",
+      "contentType": "image/png",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "3100",
+        "Date": "2026-12-11",
+        "Amount": "100750.00"
+      }
+    },
+    {
+      "id": "act-holdout-image-011",
+      "file": "files/act-holdout-image-011.png",
+      "sourceKind": "Image",
+      "difficulty": "Medium",
+      "templateId": "act-holdout-e",
+      "contentType": "image/png",
+      "expectedType": "Act",
+      "expectedStatus": "Completed",
+      "expectedDepartment": "Accounting",
+      "expectedFields": {
+        "Number": "HA-11",
+        "Date": "2026-12-12",
+        "Amount": "101725.00"
+      }
+    },
+    {
+      "id": "act-holdout-image-012",
+      "file": "files/act-holdout-image-012.png",
+      "sourceKind": "Image",
+      "difficulty": "Hard",
+      "templateId": "act-holdout-f",
+      "contentType": "image/png",
+      "expectedType": "Act",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {
+        "Number": "312/Р",
+        "Date": "2026-12-13"
+      }
+    },
+    {
+      "id": "unknown-holdout-textpdf-001",
+      "file": "files/unknown-holdout-textpdf-001.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Easy",
+      "templateId": "unknown-holdout-letter",
+      "contentType": "application/pdf",
+      "expectedType": "Unknown",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {}
+    },
+    {
+      "id": "unknown-holdout-textpdf-002",
+      "file": "files/unknown-holdout-textpdf-002.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Medium",
+      "templateId": "unknown-holdout-memo",
+      "contentType": "application/pdf",
+      "expectedType": "Unknown",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {}
+    },
+    {
+      "id": "unknown-holdout-textpdf-003",
+      "file": "files/unknown-holdout-textpdf-003.pdf",
+      "sourceKind": "TextPdf",
+      "difficulty": "Hard",
+      "templateId": "unknown-holdout-protocol",
+      "contentType": "application/pdf",
+      "expectedType": "Unknown",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {}
+    },
+    {
+      "id": "unknown-holdout-image-004",
+      "file": "files/unknown-holdout-image-004.png",
+      "sourceKind": "Image",
+      "difficulty": "Easy",
+      "templateId": "unknown-holdout-notice",
+      "contentType": "image/png",
+      "expectedType": "Unknown",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {}
+    },
+    {
+      "id": "unknown-holdout-image-005",
+      "file": "files/unknown-holdout-image-005.png",
+      "sourceKind": "Image",
+      "difficulty": "Medium",
+      "templateId": "unknown-holdout-request",
+      "contentType": "image/png",
+      "expectedType": "Unknown",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {}
+    },
+    {
+      "id": "unknown-holdout-image-006",
+      "file": "files/unknown-holdout-image-006.png",
+      "sourceKind": "Image",
+      "difficulty": "Hard",
+      "templateId": "unknown-holdout-message",
+      "contentType": "image/png",
+      "expectedType": "Unknown",
+      "expectedStatus": "NeedsReview",
+      "expectedDepartment": "Unassigned",
+      "expectedFields": {}
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+[
+  {
+    "scenario": "migration and admin login",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "seeded stable kinds/departments",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "create department persisted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "edit department persisted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "create document kind persisted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "real Worker extracts DOCX and routes to review",
+    "passed": true,
+    "detail": "NeedsReview"
+  },
+  {
+    "scenario": "unknown document remains unconfirmed",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "server draft roundtrip preserves incomplete/raw values",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "document assignments persisted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "text/department/counterparty filters",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "counterparty aggregation",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "stale review rejects CAS",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "review normalizes Russian amount and completes",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "CSV BOM and confirmed data",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "reopen restores editable state and changes version",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "previous confirmed values retained in history",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "stale draft rejected after reopening",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "referenced department safely deactivated",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "assignment survives deactivation",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "unused department truly deleted",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "operator cannot mutate admin catalogs",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "drafts isolated by user",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "real embedding model index",
+    "passed": true,
+    "detail": {
+      "indexed": 2
+    }
+  },
+  {
+    "scenario": "semantic query without literal match ranks repair document",
+    "passed": true,
+    "detail": [
+      [
+        "repair-5cc165.docx",
+        0.5168495525056575
+      ],
+      [
+        "vacation-5cc165.docx",
+        0.3585700060307336
+      ]
+    ]
+  },
+  {
+    "scenario": "AI really creates draft kind",
+    "passed": true,
+    "detail": "Заявление о предоставлении ежегодного оплачиваемого отпуска"
+  },
+  {
+    "scenario": "editing AI kind does not approve it",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "browser login and registry",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "browser semantic search real response",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "browser draft survives reload",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "browser AI suggestion adjacent to original",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "theater Escape exits and restores focus",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "return preserves search URL",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "automatic draft has explicit red warning",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "browser admin adds and deletes department",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "search no page overflow 900",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "theater no page overflow 900",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "catalog no page overflow 900",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "search no page overflow 390",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "theater no page overflow 390",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "catalog no page overflow 390",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "no browser runtime errors",
+    "passed": true,
+    "detail": []
+  },
+  {
+    "scenario": "admin approves AI draft",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "resolution archives original without fake completion",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "resolution visible in workspace",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "scenario": "no keyword fallback when semantic model unavailable",
+    "passed": true,
+    "detail": null
+  }
+]

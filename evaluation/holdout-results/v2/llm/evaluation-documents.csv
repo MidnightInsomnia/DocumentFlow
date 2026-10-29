@@ -1,0 +1,43 @@
+Id,SourceKind,Difficulty,TemplateId,ExpectedType,ActualType,ClassificationCorrect,ExpectedStatus,ActualStatus,ExpectedDepartment,ActualDepartment,FieldsCorrect,FieldsMissing,FieldsWrong,FieldsUnexpected,ExactMatch,ProcessingTimeMs,Result
+invoice-holdout-textpdf-001,TextPdf,Easy,invoice-holdout-a,Invoice,Invoice,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1431,Ollama returned unsupported field '<missing>' for Invoice.
+invoice-holdout-textpdf-002,TextPdf,Medium,invoice-holdout-b,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,1755,Executed
+invoice-holdout-textpdf-003,TextPdf,Hard,invoice-holdout-c,Invoice,Invoice,True,Completed,NeedsReview,Accounting,Unassigned,4,0,0,1,False,1701,Executed
+invoice-holdout-textpdf-004,TextPdf,Easy,invoice-holdout-d,Invoice,Invoice,True,NeedsReview,NeedsReview,Accounting,Unassigned,4,0,0,0,False,1397,Executed
+invoice-holdout-textpdf-005,TextPdf,Medium,invoice-holdout-e,Invoice,Invoice,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1572,Ollama returned an empty value for field 'KPP'.
+invoice-holdout-scannedpdf-006,ScannedPdf,Easy,invoice-holdout-f,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,2197,Executed
+invoice-holdout-scannedpdf-007,ScannedPdf,Medium,invoice-holdout-a,Invoice,Invoice,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1988,Ollama returned an empty value for field 'KPP'.
+invoice-holdout-scannedpdf-008,ScannedPdf,Hard,invoice-holdout-b,Invoice,Invoice,True,Completed,Failed,Accounting,Unassigned,0,5,0,0,False,1973,Ollama returned unsupported field '<missing>' for Invoice.
+invoice-holdout-scannedpdf-009,ScannedPdf,Hard,invoice-holdout-c,Invoice,Invoice,True,NeedsReview,Failed,Accounting,Unassigned,0,3,0,0,False,2201,Ollama returned unsupported field 'RelatedContractNumber' for Invoice.
+invoice-holdout-image-010,Image,Easy,invoice-holdout-d,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,5,0,0,0,True,1900,Executed
+invoice-holdout-image-011,Image,Medium,invoice-holdout-e,Invoice,Invoice,True,Completed,NeedsReview,Accounting,Unassigned,4,0,0,1,False,1809,Executed
+invoice-holdout-image-012,Image,Hard,invoice-holdout-f,Invoice,Invoice,True,Completed,Completed,Accounting,Accounting,4,0,1,0,False,1915,Executed
+contract-holdout-textpdf-001,TextPdf,Easy,contract-holdout-a,Contract,Contract,True,Completed,Failed,Legal,Unassigned,0,3,0,0,False,1122,Ollama field response is invalid JSON.
+contract-holdout-textpdf-002,TextPdf,Medium,contract-holdout-b,Contract,Contract,True,Completed,Failed,Legal,Unassigned,0,3,0,0,False,1124,Ollama field response is invalid JSON.
+contract-holdout-textpdf-003,TextPdf,Hard,contract-holdout-c,Contract,Contract,True,Completed,Failed,Legal,Unassigned,0,3,0,0,False,1093,Ollama field response is invalid JSON.
+contract-holdout-textpdf-004,TextPdf,Easy,contract-holdout-d,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1082,Executed
+contract-holdout-textpdf-005,TextPdf,Medium,contract-holdout-e,Contract,Contract,True,Completed,Failed,Legal,Unassigned,0,3,0,0,False,1106,Ollama field response is invalid JSON.
+contract-holdout-scannedpdf-006,ScannedPdf,Easy,contract-holdout-f,Contract,Contract,True,Completed,Completed,Legal,Legal,3,0,0,0,True,1506,Executed
+contract-holdout-scannedpdf-007,ScannedPdf,Medium,contract-holdout-a,Contract,Contract,True,Completed,Failed,Legal,Unassigned,0,2,0,0,False,1404,Ollama returned an empty value for field 'Amount'.
+contract-holdout-scannedpdf-008,ScannedPdf,Hard,contract-holdout-b,Contract,Contract,True,NeedsReview,NeedsReview,Legal,Unassigned,1,0,0,2,False,1313,Executed
+contract-holdout-scannedpdf-009,ScannedPdf,Hard,contract-holdout-c,Contract,Contract,True,Completed,Failed,Legal,Unassigned,0,2,0,0,False,1393,Ollama returned an empty value for field 'Amount'.
+contract-holdout-image-010,Image,Easy,contract-holdout-d,Contract,Contract,True,Completed,NeedsReview,Legal,Unassigned,2,0,0,1,False,1212,Executed
+contract-holdout-image-011,Image,Medium,contract-holdout-e,Contract,Contract,True,Completed,Failed,Legal,Unassigned,0,2,0,0,False,1208,Ollama returned an empty value for field 'Amount'.
+contract-holdout-image-012,Image,Hard,contract-holdout-f,Contract,Contract,True,Completed,NeedsReview,Legal,Unassigned,2,0,0,1,False,1172,Executed
+act-holdout-textpdf-001,TextPdf,Easy,act-holdout-a,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1246,Ollama returned unsupported field '<missing>' for Act.
+act-holdout-textpdf-002,TextPdf,Medium,act-holdout-b,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1329,Ollama field response is invalid JSON.
+act-holdout-textpdf-003,TextPdf,Hard,act-holdout-c,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1337,Ollama field response is invalid JSON.
+act-holdout-textpdf-004,TextPdf,Easy,act-holdout-d,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1261,Ollama returned unsupported field '<missing>' for Act.
+act-holdout-textpdf-005,TextPdf,Medium,act-holdout-e,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1281,Ollama returned unsupported field '<missing>' for Act.
+act-holdout-scannedpdf-006,ScannedPdf,Easy,act-holdout-f,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,4,0,0,False,1626,Ollama returned unsupported field '<missing>' for Act.
+act-holdout-scannedpdf-007,ScannedPdf,Medium,act-holdout-a,Act,Act,True,NeedsReview,NeedsReview,Accounting,Unassigned,2,0,0,1,False,1429,Executed
+act-holdout-scannedpdf-008,ScannedPdf,Hard,act-holdout-b,Act,Act,True,Completed,Completed,Accounting,Accounting,3,0,0,1,False,1655,Executed
+act-holdout-scannedpdf-009,ScannedPdf,Hard,act-holdout-c,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,3,0,0,False,1694,Ollama field response is invalid JSON.
+act-holdout-image-010,Image,Easy,act-holdout-d,Act,Act,True,Completed,Completed,Accounting,Accounting,3,0,0,1,False,1524,Executed
+act-holdout-image-011,Image,Medium,act-holdout-e,Act,Act,True,Completed,Failed,Accounting,Unassigned,0,3,0,0,False,1494,Ollama field response is invalid JSON.
+act-holdout-image-012,Image,Hard,act-holdout-f,Act,Act,True,NeedsReview,NeedsReview,Accounting,Unassigned,2,0,0,1,False,1155,Executed
+unknown-holdout-textpdf-001,TextPdf,Easy,unknown-holdout-letter,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,178,Executed
+unknown-holdout-textpdf-002,TextPdf,Medium,unknown-holdout-memo,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,168,Executed
+unknown-holdout-textpdf-003,TextPdf,Hard,unknown-holdout-protocol,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,170,Executed
+unknown-holdout-image-004,Image,Easy,unknown-holdout-notice,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,324,Executed
+unknown-holdout-image-005,Image,Medium,unknown-holdout-request,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,319,Executed
+unknown-holdout-image-006,Image,Hard,unknown-holdout-message,Unknown,Unknown,True,NeedsReview,NeedsReview,Unassigned,Unassigned,0,0,0,0,True,326,Executed

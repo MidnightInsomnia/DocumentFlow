@@ -1,0 +1,164 @@
+{
+  "pngs": [
+    {
+      "file": "managed-alpha-be.tiff.page-1.png",
+      "width": 6,
+      "height": 4,
+      "bytes": 105,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-alpha-be.tiff.page-2.png",
+      "width": 6,
+      "height": 4,
+      "bytes": 98,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-group4.tiff.page-1.png",
+      "width": 64,
+      "height": 32,
+      "bytes": 955,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-group4.tiff.page-2.png",
+      "width": 64,
+      "height": 32,
+      "bytes": 1070,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-jpeg.tiff.page-1.png",
+      "width": 64,
+      "height": 32,
+      "bytes": 244,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-jpeg.tiff.page-2.png",
+      "width": 64,
+      "height": 32,
+      "bytes": 264,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-large-idat.tiff.page-1.png",
+      "width": 400,
+      "height": 300,
+      "bytes": 514859,
+      "idat_chunks": 8
+    },
+    {
+      "file": "managed-large-idat.tiff.page-2.png",
+      "width": 400,
+      "height": 300,
+      "bytes": 514880,
+      "idat_chunks": 8
+    },
+    {
+      "file": "managed-orientations.tiff.page-1.png",
+      "width": 6,
+      "height": 4,
+      "bytes": 98,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-orientations.tiff.page-2.png",
+      "width": 6,
+      "height": 4,
+      "bytes": 98,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-orientations.tiff.page-3.png",
+      "width": 6,
+      "height": 4,
+      "bytes": 98,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-orientations.tiff.page-4.png",
+      "width": 6,
+      "height": 4,
+      "bytes": 98,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-orientations.tiff.page-5.png",
+      "width": 4,
+      "height": 6,
+      "bytes": 102,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-orientations.tiff.page-6.png",
+      "width": 4,
+      "height": 6,
+      "bytes": 100,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-orientations.tiff.page-7.png",
+      "width": 4,
+      "height": 6,
+      "bytes": 102,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-orientations.tiff.page-8.png",
+      "width": 4,
+      "height": 6,
+      "bytes": 100,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-packbits.tiff.page-1.png",
+      "width": 64,
+      "height": 32,
+      "bytes": 244,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-packbits.tiff.page-2.png",
+      "width": 64,
+      "height": 32,
+      "bytes": 264,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-tiff_lzw.tiff.page-1.png",
+      "width": 64,
+      "height": 32,
+      "bytes": 244,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-tiff_lzw.tiff.page-2.png",
+      "width": 64,
+      "height": 32,
+      "bytes": 264,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-two-page.tiff.page-1.png",
+      "width": 6,
+      "height": 4,
+      "bytes": 98,
+      "idat_chunks": 1
+    },
+    {
+      "file": "managed-two-page.tiff.page-2.png",
+      "width": 6,
+      "height": 4,
+      "bytes": 94,
+      "idat_chunks": 1
+    }
+  ],
+  "png_count": 22,
+  "independent_decode": "Pillow 12.3.0",
+  "channels_orientation_alpha": "exact pixels match on independent asymmetric red/blue image for orientations 1-8 and big-endian alpha",
+  "crc32": "every chunk verified",
+  "metadata": "only IHDR/IDAT/IEND",
+  "large_image": "exact pixels match both 400x300 pages, multiple IDAT chunks"
+}

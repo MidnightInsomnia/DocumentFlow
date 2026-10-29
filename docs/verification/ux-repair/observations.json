@@ -1,0 +1,99 @@
+{
+  "database": "documentflow_ux_verify_aa3bfcc8",
+  "checks": {
+    "real_browser_login": true,
+    "ocr_missing_engine_is_explicit": true,
+    "worker_returns_actionable_ocr_failure": true,
+    "text_document_processed_without_ocr": true,
+    "discovery_anonymous_denied": true,
+    "operator_created": true,
+    "discovery_operator_readable": true,
+    "discovery_retry_operator_denied": true,
+    "kind_create_operator_denied": true,
+    "one_role_dropdown_per_user": true,
+    "users_no_page_overflow_1100": true,
+    "admin_label_padding_1100": true,
+    "users_no_page_overflow_390": true,
+    "admin_label_padding_390": true,
+    "right_panel_wheel_chains_to_page": true,
+    "drop_overlay_covers_cinema": true,
+    "escape_cancels_drag_not_cinema": true,
+    "cinema_right_panel_scrolls": true,
+    "inline_kind_created_and_assigned": true,
+    "cinema_exit_restores_body": true,
+    "assignment_survives_reload": true,
+    "discovery_has_observable_terminal_or_retry_status": true,
+    "automatic_kind_is_inactive_draft": true,
+    "automatic_kind_approval_request": true,
+    "automatic_kind_approval_readback": true,
+    "catalog_status_has_padding": true,
+    "catalog_no_mobile_page_overflow": true,
+    "global_drop_from_admin_handoff": true,
+    "drop_on_upload_appends_once": true,
+    "real_batch_upload_finished": true,
+    "upload_no_mobile_page_overflow": true,
+    "cancelled_navigation_retains_edit_and_files": true,
+    "retained_drop_consumed_once_after_confirmation": true,
+    "no_browser_runtime_errors": true,
+    "disposable_database_removed": true,
+    "disposable_storage_removed": true,
+    "owned_ports_closed": true
+  },
+  "observations": {
+    "health": {
+      "overall": "Degraded",
+      "api": "Healthy",
+      "postgresql": "Healthy",
+      "worker": {
+        "status": "Healthy",
+        "healthyInstances": 1,
+        "staleInstances": 0
+      },
+      "ocr": {
+        "status": "Unavailable",
+        "languages": [],
+        "missingLanguages": [],
+        "errorCode": "ocr_executable_unavailable"
+      },
+      "ai": {
+        "status": "Available"
+      },
+      "version": "1.0.0+5432980f42efa03e0526ad4f3d4cad2524242bb7",
+      "runtime": ".NET 10.0.9"
+    },
+    "ocr_missing_engine_is_explicit": {
+      "status": "Unavailable",
+      "languages": [],
+      "missingLanguages": [],
+      "errorCode": "ocr_executable_unavailable"
+    },
+    "worker_returns_actionable_ocr_failure": "[ocr_executable_unavailable] Tesseract не найден или не запускается. Установите движок и rus/eng.traineddata; укажите Tesseract:ExecutablePath. Системный PATH менять не требуется.",
+    "text_document_processed_without_ocr": {
+      "status": "NeedsReview",
+      "type": "Unknown"
+    },
+    "operator_created": 201,
+    "right_panel_wheel_chains_to_page": {
+      "before": 402,
+      "after": 630
+    },
+    "actual_discovery": {
+      "documentId": "9d5d65df-b654-4a4e-af8e-ccf82a2f9e9d",
+      "status": "Suggested",
+      "message": "Предложен новый вид. Требуется подтверждение администратора.",
+      "canRetry": false,
+      "lastAttemptAtUtc": null,
+      "nextRetryAtUtc": null,
+      "kindId": "cdee8327-f4dc-4b76-96aa-c484453f150d",
+      "kindName": "Служебное письмо",
+      "errorCode": null
+    },
+    "real_batch_upload_finished": {
+      "accepted": 1,
+      "duplicates": 2
+    },
+    "no_browser_runtime_errors": [],
+    "historical_log_backup": "C:\\Users\\<user>\\AppData\\Local\\hermes\\cache\\scratch\\documentflow-ux-logs-9a74524c"
+  },
+  "errors": []
+}

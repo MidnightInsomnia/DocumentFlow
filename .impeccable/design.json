@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-23T21:49:28.285691Z",
+  "title": "Design System: DocumentFlow Stitch Sovereign",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Рабочий индиго"
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Индиго наведения"
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Холодная бумага"
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Белая рабочая поверхность"
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Мягкая лаванда"
+      },
+      "header": {
+        "role": "neutral",
+        "displayName": "Контекстная лаванда"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Чернильный текст"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Вторичный текст"
+      },
+      "original": {
+        "role": "neutral",
+        "displayName": "Тёмный оригинал"
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Заголовок страницы",
+        "purpose": "Базовый h1; списки и каталоги сохраняют собственные размеры."
+      },
+      "body": {
+        "displayName": "Управление и чтение",
+        "purpose": "Inter закреплён пользовательским референсом; предупреждение overused-font оставлено осознанно."
+      },
+      "mono": {
+        "displayName": "Точные значения",
+        "purpose": "Реквизиты, даты, суммы и технические подписи."
+      },
+      "review-input": {
+        "displayName": "Ручная сверка",
+        "purpose": "Моноширинное значение поля проверки."
+      },
+      "status": {
+        "displayName": "Статус документа",
+        "purpose": "Пассивная подпись рядом с существующей Lucide-иконкой."
+      }
+    },
+    "shadows": [
+      {
+        "name": "account-popover",
+        "value": "0 4px 12px #131b2e16",
+        "purpose": "Перекрывающее меню учётной записи; sovereign.css."
+      },
+      {
+        "name": "flat",
+        "value": "none",
+        "purpose": "Шапка, карточки, кнопки, метрики и рабочая область оригинала; без искусственной elevation-шкалы."
+      }
+    ],
+    "motion": [
+      {
+        "name": "dropzone-state",
+        "value": "background-color 140ms ease-out, border-color 140ms ease-out",
+        "purpose": "Единственный явный переход в рассмотренных Sovereign-стилях; stitch-lists.css."
+      },
+      {
+        "name": "reduced-transition-duration",
+        "value": ".01ms",
+        "purpose": "transition-duration при prefers-reduced-motion: reduce; sovereign.css и stitch-inspection.css."
+      },
+      {
+        "name": "reduced-animation-duration",
+        "value": ".01ms",
+        "purpose": "animation-duration при prefers-reduced-motion: reduce."
+      },
+      {
+        "name": "reduced-animation-iterations",
+        "value": "1",
+        "purpose": "animation-iteration-count при reduced motion; sovereign.css."
+      },
+      {
+        "name": "reduced-scroll",
+        "value": "auto",
+        "purpose": "scroll-behavior при reduced motion."
+      },
+      {
+        "name": "reduced-dropzone-transition",
+        "value": "none",
+        "purpose": "Полное отключение перехода зоны загрузки при reduced motion; stitch-lists.css."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "header-compact-max",
+        "value": "1250px"
+      },
+      {
+        "name": "list-filters-max",
+        "value": "1100px"
+      },
+      {
+        "name": "inspection-stack-max",
+        "value": "1050px"
+      },
+      {
+        "name": "header-wrap-max",
+        "value": "960px"
+      },
+      {
+        "name": "base-details-max",
+        "value": "900px"
+      },
+      {
+        "name": "list-two-columns-max",
+        "value": "760px"
+      },
+      {
+        "name": "base-single-column-max",
+        "value": "650px"
+      },
+      {
+        "name": "compact-screen-max",
+        "value": "600px"
+      },
+      {
+        "name": "narrow-list-max",
+        "value": "480px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Основная кнопка",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Основное существующее действие; показан базовый размер Sovereign, не локальное переопределение списков.",
+      "html": "<button type=\"button\" class=\"ds-btn-primary\">Сохранить</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 32px; padding: 6px 12px; border-radius: 2px; font-family: Inter, 'Segoe UI', sans-serif; font-size: 11px; font-weight: 600; line-height: 1.4; text-decoration: none; cursor: pointer; box-shadow: none; border: 1px solid var(--sf-primary, #00236f); color: var(--sf-panel, #fff); background: var(--sf-primary, #00236f); } .ds-btn-primary:hover:not(:disabled) { border-color: var(--sf-primary-hover, #1e3a8a); background: var(--sf-primary-hover, #1e3a8a); } .ds-btn-primary:focus-visible { outline: 2px solid var(--sf-primary, #00236f); outline-offset: 3px; } .ds-btn-primary:disabled { opacity: .55; cursor: not-allowed; } @media (max-width: 600px) { .ds-btn-primary { min-height: 44px; padding: 9px 12px; font-size: 12px; } }"
+    },
+    {
+      "name": "Вторичная кнопка",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Белая кнопка с рамкой для сопутствующего действия; без новой ghost-вариации.",
+      "html": "<button type=\"button\" class=\"ds-btn-secondary\">Отмена</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 32px; padding: 6px 12px; border-radius: 2px; font-family: Inter, 'Segoe UI', sans-serif; font-size: 11px; font-weight: 600; line-height: 1.4; text-decoration: none; cursor: pointer; box-shadow: none; border: 1px solid var(--sf-line, #c5c5d3); color: var(--sf-ink, #131b2e); background: var(--sf-panel, #fff); } .ds-btn-secondary:hover:not(:disabled) { background: var(--sf-soft, #f2f3ff); border-color: #8c8f9e; color: var(--sf-primary, #00236f); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--sf-primary, #00236f); outline-offset: 3px; } .ds-btn-secondary:disabled { opacity: .55; cursor: not-allowed; } @media (max-width: 600px) { .ds-btn-secondary { min-height: 44px; padding: 9px 12px; font-size: 12px; } }"
+    },
+    {
+      "name": "Текстовая кнопка",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Существующая кнопка без заливки/рамки; наведение подчёркивает текст.",
+      "html": "<button type=\"button\" class=\"ds-btn-text\">Применить</button>",
+      "css": ".ds-btn-text { padding: 0; border: 0; background: none; color: var(--sf-primary, #00236f); font-family: Inter, 'Segoe UI', sans-serif; font-size: 12px; font-weight: 600; line-height: 1.5; cursor: pointer; } .ds-btn-text:hover:not(:disabled) { text-decoration: underline; } .ds-btn-text:focus-visible { outline: 2px solid var(--sf-primary, #00236f); outline-offset: 3px; } .ds-btn-text:disabled { cursor: not-allowed; }"
+    },
+    {
+      "name": "Удаление в каталоге",
+      "kind": "button",
+      "refersTo": "button-catalog-delete",
+      "description": "Реальное опасное действие строки каталога: красные текст/граница на белой поверхности.",
+      "html": "<button type=\"button\" class=\"ds-btn-delete\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M10 11v6\" /><path d=\"M14 11v6\" /><path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6\" /><path d=\"M3 6h18\" /><path d=\"M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\" /></svg><span>Удалить</span></button>",
+      "css": ".ds-btn-delete { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 32px; padding: 6px 12px; border-radius: 2px; font-family: Inter, 'Segoe UI', sans-serif; font-size: 11px; font-weight: 600; line-height: 1.4; text-decoration: none; cursor: pointer; box-shadow: none; min-height: 30px; padding: 6px 8px; white-space: nowrap; color: #93000a; border: 1px solid #efb2b8; background: var(--sf-panel, #fff); } .ds-btn-delete svg { flex-shrink: 0; vertical-align: middle; } .ds-btn-delete:hover:not(:disabled) { background: #fff1f2; } .ds-btn-delete:focus-visible { outline: 2px solid var(--sf-primary, #00236f); outline-offset: 3px; } .ds-btn-delete:disabled { opacity: .55; cursor: not-allowed; }"
+    },
+    {
+      "name": "Поле реквизита",
+      "kind": "input",
+      "refersTo": "input-review",
+      "description": "Существующее поле ручной сверки с моноширинным значением, подписью и состоянием aria-invalid; без runtime формы.",
+      "html": "<label class=\"ds-review-field\"><span>Номер документа</span><input class=\"ds-review-input\" type=\"text\" placeholder=\"Номер документа\" aria-invalid=\"false\" /></label>",
+      "css": ".ds-review-field { display: grid; gap: 6px; min-width: 0; color: var(--sf-ink, #131b2e); font-family: Inter, 'Segoe UI', sans-serif; font-size: 12px; font-weight: 500; line-height: 1.55; } .ds-review-input { min-width: 0; min-height: 36px; padding: 8px 10px; border: 1px solid var(--sf-line, #c5c5d3); border-radius: 2px; background: var(--sf-panel, #fff); color: var(--sf-ink, #131b2e); caret-color: var(--sf-primary, #00236f); font-family: var(--sf-mono, 'JetBrains Mono', Consolas, monospace); font-size: 13px; font-weight: 400; line-height: 1.55; font-variant-numeric: tabular-nums; box-shadow: none; } .ds-review-input::placeholder { color: var(--sf-muted, #444651); opacity: 1; } .ds-review-input:hover { border-color: #8c8f9e; } .ds-review-input:focus-visible { outline: 2px solid var(--sf-primary, #00236f); outline-offset: 3px; } .ds-review-input[aria-invalid=\"true\"] { border-color: #ba1a1a; box-shadow: none; } .ds-review-input:disabled { cursor: not-allowed; color: #616373; background: var(--sf-soft, #f2f3ff); } @media (max-width: 600px) { .ds-review-input { font-size: 16px; } }"
+    },
+    {
+      "name": "Верхняя навигация",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Ссылки существующего Layout с нижней линией текущей страницы; фрагмент не реализует роутер.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a class=\"ds-nav-link\" href=\"#documents\" aria-current=\"page\">Реестр документов</a><a class=\"ds-nav-link\" href=\"#verification\">Верификация</a><a class=\"ds-nav-link\" href=\"#search\">Поиск</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: stretch; align-self: stretch; gap: 3px; background: var(--sf-panel, #fff); } .ds-nav-link { display: flex; align-items: center; max-width: 140px; padding: 10px 13px; border-radius: 0; border-bottom: 2px solid transparent; color: var(--sf-muted, #444651); background: transparent; font-family: Inter, 'Segoe UI', sans-serif; font-size: 12px; font-weight: 600; line-height: 1.3; text-decoration: none; } .ds-nav-link:hover { color: var(--sf-primary, #00236f); background: var(--sf-soft, #f2f3ff); } .ds-nav-link[aria-current=\"page\"] { color: var(--sf-primary, #00236f); background: transparent; border-bottom-color: var(--sf-primary, #00236f); } .ds-nav-link:focus-visible { outline: 2px solid var(--sf-primary, #00236f); outline-offset: 3px; } @media (max-width: 1250px) { .ds-nav-link { padding-inline: 10px; font-size: 11px; } } @media (max-width: 960px) { .ds-nav { width: 100%; min-height: 39px; justify-content: flex-start; overflow-x: auto; } .ds-nav-link { max-width: none; white-space: nowrap; padding-inline: 14px; } } @media (max-width: 650px) { .ds-nav { flex-wrap: wrap; } } @media (max-width: 600px) { .ds-nav { margin-inline: -4px; gap: 0; } .ds-nav-link { min-height: 44px; padding-inline: 10px; font-size: 11px; } }"
+    },
+    {
+      "name": "Статусы и фильтры реестра",
+      "kind": "chip",
+      "refersTo": "status",
+      "description": "Пять пассивных badges из StatusBadge и отдельные существующие кнопки фильтра. Hover/focus принадлежат фильтрам; badges не получают tabindex. Выбранность в образце статическая.",
+      "html": "<div class=\"ds-status-set\"><span class=\"ds-status ds-status-pending\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z\" /><path d=\"M14 2v5a1 1 0 0 0 1 1h5\" /><path d=\"M10 9H8\" /><path d=\"M16 13H8\" /><path d=\"M16 17H8\" /></svg>Ожидает обработки</span><span class=\"ds-status ds-status-processing\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\" /><path d=\"M21 3v5h-5\" /><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\" /><path d=\"M8 16H3v5\" /></svg>Обрабатывается</span><span class=\"ds-status ds-status-review\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\" /><path d=\"M12 9v4\" /><path d=\"M12 17h.01\" /></svg>Требует проверки</span><span class=\"ds-status ds-status-completed\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"12\" cy=\"12\" r=\"10\" /><path d=\"m16 9-5.5 5.5L8 12\" /></svg>Завершён</span><span class=\"ds-status ds-status-failed\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M18 6 6 18\" /><path d=\"m6 6 12 12\" /></svg>Ошибка</span></div><div class=\"ds-status-filters\" aria-label=\"Фильтр по статусу\"><button class=\"ds-status-filter\" type=\"button\" aria-pressed=\"false\"><span class=\"ds-status-dot\" aria-hidden=\"true\"></span>Все</button><button class=\"ds-status-filter\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-status-dot ds-status-dot-review\" aria-hidden=\"true\"></span>Требует проверки</button></div>",
+      "css": ".ds-status-set { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; } .ds-status { display: inline-flex; align-items: center; gap: 4px; padding: 3px 6px; border: 1px solid var(--sf-line, #c5c5d3); border-radius: 2px; background: var(--sf-soft, #f2f3ff); color: var(--sf-muted, #444651); font: 500 10px/1.3 var(--sf-mono, 'JetBrains Mono', Consolas, monospace); } .ds-status svg { flex-shrink: 0; vertical-align: middle; } .ds-status-pending { color: #475569; background: #f1f5f9; border-color: #cbd5e1; } .ds-status-processing { color: #264191; background: #eff3ff; border-color: #b6c4ff; } .ds-status-review { color: #934500; background: #fffbeb; border-color: #f5d27d; } .ds-status-completed { color: #006a61; background: #f0fdfa; border-color: #93ded2; } .ds-status-failed { color: #991b1b; background: #fff1f2; border-color: #efb4b9; } .ds-status-filters { display: flex; flex-wrap: wrap; gap: 4px; padding: 7px 10px; border-bottom: 1px solid var(--sf-line, #c5c5d3); background: var(--sf-panel, #fff); } .ds-status-filter { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 28px; padding: 4px 8px; border: 1px solid transparent; border-radius: 2px; background: transparent; color: #444651; font-family: Inter, 'Segoe UI', sans-serif; font-size: 11px; font-weight: 400; line-height: 1.4; cursor: pointer; } .ds-status-filter:hover { background: var(--sf-soft, #f2f3ff); } .ds-status-filter[aria-pressed=\"true\"] { border-color: #bbc5e4; background: #eaedff; color: var(--sf-primary, #00236f); font-weight: 600; } .ds-status-filter:focus-visible { outline: 2px solid var(--sf-primary, #00236f); outline-offset: 3px; } .ds-status-dot { width: 5px; height: 5px; flex-shrink: 0; border-radius: 50%; background: #6d7289; } .ds-status-dot-review { background: #9b6200; } @media (max-width: 760px) { .ds-status-filters { gap: 3px; padding: 6px; } .ds-status-filter { min-height: 34px; padding-inline: 7px; } }"
+    },
+    {
+      "name": "Плоский рабочий контейнер",
+      "kind": "card",
+      "refersTo": "container",
+      "description": "Существующая card и существующая text-link внутри. Сама поверхность пассивна; hover/focus только у ссылки.",
+      "html": "<section class=\"ds-card\"><h2 class=\"ds-card-title\">Обзор обработки</h2><p class=\"ds-card-help\">Проверка и хранение документов</p><a class=\"ds-card-link\" href=\"#dashboard\">Состояние обработки</a></section>",
+      "css": ".ds-card { margin-bottom: 16px; padding: 18px; border: 1px solid var(--sf-line, #c5c5d3); border-radius: 3px; background: var(--sf-panel, #fff); color: var(--sf-ink, #131b2e); font-family: Inter, 'Segoe UI', sans-serif; font-size: 13px; line-height: 1.5; box-shadow: none; } .ds-card-title { margin: 0 0 14px; font-size: 16px; font-weight: 600; line-height: 1.5; letter-spacing: -.015em; } .ds-card-help { margin-top: 0; margin-bottom: 0; color: var(--sf-muted, #444651); font-size: 12px; line-height: 1.5; } .ds-card-link { color: var(--sf-primary, #00236f); font-weight: 600; text-underline-offset: 3px; } .ds-card-link:hover { text-decoration: underline; } .ds-card-link:focus-visible { outline: 2px solid var(--sf-primary, #00236f); outline-offset: 3px; } @media (max-width: 600px) { .ds-card { padding: 14px; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Stitch Sovereign",
+    "overview": "Sovereign — закреплённый пользователем визуальный мир DocumentFlow: компактное, спокойное рабочее пространство без декоративной демонстративности. Белая навигация и холодные лавандовые поверхности отделяют уровни управления; насыщенный индиго обозначает действие и текущий контекст. Тонкие границы и почти прямые углы поддерживают плотность, не превращая каждую группу данных в отдельную приподнятую карточку.\n\nInter обслуживает управление и чтение, JetBrains Mono — реквизиты, даты, суммы и технические подписи. Тёмная область оригинала противопоставлена светлой области ручной проверки, а не задаёт тёмную тему всего продукта. Движение подчинено смене состояния и не требуется для понимания интерфейса.",
+    "keyCharacteristics": [
+      "Холодные светлые поверхности с индиговым акцентом.",
+      "Плотная типографика и моноширинная сверка реквизитов.",
+      "Тонкие границы, небольшие радиусы и плоские контейнеры.",
+      "Статус выражен подписью, иконкой и семантическим цветом.",
+      "Видимый клавиатурный фокус и адаптация рабочих регионов."
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Status Rule",
+        "body": "Цвет статуса сопровождается текстом и существующей иконкой; нельзя сообщать состояние только цветом или переиспользовать цвет ошибки как декоративный акцент.",
+        "section": "colors"
+      },
+      {
+        "name": "The Exact Values Rule",
+        "body": "Использовать JetBrains Mono для реквизитов, сумм, дат и технических подписей; основной русский текст и команды оставлять в Inter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Workbench Rule",
+        "body": "Рабочие контейнеры плоские; не добавлять им тени вместо тональной и пограничной иерархии. Тень меню обозначает перекрытие.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** сохранять закреплённый мир Stitch Sovereign и холодную светлую палитру.",
+      "**Do** брать повторно используемые значения из frontmatter, а локальные исключения — из соответствующего CSS.",
+      "**Do** разделять Inter для управления и JetBrains Mono для точных значений.",
+      "**Do** показывать видимый keyboard focus и текстовое обозначение статуса вместе с иконкой.",
+      "**Do** сохранять самостоятельную прокрутку таблиц и последовательное расположение сверки на узком экране.",
+      "**Do** оставлять рабочие контейнеры плоскими и учитывать reduced motion."
+    ],
+    "donts": [
+      "**Don't** менять Inter/JetBrains Mono из-за предупреждения overused-font или подключать CDN вместо локальных шрифтов.",
+      "**Don't** возвращать тёмную общую SaaS-шапку, крупные скруглённые карточки и разреженные формы отвергнутого оформления.",
+      "**Don't** придумывать новые варианты кнопок, tonal ramps, тени или анимации при расширении документации.",
+      "**Don't** превращать пассивный status badge в интерактивный элемент или сообщать состояние только цветом.",
+      "**Don't** подменять продуктовую истину и контракт поверхности визуальной документацией или добавлять неподдерживаемые действия ради макета.",
+      "**Don't** выдавать описание CSS и статические образцы за новое end-to-end подтверждение работы приложения."
+    ]
+  }
+}

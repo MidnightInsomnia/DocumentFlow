@@ -1,0 +1,312 @@
+{
+  "passed": false,
+  "summary": "Независимое финальное статическое ревью не пройдено: подтверждены шесть логических дефектов в сохранности черновиков, обходе очереди, назначениях и контракте API/UI. Подтверждённых новых уязвимостей безопасности не найдено. Исходники и staged-состав не изменялись; тесты, сборки и серверы не запускались.",
+  "language": "ru",
+  "reviewType": "Единственное независимое финальное ревью полного staged diff; выводы по коду, без повторного исполнения прикладных сценариев",
+  "repositoryPath": "C:/Users/<user>/Desktop/ddd/documentflow-final-handoff/DocumentFlow-Handoff/source",
+  "reviewedHead": "4ef9e71843d6c0ba7f9448597d5461e0a1f1e3ac",
+  "indexSha256": "cb8c5cd0afb520775d80c5c1f461da96abbc0ed026b22d356b9d62247662330d",
+  "stagedTree": "5d116ea5a0d869d7f2416896e45cf5b0ea9c8ebb",
+  "sourceFingerprintsMatch": true,
+  "sourceFingerprintCount": 301,
+  "sourceManifestPath": "C:/Users/<user>/AppData/Local/hermes/cache/scratch/documentflow-usability-20261023/review-input-manifest.json",
+  "sourceManifestSha256": "a4f3a7d41d0f574f63e6772cbd177484d8bc101742cec732be8e08b2ca5a664e",
+  "applicationDiffSha256": "3ef7ee4d78415c5afeb17ccb6af98ea0a499bee93e4bfcdc72c2c9c443a2a770",
+  "identityBefore": {
+    "reviewedHead": "4ef9e71843d6c0ba7f9448597d5461e0a1f1e3ac",
+    "indexSha256": "cb8c5cd0afb520775d80c5c1f461da96abbc0ed026b22d356b9d62247662330d",
+    "stagedTree": "5d116ea5a0d869d7f2416896e45cf5b0ea9c8ebb",
+    "sourceFingerprintsMatch": true
+  },
+  "identityAfter": {
+    "reviewedHead": "4ef9e71843d6c0ba7f9448597d5461e0a1f1e3ac",
+    "indexSha256": "cb8c5cd0afb520775d80c5c1f461da96abbc0ed026b22d356b9d62247662330d",
+    "stagedTree": "5d116ea5a0d869d7f2416896e45cf5b0ea9c8ebb",
+    "sourceFingerprintsMatch": true
+  },
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "DF-L01",
+      "priority": "P1",
+      "title": "Открытие новой версии документа удаляет единственную аварийную копию старого несохранённого ввода",
+      "path": "frontend/documentflow-web/src/components/DocumentReviewForm.tsx",
+      "line": 187,
+      "endLine": 189,
+      "relatedLocations": [
+        { "path": "frontend/documentflow-web/src/components/DocumentReviewForm.tsx", "line": 133, "endLine": 143 },
+        { "path": "frontend/documentflow-web/src/components/DocumentReviewForm.tsx", "line": 160, "endLine": 160 },
+        { "path": "frontend/documentflow-web/src/components/DocumentReviewForm.tsx", "line": 183, "endLine": 183 }
+      ],
+      "reproduction": [
+        "Пользователь A изменяет поле документа NeedsReview версии V1, не сохраняя серверный черновик; форма создаёт аварийную копию в sessionStorage.",
+        "В другой вкладке/сеансе документ архивируют и восстанавливают. Он снова NeedsReview, но имеет новую Version; исходные реквизиты не менялись.",
+        "В течение 30 минут A обновляет исходную вкладку. initial.emergency найден, но initial.restored равен null из-за другой версии. Старые значения показываются только в staleDraft для копирования.",
+        "На этом же монтировании snapshot равен baseline, поэтому dirty=false и эффект удаляет запись sessionStorage. Повторное обновление страницы либо уход и возврат уничтожает также единственную оставшуюся копию в React state. Guard не предупреждает, поскольку не учитывает staleDraft."
+      ],
+      "rationale": "Неприменение устаревшего ввода поверх новой версии правильно, но оно не является согласием пользователя удалить этот ввод. Без серверного черновика данные необратимо теряются раньше заявленного срока аварийного восстановления, просто при просмотре конфликта. Причина подтверждается связкой restored=null, baseline/savedFingerprint и безусловной очистки при !dirty.",
+      "expected": "Сохранять отдельную копию конфликтующего ввода до явного удаления/успешного переноса либо истечения срока; не считать наличие восстановимых несохранённых данных основанием для автоматической очистки.",
+      "verification": "Подтверждено статическим прослеживанием состояния и эффектов; браузерный сценарий в этом ревью не запускался."
+    },
+    {
+      "id": "DF-L02",
+      "priority": "P2",
+      "title": "Серверный черновик одного пользователя молча перезаписывается устаревшей вкладкой",
+      "path": "src/DocumentFlow.Infrastructure/ReviewWork/ReviewWorkService.cs",
+      "line": 69,
+      "endLine": 85,
+      "relatedLocations": [
+        { "path": "src/DocumentFlow.Infrastructure/ReviewWork/ReviewWorkModel.cs", "line": 10, "endLine": 18 },
+        { "path": "frontend/documentflow-web/src/components/DocumentReviewForm.tsx", "line": 262, "endLine": 281 },
+        { "path": "frontend/documentflow-web/src/api/reviewWorkApi.ts", "line": 42, "endLine": 49 }
+      ],
+      "reproduction": [
+        "Один пользователь открывает один документ NeedsReview в двух вкладках; обе читают одну Version=V и один исходный серверный черновик.",
+        "Во вкладке A меняет Number на новый вариант и сохраняет черновик. Получает успешный ответ; документ остаётся версии V.",
+        "Во вкладке B, не перечитывая черновик A, меняет другое поле и сохраняет свой старый полный набор fields с тем же baseVersion=V.",
+        "CheckVersion снова проходит. Единственная запись ReviewDraft с ключом DocumentId/UserId полностью заменяется данными B. После перезагрузки A её ранее успешно сохранённое изменение отсутствует; версии черновиков и истории этих сохранений нет."
+      ],
+      "rationale": "FOR UPDATE сериализует запросы, но не обнаруживает устаревший снимок черновика. CAS проверяет только Version документа, которую SaveDraftAsync не меняет. У ReviewDraft отсутствует собственный concurrency token/expected revision, а UpdatedAtUtc клиентом как условие записи не передаётся. Изоляция по UserId защищает разных пользователей, но не обычную работу одного пользователя в двух вкладках.",
+      "expected": "Проверять ожидаемую ревизию самого черновика или сохранять конфликтующие редакции отдельно; устаревшая вкладка не должна подтверждать успешное уничтожение уже сохранённого варианта.",
+      "verification": "Подтверждено по DTO, EF-модели, телу PUT и транзакционному пути сохранения; конкурентные HTTP-запросы не выполнялись."
+    },
+    {
+      "id": "DF-L03",
+      "priority": "P2",
+      "title": "Пропуск зацикливается между первыми двумя документами вместо продвижения по очереди",
+      "path": "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx",
+      "line": 108,
+      "endLine": 116,
+      "relatedLocations": [
+        { "path": "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx", "line": 312, "endLine": 312 }
+      ],
+      "reproduction": [
+        "В одной стабильной выборке есть три документа A, B, C в NeedsReview; в порядке, возвращаемом nextReview, они расположены A, B, C.",
+        "Открыть A и нажать «Пропустить и открыть следующий»: из первой страницы выбирается B.",
+        "В B снова нажать пропуск: повторно запрашивается первая страница, и find(item.id !== id) теперь выбирает A.",
+        "Дальнейшие пропуски дают A/B/A/B; C не достигается. Тот же алгоритм применяется к обычной и поисковой очереди."
+      ],
+      "rationale": "Пропуск не меняет статус документа, а nextReview не хранит cursor/позицию или множество пропущенных ID. Он всегда берёт первую страницу и исключает лишь текущий ID. Поэтому подтверждение с удалением элемента из NeedsReview может продвигаться, а заявленный обход через пропуск — нет.",
+      "expected": "Продвигаться после текущей позиции с корректной пагинацией либо учитывать пропущенные в текущем проходе элементы; не объявлять очередь завершённой до её фактического обхода.",
+      "verification": "Детерминированный путь по коду для списка из трёх элементов; прикладной сценарий не исполнялся."
+    },
+    {
+      "id": "DF-L04",
+      "priority": "P2",
+      "title": "Фоновое создание назначений игнорирует деактивацию системных отделов и видов",
+      "path": "src/DocumentFlow.Infrastructure/Workspace/WorkspaceIndexingService.cs",
+      "line": 84,
+      "endLine": 88,
+      "relatedLocations": [
+        { "path": "src/DocumentFlow.Infrastructure/Workspace/WorkspaceInitializer.cs", "line": 15, "endLine": 22 },
+        { "path": "src/DocumentFlow.Infrastructure/Workspace/WorkspaceInitializer.cs", "line": 43, "endLine": 51 },
+        { "path": "src/DocumentFlow.Infrastructure/Workspace/CatalogService.cs", "line": 122, "endLine": 140 },
+        { "path": "frontend/documentflow-web/src/pages/AdminCatalogsPage.tsx", "line": 177, "endLine": 177 }
+      ],
+      "reproduction": [
+        "Администратор редактирует системный отдел «Бухгалтерия» и делает его неактивным; старые назначения сохраняются, что само по себе правильно.",
+        "После этого загрузить новый распознаваемый счёт и дождаться завершения Worker и первого фонового создания DocumentWorkspace.",
+        "IndexBatchAsync напрямую записывает AccountingId из enum TargetDepartment в новый workspace, не проверяя OrganizationDepartment.IsActive. Новый документ получает уже деактивированный отдел.",
+        "Аналогично деактивированный системный вид Invoice назначается новым счетам; startup-backfill использует тот же обход проверки активности."
+      ],
+      "rationale": "UI и ручной API запрещают новые назначения неактивных элементов, но background/bootstrap обходит это правило. Ссылка остаётся валидной для FK, поскольку безопасная деактивация не удаляет строку, поэтому ошибка не будет отклонена БД. Это противоречит заявлению UI, что неактивные отделы недоступны для новых назначений. Сохранение прежних ссылок не требует создания новых ссылок на деактивированный элемент.",
+      "expected": "При создании новых системных назначений учитывать IsActive/IsDraft; прежние исторические назначения сохранять, а для недоступного нового назначения оставлять явное неназначенное состояние или применять согласованное активное правило.",
+      "verification": "Подтверждено сопоставлением admin update, обеих веток создания workspace и EF FK; загрузка нового документа не выполнялась."
+    },
+    {
+      "id": "DF-L05",
+      "priority": "P2",
+      "title": "Автообновление назначения стирает выбор пользователя каждые 15 секунд",
+      "path": "frontend/documentflow-web/src/components/DocumentAssignment.tsx",
+      "line": 27,
+      "endLine": 37,
+      "relatedLocations": [
+        { "path": "frontend/documentflow-web/src/components/DocumentAssignment.tsx", "line": 54, "endLine": 57 }
+      ],
+      "reproduction": [
+        "Открыть неизвестный документ без назначенного вида; например, AI отключён/недоступен, поэтому assignment.kindId остаётся null.",
+        "В блоке назначения выбрать вид или другой отдел, но пока не нажимать сохранение.",
+        "Дождаться очередного интервала 15 секунд и завершения GET. Он меняет revision и без проверки локальных изменений вызывает setKindId/setDepartmentId из прежнего серверного назначения.",
+        "Выбранные значения исчезают. При выборе только отдела можно потерять его незаметно; при последующем сохранении изменяется уже не первоначально выбранный пользователем набор."
+      ],
+      "rationale": "Условие polling смотрит на сохранённый assignment.kindId, а не на редактируемый kindId. Эффект загрузки одновременно обновляет серверный снимок и редактируемые controls, не имея dirty/epoch-защиты. Guard формы реквизитов не охватывает этот независимый компонент.",
+      "expected": "Отделить редактируемый снимок от фонового чтения; не заменять dirty controls результатом polling и не терять локальные изменения при появлении AI-предложения.",
+      "verification": "Подтверждено зависимостями useEffect и безусловными setters; таймер/браузер в этом ревью не запускался."
+    },
+    {
+      "id": "DF-L06",
+      "priority": "P2",
+      "title": "Сервер принимает nullable значения черновика, которые официальный UI затем не может прочитать",
+      "path": "frontend/documentflow-web/src/api/reviewWorkApi.ts",
+      "line": 24,
+      "endLine": 25,
+      "relatedLocations": [
+        { "path": "src/DocumentFlow.Infrastructure/ReviewWork/ReviewWorkService.cs", "line": 13, "endLine": 15 },
+        { "path": "src/DocumentFlow.Infrastructure/ReviewWork/ReviewWorkService.cs", "line": 56, "endLine": 65 },
+        { "path": "frontend/documentflow-web/src/api/reviewWorkApi.ts", "line": 32, "endLine": 35 }
+      ],
+      "reproduction": [
+        "Для доступного NeedsReview документа с актуальной версией V сохранить через PUT /api/documents/{id}/review/draft объект: type=Invoice, baseVersion=V, fields=[{name:Number,value:СЧ-1},{name:KPP,value:null}].",
+        "DTO разрешает string? Value, проверка field.Value?.Length > 4000 не отклоняет null; SaveDraftAsync сериализует и возвращает этот черновик успешно.",
+        "Открыть документ тем же пользователем в официальном UI. GET возвращает тот же null, но parseDraft требует typeof field.value === 'string' и отклоняет весь черновик.",
+        "UI вместо восстановления сохранённого Number показывает ошибку загрузки; повторная загрузка ничего не меняет."
+      ],
+      "rationale": "Это несовпадение новых контрактов, а не некорректный ответ стороннего сервера: текущий backend сам принимает и хранит данные, отвергаемые текущим frontend. Незавершённые/пустые поля естественны для черновика, а backend прямо декларирует nullable Value. Обе стороны должны одинаково представлять пустое значение.",
+      "expected": "Согласовать контракт: либо нормализовать null в пустую строку на границе UI без потери остальных полей, либо явно отклонять/нормализовать null на сервере до сохранения и возвращать единый формат.",
+      "verification": "Подтверждено nullable DTO, условием валидации и parseDraft; HTTP-воспроизведение не выполнялось."
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "DF-S01",
+      "path": "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx",
+      "line": 405,
+      "summary": "Добавить просмотр сохранённых ReviewRevision через существующий GET review/history. Сейчас карточка показывает события, но не предыдущие значения полей; для доступа к полноценному снимку нужен прямой API. Хранение истории на backend реализовано, поэтому это рекомендация интерфейса, а не заявление об отсутствии истории."
+    },
+    {
+      "id": "DF-S02",
+      "path": "frontend/documentflow-web/src/pages/AdminCatalogsPage.tsx",
+      "line": 60,
+      "summary": "Распространить navigation guard на несохранённые формы справочников. Переключение собственных вкладок уже спрашивает подтверждение, но общий переход по навигации/закрытие страницы этот механизм не использует. Это дополнительная защита ручного ввода вне формы реквизитов."
+    }
+  ],
+  "coverage": {
+    "method": "Пофайловое чтение git diff --cached --diff-filter=ACMR -- src frontend tools, чтение актуальных реализаций и связанных неизменённых компонентов; статическое прослеживание HTTP → сервис → EF/domain → frontend. Большие выводы разбирались по файлам и диапазонам. Отчёты исполнителя не принимались как доказательство корректности кода.",
+    "applicationChangedPaths": 77,
+    "allApplicationChangedPathsReviewed": true,
+    "deletedPaths": 124,
+    "deletionsAssessment": "Удаление исходных тестов/тестовых проектов и прямых test/dev-зависимостей рассмотрено как заданная граница работы, не как блокер; удалённые тесты не выполнялись и не восстанавливались.",
+    "areas": [
+      "Все новые и изменённые API routes, fallback JWT authorization, Admin-only catalog/reindex/status, DTO и frontend routes/types.",
+      "Настоящий локальный embedding client, digest модели, размер/валидность векторов, cosine/top-K, фильтры, ИНН и фоновое индексирование; текстовая подмена semantic не обнаружена.",
+      "AI-discovery и создание нового неактивного draft, редактирование без неявного approve, явное административное подтверждение и красная маркировка.",
+      "CRUD отделов/видов, нормализация имён, advisory locks, restrict-FK и безопасная деактивация используемых элементов.",
+      "Серверные/аварийные черновики, версия документа, транзакционное подтверждение/CAS, reopen snapshots, resolve/archive и история.",
+      "CSV Completed-only, параметризованные фильтры, ограничение строк, BOM, экранирование структуры и нейтрализация формул.",
+      "Очередь, navigation guards, upload append/replace, сохранение ссылок, ошибки сеанса и смена пароля.",
+      "Кинотеатр, обычный предпросмотр, Escape/focus код, responsive CSS и отсутствие автоматического доверия AI-полям.",
+      "Managed TIFF header limits, decode buffers, ориентации/alpha, PNG chunks/CRC, отмена и интеграция существующего интерфейса.",
+      "Миграция Up/Down, EF-конфигурации и сгенерированная целевая модель; тело Designer совпадает с текущим ModelSnapshot.",
+      "Локальный launcher, loopback bindings, команды запуска/остановки, отсутствие встроенных новых секретов, документация ограничений."
+    ],
+    "independentStaticScan": {
+      "scope": "Добавленные application-строки полного staged diff, без обрезания содержимого перед сканированием",
+      "dynamicCodeMatch": "DocumentReviewForm.tsx:105 — RegExp.exec(value), обычное извлечение даты, не eval/исполнение кода",
+      "rawSqlMatch": "CatalogService.cs:49 — постоянный SQL advisory lock без пользовательской интерполяции",
+      "authoredWhitespaceExitCode": 0,
+      "newConfirmedSecurityFindings": 0,
+      "limitation": "Эвристический скан не является гарантией отсутствия уязвимостей; выводы основаны также на чтении кода."
+    },
+    "identityVerification": "HEAD, staged tree, SHA-256 сырых байтов git ls-files --stage -z и все 301 source SHA-256 совпали с переданным manifest до и после чтения. Незастейдженных исходных изменений нет. Новый отчёт намеренно не добавлялся в индекс.",
+    "constraintsRespected": [
+      "Исходники не исправлялись; git add/reset/stash/commit не выполнялись.",
+      "Новые тесты не писались, существующие не запускались; сборки, серверы, API/browser сценарии и модели повторно не запускались.",
+      "Создан только новый docs/verification/final-code-review.json; дополнительные Markdown/скрипты в репозиторий не записывались.",
+      "Пароли, JWT и содержимое local-secrets.json не читались и не включались в отчёт."
+    ]
+  },
+  "unverified": [
+    "Динамическое воспроизведение находок не выполнялось по прямому запрету запуска тестов/серверов. reproduction описывает подтверждённые кодом сценарии для родительской целевой проверки, а не выполненные запросы.",
+    "Результаты ранее заявленных build/audit/46 HTTP-browser сценариев, скриншотов и TIFF-прогонов не перепроверялись и не использовались вместо чтения кода.",
+    "Огромные машинные inventories и архивы сторонних LICENSE/NOTICE не перечитывались построчно; их 392 evidence-хеша этим ревью заново не аудировались. Изучены текущие авторские описания зависимостей и явных границ.",
+    "Полный native PDF/GPU/toolchain permissive-only состав не удостоверяется: это уже явно раскрытая граница, не новая security/code finding. Новых обязательных платных API/подписок по прочитанным интеграциям не обнаружено.",
+    "Качество tiny 0.5B модели, полный OCR Tesseract, перенос на другую машину, миграция чужой production-БД и нагрузочная/процессная изоляция TIFF не проверялись.",
+    "Пиксельная/assistive-технологическая проверка кинотеатра и поведение клавиатуры внутри встроенного PDF viewer повторно не проверялись; оценён соответствующий код и CSS."
+  ],
+  "reviewedPaths": [
+    "frontend/documentflow-web/package-lock.json",
+    "frontend/documentflow-web/package.json",
+    "frontend/documentflow-web/src/App.tsx",
+    "frontend/documentflow-web/src/api/apiClient.ts",
+    "frontend/documentflow-web/src/api/documentsApi.ts",
+    "frontend/documentflow-web/src/api/reviewWorkApi.ts",
+    "frontend/documentflow-web/src/api/workspaceApi.ts",
+    "frontend/documentflow-web/src/components/DocumentAssignment.tsx",
+    "frontend/documentflow-web/src/components/DocumentPreview.tsx",
+    "frontend/documentflow-web/src/components/DocumentReviewForm.tsx",
+    "frontend/documentflow-web/src/components/Layout.tsx",
+    "frontend/documentflow-web/src/components/review-form.css",
+    "frontend/documentflow-web/src/document-workspace.css",
+    "frontend/documentflow-web/src/hooks/useNavigationGuard.ts",
+    "frontend/documentflow-web/src/main.tsx",
+    "frontend/documentflow-web/src/pages/AdminCatalogsPage.tsx",
+    "frontend/documentflow-web/src/pages/ChangePasswordPage.tsx",
+    "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx",
+    "frontend/documentflow-web/src/pages/DocumentsPage.tsx",
+    "frontend/documentflow-web/src/pages/LoginPage.tsx",
+    "frontend/documentflow-web/src/pages/SearchPage.tsx",
+    "frontend/documentflow-web/src/pages/UploadDocumentPage.tsx",
+    "frontend/documentflow-web/src/types/documents.ts",
+    "frontend/documentflow-web/src/types/workspace.ts",
+    "frontend/documentflow-web/src/utils/labels.ts",
+    "frontend/documentflow-web/src/workspace.css",
+    "frontend/documentflow-web/tsconfig.app.json",
+    "src/DocumentFlow.Api/Controllers/AdminCatalogsController.cs",
+    "src/DocumentFlow.Api/Controllers/CatalogsController.cs",
+    "src/DocumentFlow.Api/Controllers/DocumentExportController.cs",
+    "src/DocumentFlow.Api/Controllers/DocumentInsightsController.cs",
+    "src/DocumentFlow.Api/Controllers/DocumentReviewController.cs",
+    "src/DocumentFlow.Api/Controllers/DocumentReviewWorkController.cs",
+    "src/DocumentFlow.Api/Controllers/DocumentSearchController.cs",
+    "src/DocumentFlow.Api/Controllers/DocumentWorkspaceController.cs",
+    "src/DocumentFlow.Api/Controllers/DocumentsController.cs",
+    "src/DocumentFlow.Api/Program.cs",
+    "src/DocumentFlow.Api/Requests/Documents/ReviewDocumentRequest.cs",
+    "src/DocumentFlow.Api/Responses/Documents/DocumentInsightsResponses.cs",
+    "src/DocumentFlow.Api/Responses/Documents/DocumentReadResponses.cs",
+    "src/DocumentFlow.Application/Documents/Processing/DocumentFieldSchema.cs",
+    "src/DocumentFlow.Application/Documents/Processing/Validation/RuleBasedDocumentValidator.cs",
+    "src/DocumentFlow.Application/Documents/Read/ConsistencyCheckResult.cs",
+    "src/DocumentFlow.Application/Documents/Read/DocumentDetails.cs",
+    "src/DocumentFlow.Application/Documents/Read/DocumentListItem.cs",
+    "src/DocumentFlow.Application/Documents/Read/PotentialDuplicateResult.cs",
+    "src/DocumentFlow.Application/Documents/Review/DocumentReviewService.cs",
+    "src/DocumentFlow.Application/Documents/Review/DocumentVersionConflictException.cs",
+    "src/DocumentFlow.Application/Documents/Review/ReviewDocumentCommand.cs",
+    "src/DocumentFlow.Application/Documents/Review/ReviewDocumentResult.cs",
+    "src/DocumentFlow.Domain/Entities/Document.cs",
+    "src/DocumentFlow.Domain/Enums/DocumentEventType.cs",
+    "src/DocumentFlow.Infrastructure/DependencyInjection.cs",
+    "src/DocumentFlow.Infrastructure/DocumentFlow.Infrastructure.csproj",
+    "src/DocumentFlow.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+    "src/DocumentFlow.Infrastructure/Persistence/DocumentFlowDbContext.cs",
+    "src/DocumentFlow.Infrastructure/Persistence/Migrations/20261023172741_WorkspaceReviewAndSemanticSearch.Designer.cs",
+    "src/DocumentFlow.Infrastructure/Persistence/Migrations/20261023172741_WorkspaceReviewAndSemanticSearch.cs",
+    "src/DocumentFlow.Infrastructure/Persistence/Migrations/DocumentFlowDbContextModelSnapshot.cs",
+    "src/DocumentFlow.Infrastructure/Persistence/Repositories/DocumentInsightsRepository.cs",
+    "src/DocumentFlow.Infrastructure/Persistence/Repositories/DocumentReadRepository.cs",
+    "src/DocumentFlow.Infrastructure/Persistence/Repositories/DocumentReviewRepository.cs",
+    "src/DocumentFlow.Infrastructure/Processing/TextExtraction/TiffHeaderLimits.cs",
+    "src/DocumentFlow.Infrastructure/Processing/TextExtraction/TiffRasterizer.cs",
+    "src/DocumentFlow.Infrastructure/ReviewWork/ReviewWorkEntities.cs",
+    "src/DocumentFlow.Infrastructure/ReviewWork/ReviewWorkModel.cs",
+    "src/DocumentFlow.Infrastructure/ReviewWork/ReviewWorkService.cs",
+    "src/DocumentFlow.Infrastructure/Workspace/CatalogService.cs",
+    "src/DocumentFlow.Infrastructure/Workspace/DocumentSearchService.cs",
+    "src/DocumentFlow.Infrastructure/Workspace/DocumentWorkspaceService.cs",
+    "src/DocumentFlow.Infrastructure/Workspace/INTEGRATION.md",
+    "src/DocumentFlow.Infrastructure/Workspace/LocalModelClients.cs",
+    "src/DocumentFlow.Infrastructure/Workspace/WorkspaceIndexingService.cs",
+    "src/DocumentFlow.Infrastructure/Workspace/WorkspaceInitializer.cs",
+    "src/DocumentFlow.Infrastructure/Workspace/WorkspaceModel.cs",
+    "src/DocumentFlow.Infrastructure/Workspace/WorkspaceServiceCollectionExtensions.cs",
+    "tools/local_stack.py",
+    ".gitattributes",
+    ".gitignore",
+    ".hermes/plans/2026-10-23-documentflow-improvements.md",
+    "DocumentFlow.sln",
+    "Start-DocumentFlow.cmd",
+    "README.md",
+    "README-LOCAL.md",
+    "docs/INITIAL-LICENSE-AUDIT.md",
+    "docs/MODELS-AND-FRONTEND-CURRENT.md",
+    "docs/THIRD_PARTY_NOTICES.md",
+    "docs/TIFF-DEPENDENCY-CHANGE.md",
+    "docs/verification/README.md",
+    "docs/verification/pre-review-static-scan.json",
+    "frontend/documentflow-web/src/components/AuthProvider.tsx",
+    "frontend/documentflow-web/src/utils/uploadBatch.ts",
+    "src/DocumentFlow.Infrastructure/Persistence/Repositories/DocumentProcessingRepository.cs",
+    "src/DocumentFlow.Infrastructure/Persistence/Repositories/DocumentReprocessRepository.cs"
+  ]
+}

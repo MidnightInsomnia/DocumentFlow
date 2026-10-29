@@ -1,0 +1,1047 @@
+{
+  "evidence": {
+    "repository": "C:/Users/<user>/Desktop/ddd/DocumentFlow-Stitch",
+    "branch": "redesign/stitch-sovereign",
+    "reviewedHead": "93dcc3fd69315a5015e12c336c576ad800185fa9",
+    "indexSha256": "70378d3b1bb8673c38f376fadd100f50c7f68618a29115172fec8e586217a920",
+    "indexFingerprintMethod": "SHA-256 of RAW subprocess stdout bytes from git ls-files --stage -z, cwd=repository. No decoding, newline rewriting, sorting or hashing of the .git/index file.",
+    "method": "One final independent combined source/security/logic review of the staged diff, plus bounded inspection of existing static screenshots. Not a rerun of /critique or a polishing loop.",
+    "scope": "source/static-review only",
+    "stagedFileCount": 54,
+    "reviewedStagedPaths": [
+      ".hermes/plans/documentflow-stitch-redesign.md",
+      ".impeccable/review/catalogs-desktop.png",
+      ".impeccable/review/catalogs-mobile.png",
+      ".impeccable/review/document-loading-desktop.png",
+      ".impeccable/review/document-loading-mobile.png",
+      ".impeccable/review/login-desktop.png",
+      ".impeccable/review/login-mobile.png",
+      ".impeccable/review/overview-desktop.png",
+      ".impeccable/review/overview-mobile.png",
+      ".impeccable/review/password-desktop.png",
+      ".impeccable/review/password-mobile.png",
+      ".impeccable/review/registry-desktop.png",
+      ".impeccable/review/registry-mobile.png",
+      ".impeccable/review/search-desktop.png",
+      ".impeccable/review/search-mobile.png",
+      ".impeccable/review/static-contact-sheet.png",
+      ".impeccable/review/upload-desktop.png",
+      ".impeccable/review/upload-mobile.png",
+      ".impeccable/review/users-desktop.png",
+      ".impeccable/review/users-mobile.png",
+      ".impeccable/surfaces/frontend-documentflow-web-src-app-tsx.md",
+      "PRODUCT.md",
+      "docs/STITCH-ASSETS.md",
+      "docs/verification/stitch-detector.json",
+      "docs/verification/stitch-static-render.json",
+      "frontend/documentflow-web/public/.gitattributes",
+      "frontend/documentflow-web/public/fonts/5f6675d606a21f26.ttf",
+      "frontend/documentflow-web/public/fonts/655ecee898b68ff3.ttf",
+      "frontend/documentflow-web/public/fonts/6d83b1a12212ea9e.ttf",
+      "frontend/documentflow-web/public/fonts/6f49e1b28bce7339.ttf",
+      "frontend/documentflow-web/public/fonts/87e867b52640b3b3.ttf",
+      "frontend/documentflow-web/public/fonts/a699af1dea30b799.ttf",
+      "frontend/documentflow-web/public/fonts/e45972c7e9f24dc3.ttf",
+      "frontend/documentflow-web/public/fonts/provenance.json",
+      "frontend/documentflow-web/public/licenses/INTER-OFL.txt",
+      "frontend/documentflow-web/public/licenses/JETBRAINS-MONO-OFL.txt",
+      "frontend/documentflow-web/public/licenses/LUCIDE.txt",
+      "frontend/documentflow-web/src/components/Icon.tsx",
+      "frontend/documentflow-web/src/components/Layout.tsx",
+      "frontend/documentflow-web/src/components/StatusBadge.tsx",
+      "frontend/documentflow-web/src/components/review-form.css",
+      "frontend/documentflow-web/src/document-workspace.css",
+      "frontend/documentflow-web/src/fonts.css",
+      "frontend/documentflow-web/src/main.tsx",
+      "frontend/documentflow-web/src/pages/AdminCatalogsPage.tsx",
+      "frontend/documentflow-web/src/pages/DashboardPage.tsx",
+      "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx",
+      "frontend/documentflow-web/src/pages/DocumentsPage.tsx",
+      "frontend/documentflow-web/src/pages/LoginPage.tsx",
+      "frontend/documentflow-web/src/pages/SearchPage.tsx",
+      "frontend/documentflow-web/src/pages/UploadDocumentPage.tsx",
+      "frontend/documentflow-web/src/sovereign.css",
+      "frontend/documentflow-web/src/stitch-inspection.css",
+      "frontend/documentflow-web/src/stitch-lists.css"
+    ],
+    "stagedDiffReview": "All staged textual diffs were read per file without display truncation; image/font binaries were fingerprinted and checked separately. All 1209 added src lines were included in source review. Hashing an unchanged file is not a claim to have audited its entire implementation.",
+    "addedSourceLinesReviewed": 1209,
+    "sourceFingerprintMethod": "SHA-256 of raw bytes for every on-disk file recursively under frontend/documentflow-web/src and frontend/documentflow-web/public, including .gitattributes, provenance and licenses. sourceFingerprints are worktree raw bytes; stagedSourceFingerprints independently hash git show :path raw blobs.",
+    "sourceFileCount": 46,
+    "publicFileCount": 12,
+    "sourceFingerprints": {
+      "frontend/documentflow-web/src/api/apiClient.ts": "69ea9da7538a943cdbbfe73eaa99b6e607475754de88efe95815ae6f4bb24469",
+      "frontend/documentflow-web/src/api/authApi.ts": "9d8dc69695cb01562173cc7c446d22146753d7c4356b621e48322ffa9ae31730",
+      "frontend/documentflow-web/src/api/dashboardApi.ts": "5d67036c0b3679ccb34a44c2d73004c0028e85259ef479d18e15cc439edf90b4",
+      "frontend/documentflow-web/src/api/documentsApi.ts": "9ca216354d7df46ea427293c9423c67bc0cbae046f43117ddb1a8a8346ba4e52",
+      "frontend/documentflow-web/src/api/reviewWorkApi.ts": "5816b8d3b6a8427d2b9acda2b2a7857ffcc67fbba8b1b8b9c92e224f49272c6c",
+      "frontend/documentflow-web/src/api/session.ts": "aa873bf683b3eaadda81e8fece2a7fbeae3d92eadd19595ca90bbc708a352e80",
+      "frontend/documentflow-web/src/api/workspaceApi.ts": "e39738582bd8353f6cfc40fbd7adf0244db17313975174c9c95396c70b14ed4d",
+      "frontend/documentflow-web/src/App.tsx": "edc537a2aa9f862a94c2cd85b3d9b77e7e2888165af16518e5c087413c597e40",
+      "frontend/documentflow-web/src/components/AuthProvider.tsx": "37887b8a16c110da5eba525346d0dbd3ee7393ad24dac386b5fd028e96f670b5",
+      "frontend/documentflow-web/src/components/DocumentAssignment.tsx": "2c5e4d1779b848a16bd43f3f63ac4db9b5f849fee96a289a871cdd707ec5036c",
+      "frontend/documentflow-web/src/components/DocumentEvents.tsx": "9d848627a5dec294e2f5e35d4dc8ba4363264ead2f0d3413a9d928e79ebc5b2b",
+      "frontend/documentflow-web/src/components/DocumentFieldsTable.tsx": "160a82b5e8d8d51c465d8bbc2356b9f0f581e76455119593e11b54bf9cc59e5d",
+      "frontend/documentflow-web/src/components/DocumentPreview.tsx": "b28c54ffdb9629c035ad38f9dc81dca8be3b2052e31ee9cd98353c792d6dda16",
+      "frontend/documentflow-web/src/components/DocumentReviewForm.tsx": "cd90cb1adb6c7a107740acaece7a69d99fea43d5019b119510b5c9b3324bbd8c",
+      "frontend/documentflow-web/src/components/ExtractedTextPanel.tsx": "3c08f48900d70e7929c387f86580c728834d638899f0a4500b3d1a461b1ad996",
+      "frontend/documentflow-web/src/components/Icon.tsx": "0fa4d727f75b322e7473b9bb6a3a60aca120adb5c35a79fb4225fbc379caf649",
+      "frontend/documentflow-web/src/components/Layout.tsx": "dbffda46b31fc644736ecf60aa37ba03e4687dcee7b539b7b7d3a835cb7a0433",
+      "frontend/documentflow-web/src/components/review-form.css": "ed52789414c578632095db8f4ebc6ed16f98148431ffa79e33e383784619e904",
+      "frontend/documentflow-web/src/components/StatusBadge.tsx": "bcbe45b355596822e29a0cacfe4ca46aa1b8daf9cad3627d7e961a6530a75bc3",
+      "frontend/documentflow-web/src/config.ts": "bfd37fc6f0a945708edf5910f9ef2c80f168425fe6e76dc9e6bf094ccf5046b3",
+      "frontend/documentflow-web/src/document-workspace.css": "4b5c62229cee7749b47e85e7398ab6655920e05faddf81cdaba320fe66cddc27",
+      "frontend/documentflow-web/src/fonts.css": "ab148d18c4eeea7a68b90187af457db8baad415352359668b89baf1cc10947e1",
+      "frontend/documentflow-web/src/hooks/useNavigationGuard.ts": "43a7c6b98a7996896d5dd26de658704a1bb4cd1dff9b676d16db984d6a5fad20",
+      "frontend/documentflow-web/src/main.tsx": "771e5b5cb72e796c0c2b5dc8aa52c59e40457d8339da53ab42b87d5d9662e847",
+      "frontend/documentflow-web/src/pages/AdminCatalogsPage.tsx": "e7759272a256f66e1bf52dbc5851350016d42ebb29970c00d7bdd40366d79a74",
+      "frontend/documentflow-web/src/pages/ChangePasswordPage.tsx": "e633004ef1c969ab5f9620cafce4f16d02edd0176f58dde1a1d20d1b9dfe721b",
+      "frontend/documentflow-web/src/pages/CounterpartyPage.tsx": "b1c61a57c7b907e995c684c7b7d68aa4487496d8e283a38f25dac2baae2f0dbe",
+      "frontend/documentflow-web/src/pages/DashboardPage.tsx": "a5ed0258b12bd932584b37a704cb42e48adcb9466247b4328b99f7b439621d12",
+      "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx": "a8d13dbdc7854aad33bea63782e52d2218296b149a009613f810bb0cbd10ecca",
+      "frontend/documentflow-web/src/pages/DocumentsPage.tsx": "760a85b9c571924f7e7d3767bfdcb43ecac9c07ffa6e3dc2c334f2b10428ed59",
+      "frontend/documentflow-web/src/pages/LoginPage.tsx": "d3261e54c64a46be237c9f332ff2fafc3e5aa23a466826668705cc8f24faaa11",
+      "frontend/documentflow-web/src/pages/SearchPage.tsx": "2c4fc1c0fcd36add589a4cad1a110d59641898a531fc2a1ef7a3057c01173469",
+      "frontend/documentflow-web/src/pages/UploadDocumentPage.tsx": "89d9b6184bbc339db9c9e0f4471167bc6c9fb339e7211ae3e6916f16d0f3aff8",
+      "frontend/documentflow-web/src/pages/UsersPage.tsx": "3d1a0d41a000b94509f704c100ed11a4c3b3ed75ed6688c439e97a9bb66114cf",
+      "frontend/documentflow-web/src/sovereign.css": "fbd45e73a5ce76129569fc0a7927b9fe9126fa3841688aaadd7f9aa90dab14f3",
+      "frontend/documentflow-web/src/stitch-inspection.css": "92bb062b580ff0d4613dc1161da758bfd784784eeda481dea296209393d93557",
+      "frontend/documentflow-web/src/stitch-lists.css": "765e171ef52c21f7586ad2774ede00d685bbce56aaf9df123540c83af4d75e3c",
+      "frontend/documentflow-web/src/styles.css": "07e3fa5c1baf0a91881f4c3085781da012297dc763754d5dd541d034ced76eca",
+      "frontend/documentflow-web/src/types/dashboard.ts": "81afcf76a2cea9b1bd3fc5a3d71a52284c7943beb4e4a01e848417f5b164087e",
+      "frontend/documentflow-web/src/types/documents.ts": "03f4b0f7d5ea71a146cee7ac38cfe44bde469f812954d23736aaafc8da1581aa",
+      "frontend/documentflow-web/src/types/workspace.ts": "ccbdb82aec23622a687d2eaf0b31ae0458ee6194dd374ef869405f80cd0e8792",
+      "frontend/documentflow-web/src/utils/formatters.ts": "35fff2892bf11cf33e00938690ee3af02d3af2a65617e9816ff5cb553b37b374",
+      "frontend/documentflow-web/src/utils/labels.ts": "868507ffd7b5c414e5eb45e87ac9cd1e5e7f54366161664479d663c42651a73b",
+      "frontend/documentflow-web/src/utils/uploadBatch.ts": "04d1e60c53e83d2a0e687964944907fb8402632e16da6ad1b17abd6c449a2c59",
+      "frontend/documentflow-web/src/vite-env.d.ts": "424faf9241dd699dda995b367ed36665732da1e6ec1f33b2fd40394488ecac92",
+      "frontend/documentflow-web/src/workspace.css": "6129f14b373537b5d7867d2b9c1f1d30b4d07441bbea037cf9574da4510251b7",
+      "frontend/documentflow-web/public/.gitattributes": "d11736f6c36b820e4a9856907207d9274029c6793e6c3912347b4f563e5b77a8",
+      "frontend/documentflow-web/public/fonts/5f6675d606a21f26.ttf": "df54dbfafba61d4911eb3dab9bba2d20531fb009f01d64dd42fa96ab862584d8",
+      "frontend/documentflow-web/public/fonts/655ecee898b68ff3.ttf": "3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160",
+      "frontend/documentflow-web/public/fonts/6d83b1a12212ea9e.ttf": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3",
+      "frontend/documentflow-web/public/fonts/6f49e1b28bce7339.ttf": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+      "frontend/documentflow-web/public/fonts/87e867b52640b3b3.ttf": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+      "frontend/documentflow-web/public/fonts/a699af1dea30b799.ttf": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+      "frontend/documentflow-web/public/fonts/e45972c7e9f24dc3.ttf": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+      "frontend/documentflow-web/public/fonts/provenance.json": "5e5faa178ae7639ce519e82a64af7ebe90c2b793afc91dcb83aa7b1a39274683",
+      "frontend/documentflow-web/public/licenses/INTER-OFL.txt": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "frontend/documentflow-web/public/licenses/JETBRAINS-MONO-OFL.txt": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+      "frontend/documentflow-web/public/licenses/LUCIDE.txt": "ee35498e6684b30c9efaae009415884772f4450b3f6a3ae49103cd550a2c8ceb"
+    },
+    "stagedSourceFingerprints": {
+      "frontend/documentflow-web/src/api/apiClient.ts": "ddd290e559a2f15c384cc34da3b5c3d240453953ca710fe09aeed11b007a5c0e",
+      "frontend/documentflow-web/src/api/authApi.ts": "e09c236cec34c09fd0e073bdcda68f83a712887bce1b52107a7989c96adc47c2",
+      "frontend/documentflow-web/src/api/dashboardApi.ts": "dc0ec2997401aaf46f84820d2c3e07ad88eebc4685f96884eb4c7f98a1d5544f",
+      "frontend/documentflow-web/src/api/documentsApi.ts": "1a88a759367f8067754b132f1e22d0b6a60e69c30f48d5c6791fc0e69bb8641d",
+      "frontend/documentflow-web/src/api/reviewWorkApi.ts": "e3dcc10853d11e79fa026f545be8c1ef0e740da69b6c3ffeafe18b4a4b7e2bba",
+      "frontend/documentflow-web/src/api/session.ts": "dccd3cbf9548d73efca2ba70048c9b782b226e64a1025be6533b2da4617bf13a",
+      "frontend/documentflow-web/src/api/workspaceApi.ts": "614bf0910b895f6c52e81d13390cbbd49ba562c02d91e176794bb59e8fb11426",
+      "frontend/documentflow-web/src/App.tsx": "fdac321ba42bf0befdc39350fea8f1aac67d4facce5b1f4bbbb183ce18fc0c81",
+      "frontend/documentflow-web/src/components/AuthProvider.tsx": "5f6cfc6ddd72b90fbe5fb81e736d90a0267b4f99d04336dfc89030a67e1c8f0f",
+      "frontend/documentflow-web/src/components/DocumentAssignment.tsx": "28796e8536c17db49e18d67fe2dd45f2f56b57a2e0eda69b28736e3194d5b5dc",
+      "frontend/documentflow-web/src/components/DocumentEvents.tsx": "1eefff8ca9fd5857ab65695bfa1519aa08f51e39fb6382b73f49097dd806d559",
+      "frontend/documentflow-web/src/components/DocumentFieldsTable.tsx": "6280d5ee123a3f8292bbb1a4a7d4d096de5dd003f271b280d5f1c76ee835495d",
+      "frontend/documentflow-web/src/components/DocumentPreview.tsx": "af3e79982af71de025111d06e5d43cb33e3b080293c0e042b4ef9115a9149ffe",
+      "frontend/documentflow-web/src/components/DocumentReviewForm.tsx": "6ebee10572b1c9fab6730fdac3537cd4c432cdf067efffb700f42815093306b6",
+      "frontend/documentflow-web/src/components/ExtractedTextPanel.tsx": "844ab8dc5af2a6d500382ff3a794a9d3bf2b839d0626eb44c0962a71b5a3fb5e",
+      "frontend/documentflow-web/src/components/Icon.tsx": "0fa4d727f75b322e7473b9bb6a3a60aca120adb5c35a79fb4225fbc379caf649",
+      "frontend/documentflow-web/src/components/Layout.tsx": "859141951ad63c0f26ae7df110661a721983561f978d714292da33174ad11da3",
+      "frontend/documentflow-web/src/components/review-form.css": "949b4a7d7ac4f10205d9c7aabcf5505a26d0e7334ff3a2c03aac66414a1e2270",
+      "frontend/documentflow-web/src/components/StatusBadge.tsx": "f8244d5f87f14baa5a7b3656858d21108f3cdb4609e6b8633094519793dcc4da",
+      "frontend/documentflow-web/src/config.ts": "5436ca72eb984e5755431669fc1130b7c6fca995cd3ca5f65ff37467b1fd4384",
+      "frontend/documentflow-web/src/document-workspace.css": "52d254398eacbbb7880be63768c3761457d46ce1874f2e524d21eba24eddff51",
+      "frontend/documentflow-web/src/fonts.css": "ab148d18c4eeea7a68b90187af457db8baad415352359668b89baf1cc10947e1",
+      "frontend/documentflow-web/src/hooks/useNavigationGuard.ts": "75bdc0c7a75ad2d9c9f623cdedb5fde88b647afda95e942aff959b4c1c861607",
+      "frontend/documentflow-web/src/main.tsx": "cd3caab0c5d1528c82199634c04651f31151810184ff05965a731430099cb1d9",
+      "frontend/documentflow-web/src/pages/AdminCatalogsPage.tsx": "c4d9f93c6be8c460f000be4c4599302e93c16534adbbdfabc86a8316dce84fe2",
+      "frontend/documentflow-web/src/pages/ChangePasswordPage.tsx": "f30d333499f339c3ab311598a6009e4749fc941bff04c31eaa16f0b357b7ec25",
+      "frontend/documentflow-web/src/pages/CounterpartyPage.tsx": "e8d030ef742b00eb02c8418bac95787bcb70980341684290036c5f63ae377ad2",
+      "frontend/documentflow-web/src/pages/DashboardPage.tsx": "89e0531a3ad964c97d98f2e067b63e476208d9092f4acf98cfba088124639931",
+      "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx": "5c7ea3d67ec9e1f732d928b202e942a3ec9a4927c171e3f598775ce4a7b5bfcd",
+      "frontend/documentflow-web/src/pages/DocumentsPage.tsx": "cbc90850944d4f939af671a0467f1b6f5107d7777454bab264896f76114129b8",
+      "frontend/documentflow-web/src/pages/LoginPage.tsx": "168f14e3aec1e78356893d211e9161eac320cfa5ce35fe21ae2964714f0efc11",
+      "frontend/documentflow-web/src/pages/SearchPage.tsx": "63843885a444666256901a2ce21b424057b97d373883f466f3aa863f0188a09f",
+      "frontend/documentflow-web/src/pages/UploadDocumentPage.tsx": "fa7cc7dda23acca7bf7dc0e29970294aef82851ad22fb251ce62564ede67b340",
+      "frontend/documentflow-web/src/pages/UsersPage.tsx": "4e8c9564c37b002768dcac716d931d34515e14a8e554fd8467359f3a3696917f",
+      "frontend/documentflow-web/src/sovereign.css": "fbd45e73a5ce76129569fc0a7927b9fe9126fa3841688aaadd7f9aa90dab14f3",
+      "frontend/documentflow-web/src/stitch-inspection.css": "92bb062b580ff0d4613dc1161da758bfd784784eeda481dea296209393d93557",
+      "frontend/documentflow-web/src/stitch-lists.css": "765e171ef52c21f7586ad2774ede00d685bbce56aaf9df123540c83af4d75e3c",
+      "frontend/documentflow-web/src/styles.css": "5b137586d27f583bbe249132e1475918c55f4c7276b863652c9e2ace40f40793",
+      "frontend/documentflow-web/src/types/dashboard.ts": "dee2272227a63cc8677705efa44ef4670bd6027a8b790bb683da042591790e80",
+      "frontend/documentflow-web/src/types/documents.ts": "2b2b81f2cc153c4c5a22615392478d08755c96a0bcec8d519861e28f703016a7",
+      "frontend/documentflow-web/src/types/workspace.ts": "7d62a2db324107f819f3af114dbb88a19d127af5ccab52fff3f6e201018b89c9",
+      "frontend/documentflow-web/src/utils/formatters.ts": "e98a24050a9608a6551238fe46b022b109ba2e0433a33ee7807a7cd823e77fbd",
+      "frontend/documentflow-web/src/utils/labels.ts": "302d65cc5e04db3dc17f428aafeeaa65ae14aae03aec414fb00b057a417afc04",
+      "frontend/documentflow-web/src/utils/uploadBatch.ts": "5c55023a5a18a2ea77fbcf5dd73c0ead97d448ad9f24b7c7bbc78b13535d5337",
+      "frontend/documentflow-web/src/vite-env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "frontend/documentflow-web/src/workspace.css": "693aafbb111ac9c461d9139b63a25c757ebbdf61be3e426481766cd6b7a758f5",
+      "frontend/documentflow-web/public/.gitattributes": "d11736f6c36b820e4a9856907207d9274029c6793e6c3912347b4f563e5b77a8",
+      "frontend/documentflow-web/public/fonts/5f6675d606a21f26.ttf": "df54dbfafba61d4911eb3dab9bba2d20531fb009f01d64dd42fa96ab862584d8",
+      "frontend/documentflow-web/public/fonts/655ecee898b68ff3.ttf": "3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160",
+      "frontend/documentflow-web/public/fonts/6d83b1a12212ea9e.ttf": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3",
+      "frontend/documentflow-web/public/fonts/6f49e1b28bce7339.ttf": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+      "frontend/documentflow-web/public/fonts/87e867b52640b3b3.ttf": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+      "frontend/documentflow-web/public/fonts/a699af1dea30b799.ttf": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+      "frontend/documentflow-web/public/fonts/e45972c7e9f24dc3.ttf": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+      "frontend/documentflow-web/public/fonts/provenance.json": "5e5faa178ae7639ce519e82a64af7ebe90c2b793afc91dcb83aa7b1a39274683",
+      "frontend/documentflow-web/public/licenses/INTER-OFL.txt": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "frontend/documentflow-web/public/licenses/JETBRAINS-MONO-OFL.txt": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+      "frontend/documentflow-web/public/licenses/LUCIDE.txt": "ee35498e6684b30c9efaae009415884772f4450b3f6a3ae49103cd550a2c8ceb"
+    },
+    "lineEndingEvidence": {
+      "rawWorktreeIndexDifferences": [
+        "frontend/documentflow-web/src/api/apiClient.ts",
+        "frontend/documentflow-web/src/api/authApi.ts",
+        "frontend/documentflow-web/src/api/dashboardApi.ts",
+        "frontend/documentflow-web/src/api/documentsApi.ts",
+        "frontend/documentflow-web/src/api/reviewWorkApi.ts",
+        "frontend/documentflow-web/src/api/session.ts",
+        "frontend/documentflow-web/src/api/workspaceApi.ts",
+        "frontend/documentflow-web/src/App.tsx",
+        "frontend/documentflow-web/src/components/AuthProvider.tsx",
+        "frontend/documentflow-web/src/components/DocumentAssignment.tsx",
+        "frontend/documentflow-web/src/components/DocumentEvents.tsx",
+        "frontend/documentflow-web/src/components/DocumentFieldsTable.tsx",
+        "frontend/documentflow-web/src/components/DocumentPreview.tsx",
+        "frontend/documentflow-web/src/components/DocumentReviewForm.tsx",
+        "frontend/documentflow-web/src/components/ExtractedTextPanel.tsx",
+        "frontend/documentflow-web/src/components/Layout.tsx",
+        "frontend/documentflow-web/src/components/review-form.css",
+        "frontend/documentflow-web/src/components/StatusBadge.tsx",
+        "frontend/documentflow-web/src/config.ts",
+        "frontend/documentflow-web/src/document-workspace.css",
+        "frontend/documentflow-web/src/hooks/useNavigationGuard.ts",
+        "frontend/documentflow-web/src/main.tsx",
+        "frontend/documentflow-web/src/pages/AdminCatalogsPage.tsx",
+        "frontend/documentflow-web/src/pages/ChangePasswordPage.tsx",
+        "frontend/documentflow-web/src/pages/CounterpartyPage.tsx",
+        "frontend/documentflow-web/src/pages/DashboardPage.tsx",
+        "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx",
+        "frontend/documentflow-web/src/pages/DocumentsPage.tsx",
+        "frontend/documentflow-web/src/pages/LoginPage.tsx",
+        "frontend/documentflow-web/src/pages/SearchPage.tsx",
+        "frontend/documentflow-web/src/pages/UploadDocumentPage.tsx",
+        "frontend/documentflow-web/src/pages/UsersPage.tsx",
+        "frontend/documentflow-web/src/styles.css",
+        "frontend/documentflow-web/src/types/dashboard.ts",
+        "frontend/documentflow-web/src/types/documents.ts",
+        "frontend/documentflow-web/src/types/workspace.ts",
+        "frontend/documentflow-web/src/utils/formatters.ts",
+        "frontend/documentflow-web/src/utils/labels.ts",
+        "frontend/documentflow-web/src/utils/uploadBatch.ts",
+        "frontend/documentflow-web/src/vite-env.d.ts",
+        "frontend/documentflow-web/src/workspace.css"
+      ],
+      "allDifferencesOnlyCRLFvsLF": true,
+      "materialContentMismatches": [],
+      "unstagedTrackedDiffAtStart": []
+    },
+    "inspectedScreenshots": [
+      {
+        "path": ".impeccable/review/registry-desktop.png",
+        "inspectionLevel": "detail",
+        "sha256": "cc71d5642c5ff33aa09f239b15aa6ffead5e3b4f2ed661ab90e7c41b2653c2d8",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "observation": "Белая компактная шапка, индиго active state, строка статусов, двухрядные фильтры, toolbar CSV и честный loading. Материального clipping/перекрытия не видно."
+      },
+      {
+        "path": ".impeccable/review/registry-mobile.png",
+        "inspectionLevel": "detail",
+        "sha256": "5be794ea4fa8d0cd2d2416b63740919c2b11f27eefe6b95a4799ddd0940afdf8",
+        "pixels": {
+          "width": 390,
+          "height": 1020
+        },
+        "observation": "Управление переносится в узкую композицию; фильтры в две колонки, статусы wrap. Полная высота изображения больше viewport: это full-page capture, не overflow-дефект."
+      },
+      {
+        "path": ".impeccable/review/upload-desktop.png",
+        "inspectionLevel": "detail",
+        "sha256": "3258ca98da1722d7f16dab5c9a77156e36eb8c13b334387d0cecdba14e50727e",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "observation": "Dropzone, выбор append/replace, лимиты и disabled действия пустой партии различимы. Не изображены загруженные файлы или OCR-проценты."
+      },
+      {
+        "path": ".impeccable/review/catalogs-desktop.png",
+        "inspectionLevel": "detail",
+        "sha256": "7250238a715ee5438df990f2f4af772630ce0aa27409c9248a6bd004e1b61a2f",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "observation": "Заголовок и tabs сохраняют язык референса; загрузка справочников и индекса обозначена явно. AI-таблица здесь не отрисована."
+      },
+      {
+        "path": ".impeccable/review/static-contact-sheet.png",
+        "inspectionLevel": "contact-sheet-only",
+        "sha256": "5a4922285d81bddfc7720fed39f941284c656e174c9b70969553d5457198e3ec",
+        "pixels": {
+          "width": 1440,
+          "height": 1650
+        },
+        "observation": "Общий обзор всех 18 начальных desktop/mobile состояний. Одинаковая оболочка и язык поверхностей; мелкий текст и детальные взаимодействия по контакт-листу не подтверждаются."
+      }
+    ],
+    "inspectedReferenceScreenshots": [
+      {
+        "path": "C:/Users/<user>/Desktop/ddd/stitch_project_design_concept/1_/screen.png",
+        "sha256": "64179c7ce12e6aaf66e43211f91e624846f97e1713468e8602afc8a7794ae0aa",
+        "pixels": {
+          "width": 1146,
+          "height": 560
+        },
+        "role": "pinned-reference, not evidence of implemented functionality"
+      },
+      {
+        "path": "C:/Users/<user>/Desktop/ddd/stitch_project_design_concept/2_/screen.png",
+        "sha256": "685344427d290340becdb4c51fe57a13bcad391e00b96b5dcbbd30de96ccb10f",
+        "pixels": {
+          "width": 1146,
+          "height": 1028
+        },
+        "role": "pinned-reference, not evidence of implemented functionality"
+      },
+      {
+        "path": "C:/Users/<user>/Desktop/ddd/stitch_project_design_concept/4_/screen.png",
+        "sha256": "123974230b3dad5df78edf83f14d05bdc317812f42090ca01f5b05faabe8d0ca",
+        "pixels": {
+          "width": 1146,
+          "height": 1198
+        },
+        "role": "pinned-reference, not evidence of implemented functionality"
+      }
+    ],
+    "referenceHtmlEvidence": [
+      {
+        "path": "C:/Users/<user>/Desktop/ddd/stitch_project_design_concept/1_/code.html",
+        "sha256": "2cb64979fc13dc16a4f38ce5a8797b778fce69cde2549848ef5afbdd4cbd1fc5",
+        "inspection": "full HTML for upload (3_); head tokens and extracted structural/control markup for 1_, 2_, 4_, paired with their inspected PNGs"
+      },
+      {
+        "path": "C:/Users/<user>/Desktop/ddd/stitch_project_design_concept/2_/code.html",
+        "sha256": "428dea6d67de523c771445adc2a3646db88a152b19299a6a231349b1714a92af",
+        "inspection": "full HTML for upload (3_); head tokens and extracted structural/control markup for 1_, 2_, 4_, paired with their inspected PNGs"
+      },
+      {
+        "path": "C:/Users/<user>/Desktop/ddd/stitch_project_design_concept/3_/code.html",
+        "sha256": "91c36e21354f0ab4d4f20782584f80b0c555c894378452258ba8f510538f828d",
+        "inspection": "full HTML for upload (3_); head tokens and extracted structural/control markup for 1_, 2_, 4_, paired with their inspected PNGs"
+      },
+      {
+        "path": "C:/Users/<user>/Desktop/ddd/stitch_project_design_concept/4_/code.html",
+        "sha256": "cdb34a92b2304cea4863368240f23b84a35f3449435f5a02b0e00600f29eca05",
+        "inspection": "full HTML for upload (3_); head tokens and extracted structural/control markup for 1_, 2_, 4_, paired with their inspected PNGs"
+      }
+    ],
+    "supportingSourceReads": [
+      "frontend/documentflow-web/src/App.tsx",
+      "frontend/documentflow-web/src/styles.css",
+      "frontend/documentflow-web/src/workspace.css",
+      "frontend/documentflow-web/src/components/AuthProvider.tsx",
+      "frontend/documentflow-web/src/components/DocumentReviewForm.tsx",
+      "frontend/documentflow-web/src/components/DocumentAssignment.tsx",
+      "frontend/documentflow-web/src/components/DocumentPreview.tsx",
+      "frontend/documentflow-web/src/hooks/useNavigationGuard.ts",
+      "frontend/documentflow-web/src/utils/uploadBatch.ts",
+      "frontend/documentflow-web/src/pages/UsersPage.tsx",
+      "frontend/documentflow-web/src/pages/ChangePasswordPage.tsx",
+      "frontend/documentflow-web/src/pages/CounterpartyPage.tsx"
+    ],
+    "captureManifest": [
+      {
+        "path": ".impeccable/review/registry-desktop.png",
+        "sha256": "cc71d5642c5ff33aa09f239b15aa6ffead5e3b4f2ed661ab90e7c41b2653c2d8",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "reportedGeometry": {
+          "width": 1440,
+          "scroll": 1440,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/registry-mobile.png",
+        "sha256": "5be794ea4fa8d0cd2d2416b63740919c2b11f27eefe6b95a4799ddd0940afdf8",
+        "pixels": {
+          "width": 390,
+          "height": 1020
+        },
+        "reportedGeometry": {
+          "width": 390,
+          "scroll": 390,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/search-desktop.png",
+        "sha256": "c9895b0d5d496ccea703dbb85b6fa6e663d149d90bfca537f9ca39ed1400895b",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "reportedGeometry": {
+          "width": 1440,
+          "scroll": 1440,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/search-mobile.png",
+        "sha256": "9d4139dae33f24ac0ffb742dcfcae40d7621c41a401b23de9d8047a3bef63ec2",
+        "pixels": {
+          "width": 390,
+          "height": 1092
+        },
+        "reportedGeometry": {
+          "width": 390,
+          "scroll": 390,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/upload-desktop.png",
+        "sha256": "3258ca98da1722d7f16dab5c9a77156e36eb8c13b334387d0cecdba14e50727e",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "reportedGeometry": {
+          "width": 1440,
+          "scroll": 1440,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/upload-mobile.png",
+        "sha256": "32c56ef13330b7d30cc8a2051ceeefec52ceb117724711510f20034bd061dbd6",
+        "pixels": {
+          "width": 390,
+          "height": 855
+        },
+        "reportedGeometry": {
+          "width": 390,
+          "scroll": 390,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/catalogs-desktop.png",
+        "sha256": "7250238a715ee5438df990f2f4af772630ce0aa27409c9248a6bd004e1b61a2f",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "reportedGeometry": {
+          "width": 1440,
+          "scroll": 1440,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/catalogs-mobile.png",
+        "sha256": "356e68cbed8b111dd8b6d8e7e9745c4f33f311125501fdaf5542640c82030ec3",
+        "pixels": {
+          "width": 390,
+          "height": 960
+        },
+        "reportedGeometry": {
+          "width": 390,
+          "scroll": 390,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/overview-desktop.png",
+        "sha256": "bd0f351f751ed393d2489645d97d1aa0caafae80dac08ba92e909c40c5a1bbd2",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "reportedGeometry": {
+          "width": 1440,
+          "scroll": 1440,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/overview-mobile.png",
+        "sha256": "1ddbfe924328cde7be90f608bb241825278fc08757fa8d14657b365612439155",
+        "pixels": {
+          "width": 390,
+          "height": 844
+        },
+        "reportedGeometry": {
+          "width": 390,
+          "scroll": 390,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/users-desktop.png",
+        "sha256": "22593adbcd53bcb8f307dee8a98dc7d2c524b90b91611eaabe1c8a6d9aad1b66",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "reportedGeometry": {
+          "width": 1440,
+          "scroll": 1440,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/users-mobile.png",
+        "sha256": "55061e91b8737158987392434108c15f6744d942c5fdaba8d2aa1121f7cf93e7",
+        "pixels": {
+          "width": 390,
+          "height": 1014
+        },
+        "reportedGeometry": {
+          "width": 390,
+          "scroll": 390,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/password-desktop.png",
+        "sha256": "a96543c96b874a4c2f59172d5352ec2203f45330c6b0dc550cab2a99b662dc85",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "reportedGeometry": {
+          "width": 1440,
+          "scroll": 1440,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/password-mobile.png",
+        "sha256": "1bd7bdb187ad8b0c72c1dfa531c468599240e244bcf63dfb20b2bba366b0f084",
+        "pixels": {
+          "width": 390,
+          "height": 844
+        },
+        "reportedGeometry": {
+          "width": 390,
+          "scroll": 390,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/document-loading-desktop.png",
+        "sha256": "172edc35f85df6180b87f7d1e03f15db3435f8a1f2ce12efc4ab917fbc51deaa",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "reportedGeometry": {
+          "width": 1440,
+          "scroll": 1440,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/document-loading-mobile.png",
+        "sha256": "f055e07b834babd5d6db1501618dabf4fa8a0a16e5d273de5b7d922c38bba246",
+        "pixels": {
+          "width": 390,
+          "height": 844
+        },
+        "reportedGeometry": {
+          "width": 390,
+          "scroll": 390,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "JetBrains Mono",
+            "JetBrains Mono"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/login-desktop.png",
+        "sha256": "82feee102100df0f13d34c7ab9023812146603ea8e3c0fb3715db6c47f628087",
+        "pixels": {
+          "width": 1440,
+          "height": 1000
+        },
+        "reportedGeometry": {
+          "width": 1440,
+          "scroll": 1440,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      },
+      {
+        "path": ".impeccable/review/login-mobile.png",
+        "sha256": "b7e8b2fec8c6c7baa0770d52ddd1fbc7590f31bbebf0b4388fdeed8fe7daf8ce",
+        "pixels": {
+          "width": 390,
+          "height": 844
+        },
+        "reportedGeometry": {
+          "width": 390,
+          "scroll": 390,
+          "font": "Inter, \"Segoe UI\", sans-serif",
+          "fonts": [
+            "Inter",
+            "Inter",
+            "Inter",
+            "Inter"
+          ]
+        },
+        "reportedNetworkRequests": 0,
+        "rawDiskEqualsIndex": true
+      }
+    ],
+    "existingCaptureMetadata": {
+      "path": "docs/verification/stitch-static-render.json",
+      "sha256": "4a4b12584a36375be166b79cc69256732d903c026533b0df3cedf8ec295cd146",
+      "reportedCaptureCount": 18,
+      "allReportedWidthsEqualScrollWidths": true,
+      "allReportedNetworkRequestsZero": true,
+      "independentlyReexecuted": false,
+      "interpretation": "Existing SSR metadata inspected, not fresh browser measurements. PNG signatures/dimensions, raw hashes and disk/index equality checked in this review."
+    },
+    "priorDetector": {
+      "path": "docs/verification/stitch-detector.json",
+      "rerun": false,
+      "observedFinding": "overused-font: Inter at sovereign.css:16",
+      "disposition": "Not a defect: Inter is explicitly pinned by the user/reference. No replacement font proposed."
+    },
+    "priorBuild": {
+      "rerun": false,
+      "provenance": "Delegation context reports previous tsc -b && vite build success, 86 modules; JS 492.84 kB and CSS 90.52 kB. No fresh build execution or independent build certification in this review."
+    }
+  },
+  "compliance": {
+    "directionContract": {
+      "status": "consistent within reviewed source/static scope",
+      "inputs": [
+        "PRODUCT.md",
+        ".impeccable/surfaces/frontend-documentflow-web-src-app-tsx.md",
+        ".hermes/plans/documentflow-stitch-redesign.md",
+        "docs/STITCH-ASSETS.md",
+        "C:/Users/<user>/Desktop/ddd/stitch_project_design_concept/documentflow_sovereign/DESIGN.md"
+      ],
+      "mode": "Operate",
+      "seedKey": "user-pinned-stitch-sovereign",
+      "observations": [
+        "Source tokens match the pinned export: #faf8ff/#f2f3ff, #00236f/#1e3a8a, white top navigation, thin #c5c5d3 boundaries, small radii; Inter for controls, JetBrains Mono for business values, tabular numerals, local Lucide SVGs.",
+        "Detailed registry/upload/catalogs screenshots retain the selected operational visual language rather than introducing a competing SaaS/marketing system. No material visible layout defect confirmed in the inspected initial states.",
+        "Original/form dark/light split and cinema CSS exist in document-workspace.css; at <=1050px the layout stacks rather than compressing the form. This is source evidence only, not a screenshot pass for the populated workspace.",
+        "Real capabilities take precedence over decorative reference sample data: no invented ERP/1С, ЭЦП, OCR bounding boxes, WIA scanner, batch pause, counters or integration success state added.",
+        "3_/screen.png was read as raw bytes and contains <FIFE Image failed to fetch>, not a PNG. Upload was compared with 3_/code.html; this known reference limitation is not a new defect."
+      ]
+    },
+    "preservedFunctions": {
+      "status": "source preservation checked; runtime behavior not certified",
+      "exactIndexVsHeadChecks": {
+        "frontend/documentflow-web/package.json": true,
+        "frontend/documentflow-web/package-lock.json": true,
+        "frontend/documentflow-web/src/App.tsx": true,
+        "frontend/documentflow-web/src/components/DocumentReviewForm.tsx": true,
+        "frontend/documentflow-web/src/components/DocumentAssignment.tsx": true,
+        "frontend/documentflow-web/src/components/DocumentPreview.tsx": true,
+        "frontend/documentflow-web/src/api/": {
+          "count": 7,
+          "allUnchanged": true
+        },
+        "frontend/documentflow-web/src/hooks/": {
+          "count": 1,
+          "allUnchanged": true
+        },
+        "frontend/documentflow-web/src/types/": {
+          "count": 3,
+          "allUnchanged": true
+        },
+        "frontend/documentflow-web/src/utils/": {
+          "count": 3,
+          "allUnchanged": true
+        }
+      },
+      "unchangedLogicSlices": {
+        "frontend/documentflow-web/src/pages/DocumentsPage.tsx": true,
+        "frontend/documentflow-web/src/pages/SearchPage.tsx": true,
+        "frontend/documentflow-web/src/pages/AdminCatalogsPage.tsx": true,
+        "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx": true,
+        "frontend/documentflow-web/src/pages/DashboardPage.tsx": true,
+        "frontend/documentflow-web/src/pages/LoginPage.tsx": true
+      },
+      "reviewedBindings": [
+        {
+          "path": "frontend/documentflow-web/src/components/Layout.tsx",
+          "lines": "7-46",
+          "result": "Existing documents/search/dashboard/upload/users/catalogs/password routes remain reachable; admin entries remain role-gated and App Protected admin is unchanged. logout is still the AuthProvider callback. Header search uses URLSearchParams and navigate to the actual text-search route; Ctrl/Meta+K listener has cleanup. Account menu uses native details/summary. Open/authenticated menu and keyboard flow were source-reviewed only."
+        },
+        {
+          "path": "frontend/documentflow-web/src/pages/DocumentsPage.tsx",
+          "lines": "19-109, 116-185",
+          "result": "Polling, abort/epoch handling, search, all previous filters, sorting, archive, date guard, CSV export and pagination callbacks preserved. Status select replaced by aria-pressed filter buttons invoking the same setFilter. Existing record values remain React text; returnTo and manual-review links are carried into the new table."
+        },
+        {
+          "path": "frontend/documentflow-web/src/pages/UploadDocumentPage.tsx",
+          "lines": "24-151, 159-215",
+          "result": "File selection and added drop handler both use receiveFiles; validateFile/validateBatch, 20-file/20-MiB/100-MiB limits, append/replace confirmation, upload-in-progress guard, navigation guard, retry, duplicate links, polling and recent IDs are retained. Drop does not start upload; submit still calls existing uploadBatch. New progress is final-status count, not fabricated OCR percentage."
+        },
+        {
+          "path": "frontend/documentflow-web/src/pages/SearchPage.tsx",
+          "lines": "12-98, 107-162",
+          "result": "Text/semantic modes, explicit semantic-unavailable fallback, filters, counterparties, errors/retry, pagination and result data preserved. New row action points to the same document with returnTo, adding manual-review anchor only for eligible NeedsReview records."
+        },
+        {
+          "path": "frontend/documentflow-web/src/pages/AdminCatalogsPage.tsx",
+          "lines": "42-140, 144-225",
+          "result": "Catalog CRUD, approval, destructive confirmation, system-item guards, tabs/keyboard handlers and reindex handlers retained. aiDrafts and managedKinds are complementary partitions, so no kind is omitted. Automatic drafts retain red warning/outline; activation still requires existing admin approval flow. Counts derive from loaded records, not mock values."
+        },
+        {
+          "path": "frontend/documentflow-web/src/pages/DocumentDetailsPage.tsx",
+          "lines": "20-304, 309-368",
+          "result": "Action handlers/guards, returnTo validation, review context, polling, archive/restore, reprocess/retry, lifecycle, next-review and cinema/Escape/focus restoration logic unchanged. Layout retains keyed DocumentReviewForm, DocumentPreview and DocumentAssignment; assignment moves into the right column as a sibling section, not inside the review form. Ancillary relations/duplicates/diagnostics/history remain present."
+        },
+        {
+          "path": "frontend/documentflow-web/src/components/DocumentReviewForm.tsx",
+          "lines": "205-246, 289-315, 356-392, 406-488",
+          "result": "Unchanged component retains separate document version and draft revision, stale/emergency recovery, conflict display, guard, explicit draft save and confirmation controls. New CSS retains hidden tab semantics, validity/focus indicators and visible recovery content; no silent overwrite introduced by the layout diff."
+        },
+        {
+          "path": "frontend/documentflow-web/src/pages/CounterpartyPage.tsx; pages/UsersPage.tsx; pages/ChangePasswordPage.tsx; pages/LoginPage.tsx; pages/DashboardPage.tsx",
+          "lines": null,
+          "result": "Existing secondary page functionality remains routed; login/dashboard diffs change presentation copy only, other secondary page sources unchanged. Shared Sovereign CSS styles these pages; contact-sheet visibility is not end-to-end evidence."
+        }
+      ]
+    },
+    "securityReview": {
+      "status": "No confirmed new security defect in the reviewed staged changes",
+      "basis": "Manual review of all staged source additions/removals and relevant existing guards; previous lexical scan context is supplementary, not a proof.",
+      "observations": [
+        "New visible values remain escaped React children/attributes. No new innerHTML/dangerouslySetInnerHTML, eval/exec, shell invocation, SQL construction, unsafe deserialization, credential literal or outbound service introduced in the source diff.",
+        "Header query is encoded through URLSearchParams into a fixed local route; new search result document URLs retain encodeURIComponent. No user-controlled external navigation endpoint added.",
+        "New drag/drop path does not bypass file/batch validation or start network submission; existing API/auth/session/hooks/types were verified unchanged against HEAD.",
+        "Roles are not inferred from the visual shell: existing Protected admin gate remains unchanged. Hiding admin menu is not claimed as server authorization verification.",
+        "SVG shapes in Icon.tsx are local constant path data rendered by createElement, not injected HTML. Font declarations point to local public files; remote reference CDNs are not imported into the added runtime code."
+      ],
+      "notPerformed": [
+        "penetration testing",
+        "dependency vulnerability audit",
+        "backend authorization verification",
+        "live file-upload security validation",
+        "runtime secret search"
+      ],
+      "lexicalScanIsExhaustive": false
+    },
+    "assets": {
+      "status": "Local asset existence, license text and recorded hashes checked",
+      "fontAndOflChecks": [
+        {
+          "path": "frontend/documentflow-web/public/fonts/a699af1dea30b799.ttf",
+          "declaredSha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+          "diskSha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+          "indexSha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+          "matches": true
+        },
+        {
+          "path": "frontend/documentflow-web/public/fonts/e45972c7e9f24dc3.ttf",
+          "declaredSha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+          "diskSha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+          "indexSha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+          "matches": true
+        },
+        {
+          "path": "frontend/documentflow-web/public/fonts/87e867b52640b3b3.ttf",
+          "declaredSha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+          "diskSha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+          "indexSha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+          "matches": true
+        },
+        {
+          "path": "frontend/documentflow-web/public/fonts/6f49e1b28bce7339.ttf",
+          "declaredSha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+          "diskSha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+          "indexSha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+          "matches": true
+        },
+        {
+          "path": "frontend/documentflow-web/public/fonts/6d83b1a12212ea9e.ttf",
+          "declaredSha256": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3",
+          "diskSha256": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3",
+          "indexSha256": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3",
+          "matches": true
+        },
+        {
+          "path": "frontend/documentflow-web/public/fonts/655ecee898b68ff3.ttf",
+          "declaredSha256": "3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160",
+          "diskSha256": "3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160",
+          "indexSha256": "3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160",
+          "matches": true
+        },
+        {
+          "path": "frontend/documentflow-web/public/fonts/5f6675d606a21f26.ttf",
+          "declaredSha256": "df54dbfafba61d4911eb3dab9bba2d20531fb009f01d64dd42fa96ab862584d8",
+          "diskSha256": "df54dbfafba61d4911eb3dab9bba2d20531fb009f01d64dd42fa96ab862584d8",
+          "indexSha256": "df54dbfafba61d4911eb3dab9bba2d20531fb009f01d64dd42fa96ab862584d8",
+          "matches": true
+        },
+        {
+          "path": "frontend/documentflow-web/public/licenses/INTER-OFL.txt",
+          "declaredSha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+          "diskSha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+          "indexSha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+          "matches": true
+        },
+        {
+          "path": "frontend/documentflow-web/public/licenses/JETBRAINS-MONO-OFL.txt",
+          "declaredSha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+          "diskSha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+          "indexSha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+          "matches": true
+        }
+      ],
+      "fontFaceDeclarations": "src/fonts.css maps all seven local files to Inter 400/500/600/700 and JetBrains Mono 400/500/600; no mandatory remote font URL.",
+      "preserveBytes": "public/.gitattributes sets fonts/** -text and licenses/** -text. Seven TTF and two OFL files match their declared raw SHA-256 on disk and in index.",
+      "lucideLicense": {
+        "shippedPath": "frontend/documentflow-web/public/licenses/LUCIDE.txt",
+        "shippedSha256": "ee35498e6684b30c9efaae009415884772f4450b3f6a3ae49103cd550a2c8ceb",
+        "upstreamLocalPath": "C:/SRC/PL/projects/ui-reference-libraries/lucide/LICENSE",
+        "upstreamSha256": "6fc5b7332939dd5c61af3a5f97450f7bc05d4a396dd0bc21ac341716b3b05096",
+        "noticeTextLinesIdentical": true,
+        "rawBytesIdentical": false,
+        "difference": "Only CRLF/LF and final newline differ; ISC and included Feather/MIT notice text is identical. No source/license rewrite performed."
+      },
+      "shippingRasterAssetsAdded": false,
+      "npmManifestAndLockChanged": false,
+      "limitations": "Provenance URLs were read from staged metadata, not re-downloaded. This review checks declared bytes and notice preservation, not a legal opinion or an independent trust audit of font binaries."
+    },
+    "accessibilityAndResponsive": {
+      "status": "Static/source checks only, not WCAG certification",
+      "observations": [
+        "Labels, aria-pressed status filters, column scopes, named focusable horizontal table regions, visible focus rules, skip-to-main and reduced-motion rules are present in the added source.",
+        "Registry mobile detailed capture shows wrapping rather than page-width overflow. Existing metadata reports scroll width equals viewport width for each initial capture; only initial/empty/loading geometry is covered.",
+        "Keyboard operation of native account menu, focus trap in the populated cinema, zoom, screen reader announcements and data-rich scroll regions were not exercised."
+      ]
+    },
+    "executionBoundary": {
+      "sourceFilesModifiedByReviewer": false,
+      "testsCreatedOrRun": false,
+      "buildRun": false,
+      "detectorRun": false,
+      "serverStarted": false,
+      "apiOrDatabaseStarted": false,
+      "commitCreated": false,
+      "deploymentPerformed": false,
+      "reviewerWriteScope": "Only docs/verification/stitch-final-review.json. Existing docs/verification/final-code-review.json is not reused or modified.",
+      "masterAndData": "Review commands stayed in the isolated worktree and read-only reference/skill paths. No master/data writes were performed; no runtime data or secrets were queried. This does not claim a historical audit of another worktree."
+    },
+    "documentationNextGate": {
+      "status": "pending-after-review, not a defect",
+      "requiredArtifacts": [
+        "DESIGN.md",
+        ".impeccable/design.json"
+      ],
+      "reason": "User explicitly assigns DESIGN.md/sidecar to the documenter after this review. Current absence does not fail this bounded review, but full finish acceptance remains gated on the subsequent documentation handoff. Do not treat this report as completion of that gate."
+    }
+  },
+  "findings": {
+    "defects": [],
+    "nonblockingSuggestions": [],
+    "inclusionRule": "Only independently confirmed, reproducible new defects belong in defects, with severity, path/line, impact and minimalFix. No such defect was confirmed. Missing live data, intentional document-loading captures, no tests and the later documentation gate are not defects."
+  },
+  "verdict": {
+    "disposition": "ship",
+    "passed": true,
+    "scope": "The exact reviewed staged index and fingerprinted frontend/public content, source/static-review only; not unconditional production or end-to-end acceptance.",
+    "summary": "В проверенном staged diff и ограниченном наборе статических изображений новых подтверждённых security/logic/material defects не обнаружено. Перенос согласуется с закреплённым Stitch Sovereign; ship разрешён только в этом явно ограниченном scope.",
+    "fullFinishAcceptance": false,
+    "runtimeEndToEndPassed": false,
+    "documentationGateComplete": false,
+    "rule": "Any confirmed security, logic or material issue would require disposition=fix and passed=false. Unverified areas are recorded as unverified, never as passes."
+  },
+  "limitations": {
+    "staticSsrIsNotEndToEnd": true,
+    "unverifiedByScreenshots": [
+      "Реальные заполненные таблицы реестра/поиска, длинные реальные значения, AI-черновики и CRUD-каталоги.",
+      "Original/form split с настоящим PDF/DOCX/TIFF/image и доступностью всех полей при внутренней прокрутке.",
+      "Cinema, Escape, focus trap/return и мобильное взаимодействие с оригиналом.",
+      "Authenticated menus, реальные роли/имя пользователя и открытое меню учётной записи.",
+      "Live interactions: поиск, фильтры, CSV, пагинация, drag/drop, upload/retry/duplicate/polling, подтверждение, draft/CAS/recovery, назначение, catalog approval/reindex, login/password/users."
+    ],
+    "scopeNotes": [
+      "Existing 18 captures show real component SSR initial/loading/empty states only; no server/API/DB, mocked responses or hydration effects were executed in this review. Their existence does not establish real authenticated sessions or successful API operations.",
+      "Exactly four current screenshots were inspected in detail plus one contact sheet containing all 18 states. The remaining states were viewed only at contact-sheet scale; per-image metadata/hashes/dimensions are not equivalent to detailed visual inspection.",
+      "document-loading names are intentional. Absence of API-populated content is expected, not a broken capture and not a demand to manufacture document data.",
+      "No new capture or live render was generated; capture metadata is pre-existing evidence. Hashes bind artifacts available now, not an independently witnessed capture process or proof of source-to-render provenance.",
+      "All changed source diffs were reviewed, not the entire backend or every unchanged source implementation. A clean manual/lexical review is not an exhaustive security guarantee.",
+      "Build success is reported from delegation context only. Tests/build/detector/servers/API/DB were expressly not run here; absence of tests is not a finding.",
+      "DESIGN.md and design sidecar are the next documenter gate. The finished-product acceptance contract is not marked fully passed by this report.",
+      "No fixes, commits, deployments or additional review/polishing cycles were performed. This verdict does not authorize starting the app or modifying original master/working data."
+    ]
+  }
+}
